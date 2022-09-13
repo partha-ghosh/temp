@@ -1,0 +1,157 @@
+* Info
+Attention: 
+Please make sure your data on the cluster does neither exceed 6 TB nor a total of 5 million files to prevent problems with the file system.
+The data in /home and /common is not backed up. This means you should move all important data back to your own computer/storage server as soon as possible. 
+Please consider to mention us and the project 'Training Center Machine Learning, Tübingen' with grant number 01|S17054 if you use this cluster for any publication.
+
+* Observations
+* Ideas
+  - Once you have concrete wrong belief about the world, it is hard to change
+  - Belief needs to be flexible => introduce noise in the pseudo-waypoints
+* Code
+** Files
+   - main.py
+** Strategy1
+   - model.py
+   - dataloader.py 
+* Tasks
+- [X] Get pseudolabels and compute the confidence score with the GT labels to
+  filter out
+- [X] Get predicted confidence score to filter out
+- [X] Joint training with sampling from pseudolabels and GT
+- [X] Joint training with sampling from pseudolabels and GT with noise
+- [ ] Tune IOU hyperparameter
+- [X] Compare DeepVO waypoints with pseudo-waypoints
+- [ ] Introduce noise in the pseudo-waypoints
+- [X] Dataloader sampling with equal distribution of turns, straight driving,
+  consider only those events where the vehicle deaccelerate and accelerate again
+  or vice versa
+- [ ] 
+- [ ] Use l2/l1 regularization in 2 to n-1 layers
+  https://discuss.pytorch.org/t/how-to-manipulate-layer-parameters-by-its-names/1282
+- [ ] Proved that introducing noise helped
+- [ ] Implement SelfD, implement iterative training, implement AIM VO, implement
+  CILRS
+* Experiments
+- [ ] AIM [0/3]
+  - [ ] full Supervised Learning (10 Towns) [0/1]
+    - [ ] 14_weather_minimal_data [0/5]
+      - [ ] with image noise | crappy dataset/dataloader | no acceleration indicator
+      - [ ] with no image noise | crappy dataset/dataloader | no acceleration indicator
+      - [ ] with no image noise | filtered dataset/stratified sample
+        dataloader | no acceleration indicator
+      - [ ] with image noise | filtered dataset/stratified sample dataloader |
+        acceleration indicator
+      - [ ] with no image noise | crappy dataset/dataloader | acceleration indicator
+  - [ ] full Supervised Learning (4 Towns) [0/1]
+    - [ ] 14_weather_minimal_data [0/2]
+      - [ ] with image noise | filtered dataset/stratified sample dataloader |
+        acceleration indicator
+      - [ ] with no image noise | crappy dataloader | no acceleration indicator
+  - [ ] self-supervised learning [0/1]
+    - [ ] 14_weather_minimal_data
+      - [ ] with no image noise | crappy dataset/dataloader	  
+	- [ ] with gt target point [0/4]
+	  - [ ] pseudo-waypoints -> sst -> finetune
+	  - [ ] pseudo-waypoints -> train with pseudo+GT
+	  - [ ] predict confidence score -> filter out -> sst -> finetune [0/3]
+	    - [ ] 0.1 threshold confidence score
+	    - [ ] 0.33 threshold confidence score
+	    - [ ] 0.5 threshold confidence score
+	  - [ ] calculate confidence score from GT -> filter out -> sst -> finetune [0/3]
+	    - [ ] 0.1 threshold confidence score
+	    - [ ] 0.33 threshold confidence score
+	    - [ ] 0.5 threshold confidence score
+	- [ ] with pseudo-waypoints+target point from DeepVO
+	- [ ] with image noise | filtered dataset/stratified sample dataloader |
+          with acceleration indicator
+	    - [ ] with pseudo-waypoints+target point from DeepVO
+- [ ] CILRS <-> SelfD
+  - [ ] full supervised learning (10 towns)
+  - [ ] full supervised learning (4 towns)
+  - [ ] self-supervised learning | pseudo-waypoints -> sst -> finetune
+  - [ ] self-supervised learning | pseudo-waypoints (sample nav) -> confidence
+    score -> filter out -> sst -> finetune
+- [ ] DeepVO
+
+
+- [ ] Transfuser_plus_data
+  - [ ] with image noise
+    - [ ] crappy dataset/dataloader
+    - [ ] filtered dataset/stratified sample dataloader
+  - [ ] with no image noise
+
+
+- [X] use acc
+- [X] use nav
+- [X] imgaug
+- [X] change codebase
+- [X] pseudolabels
+- [X] handle sampling of pseudolabels
+- [X] change agents
+
+
+- [ ] dataset0-dataloader0-imgaug0-acc0-nav0-tp1-pc0-thresh0.33-s-st[1,..,10]-sst[1]
+- [ ] dataset0-dataloader0-imgaug0-acc0-nav1-tp0-pc0-thresh0.33-s-st[1,..,10]-sst[1]
+- [ ] dataset0-dataloader0-imgaug1-acc0-nav0-tp1-pc0-thresh0.33-s-st[1,..,10]-sst[1]
+- [ ] dataset0-dataloader1-imgaug0-acc0-nav0-tp1-pc0-thresh0.33-s-st[1,..,10]-sst[1]
+- [ ] dataset0-dataloader1-imgaug1-acc0-nav0-tp1-pc0-thresh0.33-s-st[1,..,10]-sst[1]
+- [ ] dataset1-dataloader0-imgaug0-acc0-nav0-tp1-pc0-thresh0.33-s-st[1,..,10]-sst[1]
+- [ ] dataset1-dataloader1-imgaug1-acc0-nav0-tp1-pc0-thresh0.33-s-st[1,..,10]-sst[1]
+- [ ] dataset1-dataloader1-imgaug1-acc0-nav1-tp0-pc0-thresh0.33-s-st[1,..,10]-sst[1]
+- [ ] dataset1-dataloader1-imgaug1-acc0-nav1-tp0-pc0-thresh0.33-s-st[1,..,4]-sst[1]
+- [ ] dataset1-dataloader1-imgaug1-acc0-nav1-tp0-pc1-thresh0.33-s-st[1,..,4]-sst[1]
+- [ ] dataset1-dataloader1-imgaug1-acc0-nav0-tp1-pc0-thresh0.33-s-st[1,..,4]-sst[1]
+- [ ] dataset1-dataloader1-imgaug1-acc0-nav0-tp1-pc1-thresh0.33-s-st[1,..,4]-sst[1]
+
+- [ ]
+  - [ ]
+    dataset1-dataloader1-imgaug1-acc0-nav0-tp1-pc0-thresh1-whatif0-s-st[1,..,4]-sst[1,..,10] (load)
+  - [ ] dataset1-dataloader1-imgaug1-acc0-nav0-tp1-pc0-thresh0.33-whatif0-ssf-st[1,..,4]-sst[1,..,10]
+- [ ]
+  - [ ]
+    dataset1-dataloader1-imgaug1-acc0-nav0-tp1-pc0-thresh1-whatif1-s-st[1,..,4]-sst[1,..,10] (load)
+  - [ ] dataset1-dataloader1-imgaug1-acc0-nav0-tp1-pc0-thresh0.33-whatif1-ssf-st[1,..,4]-sst[1,..,10]
+- [ ]
+  - [ ]
+    dataset1-dataloader1-imgaug1-acc0-nav0-tp1-pc1-thresh0.33-whatif0-s-st[1,..,4]-sst[1,..,10] (load)
+  - [ ] dataset1-dataloader1-imgaug1-acc0-nav0-tp1-pc1-thresh0.33-whatif0-ssf-st[1,..,4]-sst[1,..,10]
+- [ ]
+  - [ ]
+    dataset1-dataloader1-imgaug1-acc0-nav0-tp1-pc1-thresh0.5-whatif0-s-st[1,..,4]-sst[1,..,10] (load)
+  - [ ] dataset1-dataloader1-imgaug1-acc0-nav0-tp1-pc1-thresh0.5-whatif0-ssf-st[1,..,4]-sst[1,..,10]
+- [ ]
+  - [ ]
+    dataset1-dataloader1-imgaug1-acc0-nav0-tp1-pc1-thresh0.1-whatif0-s-st[1,..,4]-sst[1,..,10] (load)
+  - [ ] dataset1-dataloader1-imgaug1-acc0-nav0-tp1-pc1-thresh0.1-whatif0-ssf-st[1,..,4]-sst[1,..,10]
+
+ - [ ]
+  - [ ]
+    dataset1-dataloader1-imgaug1-acc0-nav1-tp0-pc0-thresh1-whatif0-s-st[1,..,4]-sst[1,..,10] (load)
+  - [ ] dataset1-dataloader1-imgaug1-acc0-nav1-tp0-pc0-thresh0.33-whatif0-ssf-st[1,..,4]-sst[1,..,10]
+- [ ]
+  - [ ]
+    dataset1-dataloader1-imgaug1-acc0-nav1-tp0-pc0-thresh1-whatif1-s-st[1,..,4]-sst[1,..,10] (load)
+  - [ ] dataset1-dataloader1-imgaug1-acc0-nav1-tp0-pc0-thresh0.33-whatif1-ssf-st[1,..,4]-sst[1,..,10]   
+- [ ]
+  - [ ]
+    dataset1-dataloader1-imgaug1-acc0-nav1-tp0-pc1-thresh0.33-whatif1-s-st[1,..,4]-sst[1,..,10] (load)
+  - [ ] dataset1-dataloader1-imgaug1-acc0-nav1-tp0-pc1-thresh0.33-whatif1-ssf-st[1,..,4]-sst[1,..,10]
+- [ ]
+  - [ ]
+    dataset1-dataloader1-imgaug1-acc0-nav1-tp0-pc1-thresh0.5-whatif1-s-st[1,..,4]-sst[1,..,10] (load)
+  - [ ]
+    dataset1-dataloader1-imgaug1-acc0-nav1-tp0-pc1-thresh0.5-whatif1-ssf-st[1,..,4]-sst[1,..,10]
+- [ ]
+  - [ ]
+    dataset1-dataloader1-imgaug1-acc0-nav1-tp0-pc1-thresh0.1-whatif1-s-st[1,..,4]-sst[1,..,10] (load)
+  - [ ]
+    dataset1-dataloader1-imgaug1-acc0-nav1-tp0-pc1-thresh0.1-whatif1-ssf-st[1,..,4]-sst[1,..,10]
+
+
+DeepVO
+- [ ] Train DeepVO
+- [ ]
+  dataset1-dataloader1-imgaug1-acc0-nav0-tp1-pc0-thresh0.33-whatif0-ssf-st[1,..,4]-sst[1,..,10]
+
+Pick the best in SelfD and train with youtube data

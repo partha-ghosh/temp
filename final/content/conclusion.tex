@@ -1,0 +1,48 @@
+\chapter{Conclusion}
+\label{sec:conclusion}
+
+To conclude...
+Autonomous vehicles are a promising technical solution to important problems in
+transportation. Every year more than a million people die due to traffic accidents
+[1] primarily caused by human error [2]. Automating driving has the potential to
+drastically reduce these accidents. Additionally, self-driving cars could improve
+the mobility of people who are not able to drive themselves. The use of supervised
+machine learning has become the dominant approach to autonomous driving because
+it can handle high-dimensional sensor data such as images well. To train machine
+learning algorithms in an end-to-end fashion, meaning directly optimizing a neural
+network to perform the full driving task, one needs demonstrations from an expert
+driver. Industrial research often collects data from human expert drivers, but this
+approach is expensive in terms of money and time.
+Simulations [3, 4] are frequently used to perform research on autonomous driving
+because new ideas can safely be tested in them. In simulations, an alternative to
+human experts called privileged experts is available to perform the data collection
+task. Privileged experts are computer programs that have direct access to the
+simulator (e.g. knowing the positions of all cars), circumventing the challenging
+perception task. These privileged experts can generate labeled data faster than
+human experts and at basically no cost.
+
+
+Deep policy learning makes promising progress to many visuomotor control tasks
+ranging from robotic manipula- tion [20, 22, 25, 39] to autonomous driving [4,
+47]. By learning to map visual observation directly to control action through a
+deep neural network, it mitigates the manual design of controller, lowers the
+system complexity, and improves generalization ability. However, the sample ef-
+ficiency of the underlying algorithms such as reinforcement learning or
+imitation learning remains low. It requires a significant amount of online
+interactions or expert demon- strations in the training environment thus limits
+its real- world applications.  Many recent works use unsupervised learning and
+data augmentation to improve the sample efficiency by pre- training the neural
+representations before policy learning.  However, the augmented data in
+pretraining such as frames with random background videos [16, 17, 43] shifts
+drasti-cally from the original data distribution, which degrades the overall
+performance of the model. Also, it remains challenging to generalize the learned
+weights to the real- world environment as it is hard to design augmentations
+that reflect the real-world diversity. In this work, we explore pretraining the
+neural representation on a massive amount of real-world data directly. Figure 1
+shows some uncurated YouTube videos, which contain driving scenes all over the
+world with diverse conditions such as different weathers, urban and rural
+environments, and various traffic densities.  We show that exploiting such
+real-world data in deep policy learning can substantially improve the
+generalization ability of the pretrained models and benefit downstream tasks
+across various domains.
+

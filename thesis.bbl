@@ -1,0 +1,714 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nty/global//global/global}
+  \entry{10.2307/j.ctt183ph6v}{book}{}
+    \name{author}{1}{}{%
+      {{hash=BR}{%
+         family={BELLMAN},
+         familyi={B\bibinitperiod},
+         given={RICHARD},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Princeton University Press}%
+    }
+    \strng{namehash}{BR1}
+    \strng{fullhash}{BR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{abstract}{%
+    The book description for "Adaptive Control Processes" is currently
+  unavailable.%
+    }
+    \field{isbn}{9780691079011}
+    \field{title}{Adaptive Control Processes: A Guided Tour}
+    \verb{url}
+    \verb http://www.jstor.org/stable/j.ctt183ph6v
+    \endverb
+    \field{year}{1961}
+    \field{urlday}{10}
+    \field{urlmonth}{09}
+    \field{urlyear}{2022}
+  \endentry
+
+  \entry{Chen2019}{article}{}
+    \name{author}{4}{}{%
+      {{hash=CD}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Dian},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=ZB}{%
+         family={Zhou},
+         familyi={Z\bibinitperiod},
+         given={Brady},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=KV}{%
+         family={Koltun},
+         familyi={K\bibinitperiod},
+         given={Vladlen},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=KP}{%
+         family={Krähenbühl},
+         familyi={K\bibinitperiod},
+         given={Philipp},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.RO, cs.AI, cs.CV, cs.LG}
+    \strng{namehash}{CD+1}
+    \strng{fullhash}{CDZBKVKP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{abstract}{%
+    Vision-based urban driving is hard. The autonomous system needs to learn to
+  perceive the world and act in it. We show that this challenging learning
+  problem can be simplified by decomposing it into two stages. We first train
+  an agent that has access to privileged information. This privileged agent
+  cheats by observing the ground-truth layout of the environment and the
+  positions of all traffic participants. In the second stage, the privileged
+  agent acts as a teacher that trains a purely vision-based sensorimotor agent.
+  The resulting sensorimotor agent does not have access to any privileged
+  information and does not cheat. This two-stage training procedure is
+  counter-intuitive at first, but has a number of important advantages that we
+  analyze and empirically demonstrate. We use the presented approach to train a
+  vision-based autonomous driving system that substantially outperforms the
+  state of the art on the CARLA benchmark and the recent NoCrash benchmark. Our
+  approach achieves, for the first time, 100% success rate on all tasks in the
+  original CARLA benchmark, sets a new record on the NoCrash benchmark, and
+  reduces the frequency of infractions by an order of magnitude compared to the
+  prior state of the art. For the video that summarizes this work, see
+  https://youtu.be/u9ZCxxD-UUw%
+    }
+    \verb{eprint}
+    \verb 1912.12294
+    \endverb
+    \field{title}{Learning by Cheating}
+    \verb{file}
+    \verb :Chen2019 - Learning by Cheating.pdf:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.RO}
+    \field{month}{12}
+    \field{year}{2019}
+  \endentry
+
+  \entry{Chitta2021}{article}{}
+    \name{author}{3}{}{%
+      {{hash=CK}{%
+         family={Chitta},
+         familyi={C\bibinitperiod},
+         given={Kashyap},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=PA}{%
+         family={Prakash},
+         familyi={P\bibinitperiod},
+         given={Aditya},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=GA}{%
+         family={Geiger},
+         familyi={G\bibinitperiod},
+         given={Andreas},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.CV, cs.AI, cs.LG, cs.RO}
+    \strng{namehash}{CKPAGA1}
+    \strng{fullhash}{CKPAGA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{abstract}{%
+    Efficient reasoning about the semantic, spatial, and temporal structure of
+  a scene is a crucial prerequisite for autonomous driving. We present NEural
+  ATtention fields (NEAT), a novel representation that enables such reasoning
+  for end-to-end imitation learning models. NEAT is a continuous function which
+  maps locations in Bird's Eye View (BEV) scene coordinates to waypoints and
+  semantics, using intermediate attention maps to iteratively compress
+  high-dimensional 2D image features into a compact representation. This allows
+  our model to selectively attend to relevant regions in the input while
+  ignoring information irrelevant to the driving task, effectively associating
+  the images with the BEV representation. In a new evaluation setting involving
+  adverse environmental conditions and challenging scenarios, NEAT outperforms
+  several strong baselines and achieves driving scores on par with the
+  privileged CARLA expert used to generate its training data. Furthermore,
+  visualizing the attention maps for models with NEAT intermediate
+  representations provides improved interpretability.%
+    }
+    \verb{eprint}
+    \verb 2109.04456
+    \endverb
+    \field{title}{NEAT: Neural Attention Fields for End-to-End Autonomous
+  Driving}
+    \verb{file}
+    \verb :Chitta2021 - NEAT_ Neural Attention Fields for End to End Autonomous
+    \verb  Driving.pdf:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{month}{09}
+    \field{year}{2021}
+  \endentry
+
+  \entry{Cho2014}{article}{}
+    \name{author}{7}{}{%
+      {{hash=CK}{%
+         family={Cho},
+         familyi={C\bibinitperiod},
+         given={Kyunghyun},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=vMB}{%
+         prefix={van},
+         prefixi={v\bibinitperiod},
+         family={Merrienboer},
+         familyi={M\bibinitperiod},
+         given={Bart},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=GC}{%
+         family={Gulcehre},
+         familyi={G\bibinitperiod},
+         given={Caglar},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=BD}{%
+         family={Bahdanau},
+         familyi={B\bibinitperiod},
+         given={Dzmitry},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=BF}{%
+         family={Bougares},
+         familyi={B\bibinitperiod},
+         given={Fethi},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=SH}{%
+         family={Schwenk},
+         familyi={S\bibinitperiod},
+         given={Holger},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=BY}{%
+         family={Bengio},
+         familyi={B\bibinitperiod},
+         given={Yoshua},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.CL, cs.LG, cs.NE, stat.ML}
+    \strng{namehash}{CK+1}
+    \strng{fullhash}{CKMBvGCBDBFSHBY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{abstract}{%
+    In this paper, we propose a novel neural network model called RNN
+  Encoder-Decoder that consists of two recurrent neural networks (RNN). One RNN
+  encodes a sequence of symbols into a fixed-length vector representation, and
+  the other decodes the representation into another sequence of symbols. The
+  encoder and decoder of the proposed model are jointly trained to maximize the
+  conditional probability of a target sequence given a source sequence. The
+  performance of a statistical machine translation system is empirically found
+  to improve by using the conditional probabilities of phrase pairs computed by
+  the RNN Encoder-Decoder as an additional feature in the existing log-linear
+  model. Qualitatively, we show that the proposed model learns a semantically
+  and syntactically meaningful representation of linguistic phrases.%
+    }
+    \verb{eprint}
+    \verb 1406.1078
+    \endverb
+    \field{title}{Learning Phrase Representations using RNN Encoder-Decoder for
+  Statistical Machine Translation}
+    \verb{file}
+    \verb :http\://arxiv.org/pdf/1406.1078v3:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CL}
+    \field{month}{06}
+    \field{year}{2014}
+  \endentry
+
+  \entry{Codevilla2019}{article}{}
+    \name{author}{4}{}{%
+      {{hash=CF}{%
+         family={Codevilla},
+         familyi={C\bibinitperiod},
+         given={Felipe},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=SE}{%
+         family={Santana},
+         familyi={S\bibinitperiod},
+         given={Eder},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=LAM}{%
+         family={López},
+         familyi={L\bibinitperiod},
+         given={Antonio\bibnamedelima M.},
+         giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=GA}{%
+         family={Gaidon},
+         familyi={G\bibinitperiod},
+         given={Adrien},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.CV, cs.AI}
+    \strng{namehash}{CF+1}
+    \strng{fullhash}{CFSELAMGA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{abstract}{%
+    Driving requires reacting to a wide variety of complex environment
+  conditions and agent behaviors. Explicitly modeling each possible scenario is
+  unrealistic. In contrast, imitation learning can, in theory, leverage data
+  from large fleets of human-driven cars. Behavior cloning in particular has
+  been successfully used to learn simple visuomotor policies end-to-end, but
+  scaling to the full spectrum of driving behaviors remains an unsolved
+  problem. In this paper, we propose a new benchmark to experimentally
+  investigate the scalability and limitations of behavior cloning. We show that
+  behavior cloning leads to state-of-the-art results, including in unseen
+  environments, executing complex lateral and longitudinal maneuvers without
+  these reactions being explicitly programmed. However, we confirm well-known
+  limitations (due to dataset bias and overfitting), new generalization issues
+  (due to dynamic objects and the lack of a causal model), and training
+  instability requiring further research before behavior cloning can graduate
+  to real-world driving. The code of the studied behavior cloning approaches
+  can be found at https://github.com/felipecode/coiltraine .%
+    }
+    \verb{eprint}
+    \verb 1904.08980
+    \endverb
+    \field{title}{Exploring the Limitations of Behavior Cloning for Autonomous
+  Driving}
+    \verb{file}
+    \verb :Codevilla2019 - Exploring the Limitations of Behavior Cloning for Au
+    \verb tonomous Driving.pdf:PDF;:http\://arxiv.org/pdf/1904.08980v1:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{month}{04}
+    \field{year}{2019}
+  \endentry
+
+  \entry{Filos2020}{article}{}
+    \name{author}{6}{}{%
+      {{hash=FA}{%
+         family={Filos},
+         familyi={F\bibinitperiod},
+         given={Angelos},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=TP}{%
+         family={Tigas},
+         familyi={T\bibinitperiod},
+         given={Panagiotis},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=MR}{%
+         family={McAllister},
+         familyi={M\bibinitperiod},
+         given={Rowan},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=RN}{%
+         family={Rhinehart},
+         familyi={R\bibinitperiod},
+         given={Nicholas},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=LS}{%
+         family={Levine},
+         familyi={L\bibinitperiod},
+         given={Sergey},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=GY}{%
+         family={Gal},
+         familyi={G\bibinitperiod},
+         given={Yarin},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.LG, cs.RO, stat.ML}
+    \strng{namehash}{FA+1}
+    \strng{fullhash}{FATPMRRNLSGY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{abstract}{%
+    Out-of-training-distribution (OOD) scenarios are a common challenge of
+  learning agents at deployment, typically leading to arbitrary deductions and
+  poorly-informed decisions. In principle, detection of and adaptation to OOD
+  scenes can mitigate their adverse effects. In this paper, we highlight the
+  limitations of current approaches to novel driving scenes and propose an
+  epistemic uncertainty-aware planning method, called \emph{robust imitative
+  planning} (RIP). Our method can detect and recover from some distribution
+  shifts, reducing the overconfident and catastrophic extrapolations in OOD
+  scenes. If the model's uncertainty is too great to suggest a safe course of
+  action, the model can instead query the expert driver for feedback, enabling
+  sample-efficient online adaptation, a variant of our method we term
+  \emph{adaptive robust imitative planning} (AdaRIP). Our methods outperform
+  current state-of-the-art approaches in the nuScenes \emph{prediction}
+  challenge, but since no benchmark evaluating OOD detection and adaption
+  currently exists to assess \emph{control}, we introduce an autonomous car
+  novel-scene benchmark, \texttt{CARNOVEL}, to evaluate the robustness of
+  driving agents to a suite of tasks with distribution shifts.%
+    }
+    \verb{eprint}
+    \verb 2006.14911
+    \endverb
+    \field{title}{Can Autonomous Vehicles Identify, Recover From, and Adapt to
+  Distribution Shifts?}
+    \verb{file}
+    \verb :http\://arxiv.org/pdf/2006.14911v2:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.LG}
+    \field{month}{06}
+    \field{year}{2020}
+  \endentry
+
+  \entry{Fischer2015}{article}{}
+    \name{author}{9}{}{%
+      {{hash=FP}{%
+         family={Fischer},
+         familyi={F\bibinitperiod},
+         given={Philipp},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=DA}{%
+         family={Dosovitskiy},
+         familyi={D\bibinitperiod},
+         given={Alexey},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=IE}{%
+         family={Ilg},
+         familyi={I\bibinitperiod},
+         given={Eddy},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=HP}{%
+         family={Häusser},
+         familyi={H\bibinitperiod},
+         given={Philip},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=HC}{%
+         family={Hazırbaş},
+         familyi={H\bibinitperiod},
+         given={Caner},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=GV}{%
+         family={Golkov},
+         familyi={G\bibinitperiod},
+         given={Vladimir},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=vdSP}{%
+         prefix={van\bibnamedelima der},
+         prefixi={v\bibinitperiod\bibinitdelim d\bibinitperiod},
+         family={Smagt},
+         familyi={S\bibinitperiod},
+         given={Patrick},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=CD}{%
+         family={Cremers},
+         familyi={C\bibinitperiod},
+         given={Daniel},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=BT}{%
+         family={Brox},
+         familyi={B\bibinitperiod},
+         given={Thomas},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.CV, cs.LG, I.2.6; I.4.8}
+    \strng{namehash}{FP+1}
+    \strng{fullhash}{FPDAIEHPHCGVSPvdCDBT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{abstract}{%
+    Convolutional neural networks (CNNs) have recently been very successful in
+  a variety of computer vision tasks, especially on those linked to
+  recognition. Optical flow estimation has not been among the tasks where CNNs
+  were successful. In this paper we construct appropriate CNNs which are
+  capable of solving the optical flow estimation problem as a supervised
+  learning task. We propose and compare two architectures: a generic
+  architecture and another one including a layer that correlates feature
+  vectors at different image locations. Since existing ground truth data sets
+  are not sufficiently large to train a CNN, we generate a synthetic Flying
+  Chairs dataset. We show that networks trained on this unrealistic data still
+  generalize very well to existing datasets such as Sintel and KITTI, achieving
+  competitive accuracy at frame rates of 5 to 10 fps.%
+    }
+    \verb{eprint}
+    \verb 1504.06852
+    \endverb
+    \field{title}{FlowNet: Learning Optical Flow with Convolutional Networks}
+    \verb{file}
+    \verb :http\://arxiv.org/pdf/1504.06852v2:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{month}{04}
+    \field{year}{2015}
+  \endentry
+
+  \entry{Mueller2018}{article}{}
+    \name{author}{4}{}{%
+      {{hash=MM}{%
+         family={Müller},
+         familyi={M\bibinitperiod},
+         given={Matthias},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=DA}{%
+         family={Dosovitskiy},
+         familyi={D\bibinitperiod},
+         given={Alexey},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=GB}{%
+         family={Ghanem},
+         familyi={G\bibinitperiod},
+         given={Bernard},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=KV}{%
+         family={Koltun},
+         familyi={K\bibinitperiod},
+         given={Vladlen},
+         giveni={V\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.RO, cs.CV, cs.LG}
+    \strng{namehash}{MM+1}
+    \strng{fullhash}{MMDAGBKV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{abstract}{%
+    End-to-end approaches to autonomous driving have high sample complexity and
+  are difficult to scale to realistic urban driving. Simulation can help
+  end-to-end driving systems by providing a cheap, safe, and diverse training
+  environment. Yet training driving policies in simulation brings up the
+  problem of transferring such policies to the real world. We present an
+  approach to transferring driving policies from simulation to reality via
+  modularity and abstraction. Our approach is inspired by classic driving
+  systems and aims to combine the benefits of modular architectures and
+  end-to-end deep learning approaches. The key idea is to encapsulate the
+  driving policy such that it is not directly exposed to raw perceptual input
+  or low-level vehicle dynamics. We evaluate the presented approach in
+  simulated urban environments and in the real world. In particular, we
+  transfer a driving policy trained in simulation to a 1/5-scale robotic truck
+  that is deployed in a variety of conditions, with no finetuning, on two
+  continents. The supplementary video can be viewed at
+  https://youtu.be/BrMDJqI6H5U%
+    }
+    \verb{eprint}
+    \verb 1804.09364
+    \endverb
+    \field{title}{Driving Policy Transfer via Modularity and Abstraction}
+    \verb{file}
+    \verb :http\://arxiv.org/pdf/1804.09364v3:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.RO}
+    \field{month}{04}
+    \field{year}{2018}
+  \endentry
+
+  \entry{Wang2017}{article}{}
+    \name{author}{4}{}{%
+      {{hash=WS}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Sen},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=CR}{%
+         family={Clark},
+         familyi={C\bibinitperiod},
+         given={Ronald},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=WH}{%
+         family={Wen},
+         familyi={W\bibinitperiod},
+         given={Hongkai},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=TN}{%
+         family={Trigoni},
+         familyi={T\bibinitperiod},
+         given={Niki},
+         giveni={N\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.CV, cs.RO}
+    \strng{namehash}{WS+1}
+    \strng{fullhash}{WSCRWHTN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{abstract}{%
+    This paper studies monocular visual odometry (VO) problem. Most of existing
+  VO algorithms are developed under a standard pipeline including feature
+  extraction, feature matching, motion estimation, local optimisation, etc.
+  Although some of them have demonstrated superior performance, they usually
+  need to be carefully designed and specifically fine-tuned to work well in
+  different environments. Some prior knowledge is also required to recover an
+  absolute scale for monocular VO. This paper presents a novel end-to-end
+  framework for monocular VO by using deep Recurrent Convolutional Neural
+  Networks (RCNNs). Since it is trained and deployed in an end-to-end manner,
+  it infers poses directly from a sequence of raw RGB images (videos) without
+  adopting any module in the conventional VO pipeline. Based on the RCNNs, it
+  not only automatically learns effective feature representation for the VO
+  problem through Convolutional Neural Networks, but also implicitly models
+  sequential dynamics and relations using deep Recurrent Neural Networks.
+  Extensive experiments on the KITTI VO dataset show competitive performance to
+  state-of-the-art methods, verifying that the end-to-end Deep Learning
+  technique can be a viable complement to the traditional VO systems.%
+    }
+    \verb{doi}
+    \verb 10.1109/ICRA.2017.7989236
+    \endverb
+    \verb{eprint}
+    \verb 1709.08429
+    \endverb
+    \field{title}{DeepVO: Towards End-to-End Visual Odometry with Deep
+  Recurrent Convolutional Neural Networks}
+    \verb{file}
+    \verb :Wang2017 - DeepVO_ Towards End to End Visual Odometry with Deep Recu
+    \verb rrent Convolutional Neural Networks.pdf:PDF;:http\://arxiv.org/pdf/17
+    \verb 09.08429v1:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{month}{09}
+    \field{year}{2017}
+  \endentry
+
+  \entry{Zhai2019}{article}{}
+    \name{author}{4}{}{%
+      {{hash=ZG}{%
+         family={Zhai},
+         familyi={Z\bibinitperiod},
+         given={Guangyao},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=LL}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Liang},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=ZL}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Linjian},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=LY}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Yong},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.CV, cs.LG, eess.IV}
+    \strng{namehash}{ZG+1}
+    \strng{fullhash}{ZGLLZLLY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{Z}
+    \field{sortinithash}{Z}
+    \field{abstract}{%
+    While many visual ego-motion algorithm variants have been proposed in the
+  past decade, learning based ego-motion estimation methods have seen an
+  increasing attention because of its desirable properties of robustness to
+  image noise and camera calibration independence. In this work, we propose a
+  data-driven approach of fully trainable visual ego-motion estimation for a
+  monocular camera. We use an end-to-end learning approach in allowing the
+  model to map directly from input image pairs to an estimate of ego-motion
+  (parameterized as 6-DoF transformation matrices). We introduce a novel
+  two-module Long-term Recurrent Convolutional Neural Networks called
+  PoseConvGRU, with an explicit sequence pose estimation loss to achieve this.
+  The feature-encoding module encodes the short-term motion feature in an image
+  pair, while the memory-propagating module captures the long-term motion
+  feature in the consecutive image pairs. The visual memory is implemented with
+  convolutional gated recurrent units, which allows propagating information
+  over time. At each time step, two consecutive RGB images are stacked together
+  to form a 6 channels tensor for module-1 to learn how to extract motion
+  information and estimate poses. The sequence of output maps is then passed
+  through a stacked ConvGRU module to generate the relative transformation pose
+  of each image pair. We also augment the training data by randomly skipping
+  frames to simulate the velocity variation which results in a better
+  performance in turning and high-velocity situations. We evaluate the
+  performance of our proposed approach on the KITTI Visual Odometry benchmark.
+  The experiments show a competitive performance of the proposed method to the
+  geometric method and encourage further exploration of learning based methods
+  for the purpose of estimating camera ego-motion even though geometrical
+  methods demonstrate promising results.%
+    }
+    \verb{eprint}
+    \verb 1906.08095
+    \endverb
+    \field{title}{PoseConvGRU: A Monocular Approach for Visual Ego-motion
+  Estimation by Learning}
+    \verb{file}
+    \verb :Zhai2019 - PoseConvGRU_ a Monocular Approach for Visual Ego Motion E
+    \verb stimation by Learning.pdf:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{month}{06}
+    \field{year}{2019}
+  \endentry
+\enddatalist
+\endinput
