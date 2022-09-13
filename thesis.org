@@ -21,6 +21,8 @@
 #+BEGIN_SRC emacs-lisp :exports none :results none
   (org-latex-export-to-latex)
   (shell-command-to-string (concat "de-macro " (file-name-base (buffer-file-name)) ".tex && latexmk -bibtex-cond1 -pdflua " (file-name-base (buffer-file-name)) "-clean.tex"))
+  (shell-command-to-string "git add . && git commit -a -m \"initial commit\" && git push
+")
   #+END_SRC
 
 #+BEGIN_COMMENT
