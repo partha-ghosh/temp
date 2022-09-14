@@ -1,4 +1,4 @@
-% Created 2022-09-13 Tue 23:09
+% Created 2022-09-14 Wed 13:50
 % Intended LaTeX compiler: lualatex
 \documentclass[letterpaper, 12pt]{article}
 \usepackage{graphicx}
@@ -73,11 +73,11 @@
 
 
 \section*{Abstract}
-\label{sec:org42b30e6}
+\label{sec:org9c5e36d}
 \clearpage 
 
 \section*{Acknowledgements}
-\label{sec:orge316623}
+\label{sec:org250a043}
 I want to thank Bernhard Jaeger and Katrin Renz for supervising the project
 and providing me with the necessary guidance and valuable support. I want to
 thank Prof. Andreas Geiger for the helpful discussions. Finally, I want to
@@ -90,7 +90,7 @@ and encouragement throughout my entire life.
 \clearpage \tableofcontents \clearpage
 
 \section{Introduction}
-\label{sec:orgeefd681}
+\label{sec:orgcdbd97f}
 Autonomous vehicles are a promising technical solution to important problems in
 transportation. Every year more than a million people die due to traffic accidents
 [1] primarily caused by human error [2]. Automating driving has the potential to
@@ -177,48 +177,48 @@ In summary, the main contributions of this work are:
 \end{itemize}
 
 We organize the structure of the thesis as follows. We first provide an overview
-of the learning-based pipeline in SAP and its limitations in Section \ref{org074fe3a}. We
-then introduce details of our methodology in Section \ref{orgcb46f01}, followed by the
+of the learning-based pipeline in SAP and its limitations in Section \ref{org98b1f5b}. We
+then introduce details of our methodology in Section \ref{org6f4e83b}, followed by the
 description of the baseline methods and the effectiveness of our proposed model
 compared to the baselines both quantitatively and qualitatively in Section
-\ref{org79829d8}.
+\ref{org68ea1bd}.
 
 
-\section{Related Work \label{org074fe3a}}
-\label{sec:orgd5ac5ec}
+\section{Related Work \label{org98b1f5b}}
+\label{sec:org517cf44}
 \subsection{Self-supervised Learning}
-\label{sec:org5d98605}
+\label{sec:org43b4a64}
 
 \subsubsection{Emerging Properties in Self-Supervised Vision Transformers}
-\label{sec:org3b2375f}
+\label{sec:orgace5eb0}
 
 \subsubsection{Exploring Simple Siamese Representation Learning}
-\label{sec:orgc26e2c2}
+\label{sec:orgdcf3c5c}
 
 \subsubsection{Momentum Contrast for Unsupervised Visual Representation Learning}
-\label{sec:org186555b}
+\label{sec:org42e4718}
 
 \subsubsection{Self-training with Noisy Student improves ImageNet classification}
-\label{sec:org65d1418}
+\label{sec:org5eac685}
 \subsection{Self-supervised Learning in Autonomous Driving}
-\label{sec:orgcc4866c}
+\label{sec:org8c265a4}
 
 \subsubsection{SelfD: Self-Learning Large-Scale Driving Policies From the Web}
-\label{sec:org56d4187}
+\label{sec:org09519a7}
 
 \subsubsection{Offline Visual Representation Learning for Embodied Navigation}
-\label{sec:org548eccd}
+\label{sec:org0d8d72d}
 
 \subsubsection{Action-Conditioned Contrastive Policy Pretraining}
-\label{sec:orge44a748}
+\label{sec:orgd8539b9}
 
-\section{Method \label{orgcb46f01}}
-\label{sec:org84f9401}
+\section{Method \label{org6f4e83b}}
+\label{sec:orge10ef9f}
 Our goal is to facilitate training driving policies at scale.
 
 
-\subsection{Problem Setting \label{org2b0df1b}}
-\label{sec:org474d5b3}
+\subsection{Problem Setting \label{org1b9717d}}
+\label{sec:org41374a1}
 We consider the task of point-to-point navigation in an urban setting where
 the goal is to complete a given route while safely reacting to other dynamic
 agents and following traffic rules. To achieve this, we consider the imitation
@@ -268,10 +268,10 @@ high-level goal locations G are pro- vided as GPS coordinates. Note that
 these goal locations are sparse and can be hundreds of meters apart, as
 opposed to the local waypoints predicted by the policy π .
 \sout{For one of the self-supervised learning methods, we will slightly augment
-the output space of this function in Section} \ref{org27e88c9}.
+the output space of this function in Section} \ref{org89c5fc9}.
 
 \subsection{Input and Output Parameterization}
-\label{sec:orgfe3415d}
+\label{sec:org11ee5bc}
 Input Representation: Following [45, 23], we convert the
 LiDAR point cloud into a 2-bin histogram over a 2D BEV
 grid with a fixed resolution. We consider the points within
@@ -293,8 +293,8 @@ sented by a sequence of 2D waypoints, \{wt = (xt , yt )\}Tt=1 .
 We use T = 4, which is the default number of waypoints
 required by our inverse dynamics model.
 
-\subsection{Waypoint Prediction Network \label{org27e88c9}}
-\label{sec:org49c1e5b}
+\subsection{Waypoint Prediction Network \label{org89c5fc9}}
+\label{sec:org329a454}
 As shown in \sout{Fig. 2}, we pass the 512-dimensional feature vector through an MLP
 (comprising 2 hidden layers with 256 and 128 units) to reduce its dimensionality
 to 64 for computational efficiency before passing it to the auto-regressive
@@ -302,7 +302,7 @@ waypoint network implemented using GRUs \cite{Cho2014}. We initialize the hidden
 state of the GRU with the 64-dimensional feature vector. The update gate of the
 GRU controls the flow of information encoded in the hidden state to the output
 and the next time-step. It also takes in the current position and the goal
-location (Section \ref{org2b0df1b}) as input, which allows the network to focus
+location (Section \ref{org1b9717d}) as input, which allows the network to focus
 on the relevant context in the hidden state for predicting the next waypoint.
 We provide the GPS coordinates of the goal location (transformed to the
 ego-vehicle coordinate frame) as input to the GRU rather than the encoder since
@@ -324,14 +324,14 @@ time-steps whereas the lateral controller takes in their orientation. For the
 PID controllers, we use the same configuration as in the author-provided
 codebase of \cite{Chen2019}. Implementation de- tails can be found in the supplementary.
 \subsection{Self-supervised Approaches}
-\label{sec:orge71d24c}
+\label{sec:orga5fdd80}
 In this section we will introduce our proposed method and also explore some
 prior works in our self-driving framework.
 
 \subsubsection{Learning with Pseudolabels}
-\label{sec:orgfa68275}
+\label{sec:org997de47}
 \subsubsection{Deep Visual Odometry}
-\label{sec:org55d7f3f}
+\label{sec:orgc40839c}
 In this section, we will introduce our proposed method for self-supervised
 learning for autonomous driving. Our key idea is to generate pseudo-labels for
 unlabeled driving scenes by exploiting a learning-based ego-motion estimation
@@ -363,13 +363,22 @@ this is that, having small receptive field in the first 2 layers encourages the
 network to learn about the fine-grained geometric details in the pair of images
 which is essential for relative motion estimation. On the other hand, the large
 receptive field in the later layers enforces the network to ignore the global
-context and also helps in reducing the number of learnable parameters as well.
+context and also helps in reducing the number of learnable parameters as
+well. The input to the CNN are a sequence of \(n+1\), \(256 \x 256\) RGB driving
+scenes from CARLA. With \(n+1\) sequential driving scenes, we can obtain \(n\)
+sets of image pairs taking two adjacent frames at a time. These image pairs are
+then fed to the 5-layered CNN to obtain a feature maps of size \(1 \x 1 \x
+1024\) for each image pair. Contrary to the typical training process with
+augmented data for CNN, for accurate relative motion estimation, we only use the
+original images, because performing any pre-processing operation to the images
+such as blurring, adding noise, random clipping etc., could hamper the network
+to learn the geometric relationship of the objects in the images.
 
 
 The feature-encoding module
 encodes the short-term motion feature in an image pair, while the memory-
 propagating module captures the long-term motion feature in the consecutive
-image pairs.The visual memory is implemented with convolutional gated re-
+image pairs. The visual memory is implemented with convolutional gated re-
 current units, which allows propagating information over time. At each time
 step, two consecutive RGB images are stacked together to form a 6 channels
 tensor for module-1 to learn how to extract motion information and estimate
@@ -403,18 +412,18 @@ the downstream task.
 it also predicts
 accurate ego-motion estimation, 
 \subsubsection{SelfD}
-\label{sec:orgdcd8b7f}
+\label{sec:org949ae87}
 In this section we will discuss the pri
 \subsubsection{Self-supervised Representation Learning}
-\label{sec:org2eb2d5d}
+\label{sec:orgea3b7ee}
 \begin{enumerate}
 \item Action Conditioned Policy Pretraining
-\label{sec:org43c17fb}
+\label{sec:org20fee42}
 \item DINO
-\label{sec:org28e5a04}
+\label{sec:org9119f31}
 \end{enumerate}
 \subsection{Loss Function}
-\label{sec:org3619825}
+\label{sec:orgf3e20a4}
 Following [8], we train the network using an L1 loss be-
 tween the predicted waypoints and the ground truth way-
 points (from the expert), registered to the current coordi-
@@ -433,10 +442,10 @@ Note that the ground truth waypoints \{wtgt \} which are avail-
 able only at training time are different from the sparse goal
 locations G provided at both training and test time.
 \subsection{Implementation Details}
-\label{sec:orgf73ca7b}
+\label{sec:orgf2fccd9}
 
 \subsubsection{Input and Output Parameterization}
-\label{sec:orgded5797}
+\label{sec:org80afd59}
 Input Representation: Following [45, 23], we convert the
 LiDAR point cloud into a 2-bin histogram over a 2D BEV
 grid with a fixed resolution. We consider the points within
@@ -459,17 +468,17 @@ We use T = 4, which is the default number of waypoints
 required by our inverse dynamics model.
 
 \subsubsection{Dataset}
-\label{sec:orgda20bae}
+\label{sec:org727e443}
 
-\subsubsection{Data Preprocessing Pipeline \label{org28c4336}}
-\label{sec:org1a2390d}
+\subsubsection{Data Preprocessing Pipeline \label{org0ab9e19}}
+\label{sec:org1df56e0}
 
 
 \subsubsection{Training and Inference}
-\label{sec:orgbc7447e}
+\label{sec:orgbe4e60a}
 
-\section{Experimental Results \label{org79829d8}}
-\label{sec:orge956a23}
+\section{Experimental Results \label{org68ea1bd}}
+\label{sec:orgc16c6aa}
 
 In this section, we describe our experimental setup, com-
 pare the driving performance of our approach against sev-
@@ -479,7 +488,7 @@ Fuser and present an ablation study to highlight the impor-
 tance of different components of our model.
 
 \subsection{Task}
-\label{sec:org0ee386b}
+\label{sec:org9ded237}
 We consider the task of navigation along a set of
 predefined routes in a variety of areas, e.g. freeways, urban
 areas, and residential districts. The routes are defined by a
@@ -534,36 +543,31 @@ the street.
 
 
 \subsection{Dataset}
-\label{sec:orge49775b}
-We use the CARLA [21] simulator for training
-and testing, specifically CARLA 0.9.10 which consists of
-8 publicly available towns. We use 7 towns for training
-and hold out Town05 for evaluation. For generating train-
-ing data, we roll out an expert policy designed to drive us-
-ing privileged information from the simulation and store
-data at 2FPS. Please refer to the supplementary material
-for additional details. We select Town05 for evaluation
-due to the large diversity in drivable regions compared to
-other CARLA towns, e.g. multi-lane and single-lane roads,
-highways and exits, bridges and underpasses. We consider
-two evaluation settings: (1) Town05 Short: 10 short routes
-of 100-500m comprising 3 intersections each, (2) Town05
-Long: 10 long routes of 1000-2000m comprising 10 inter-
-sections each. Each route consists of a high density of dy-
-namic agents and adversarial scenarios which are spawned
-at predefined positions along the route. Since we focus on
-handling dynamic agents and adversarial scenarios, we de-
-couple this aspect from generalization across weather con-
-ditions and evaluate only on ClearNoon weather.
-\subsection{Evaluation Metrics \label{orge3f31f2}}
-\label{sec:orgd7dfc4f}
+\label{sec:orgbe0c961}
+We use the CARLA \cite{Dosovitskiy2017} simulator for training and testing,
+specifically CARLA 0.9.10 which consists of 8 publicly available towns. We use 7
+towns for training and hold out Town05 for evaluation. For generating training
+data, we roll out an expert policy designed to drive using privileged
+information from the simulation and store data at 2 FPS. Please refer to the
+supplementary material for additional details. We select Town05 for evaluation
+due to the large diversity in drivable regions compared to other CARLA towns,
+e.g. multi-lane and single-lane roads, highways and exits, bridges and
+underpasses. We consider two evaluation settings: (1) Town05 Short: 10 short
+routes of 100-500m comprising 3 intersections each, (2) Town05 Long: 10 long
+routes of 1000-2000m comprising 10 intersections each. Each route consists of
+a high density of dynamic agents and adversarial scenarios which are spawned
+at predefined positions along the route. Since we focus on handling dynamic
+agents and adversarial scenarios, we decouple this aspect from generalization
+across weather conditions and evaluate only on ClearNoon weather.
+\subsection{Evaluation Metrics \label{org69f38ec}}
+\label{sec:org9187805}
 For the CARLA Autonomous Driving Leaderboard, the driving performance of an
 agent is characterized by a set of chosen metrics that considers different
 aspects of driving. While all routes have the same type of metrics, their
 respective values are calculated separately. These metrics are as follows:
 
 \subsubsection{Route Completion}
-\label{sec:orgaa6f3ff}
+\label{sec:orgef08b4c}
 Route Completion is the percentage of the route that is completed by an
 agent. If an agent drives off-road, that percentage of the route will not be
 considered towards the computation of the route completion score. Additionally,
@@ -578,7 +582,7 @@ continue which will effectively reduce the route completion:
 \end{itemize}
 
 \subsubsection{Infraction Score}
-\label{sec:org7d3e26e}
+\label{sec:orgcd4125d}
 Infraction Score is a penalty for infractions where the agent starts with
 an ideal base score of 1.0. For every infraction, the score is multiplied by the
 penalty coefficient of that infraction type. Ordered by their severity, the
@@ -594,7 +598,7 @@ Note that this means that subsequent infractions will have a lower impact due to
 multiplicative nature of the score.
 
 \subsubsection{Driving Score}
-\label{sec:org38f07b9}
+\label{sec:org4f54dab}
 Driving Score is the main metric for performance, serving as the product between
 the route completion and the infractions penalty. It is calculated in the
 following way: \[\tx{Driving Score}=\q1N\sum_{i=1}^{N}R_{i}P_{i}\] where \(N\) is the
@@ -606,13 +610,13 @@ score is 100 and the worst score is 0. For the validation routes, we run them
 with 3 different seeds and report the mean and standard deviation of the 3
 scores averaged across the routes.
 
-\subsection{Comparisons to the Baselines Methods \label{orgaf30037}}
-\label{sec:orgcce4980}
+\subsection{Comparisons to the Baselines Methods \label{org93b433b}}
+\label{sec:orgbe4c706}
 \subsection{Ablation Studies}
-\label{sec:orgc204e24}
+\label{sec:org12dd458}
 
 \section{Conclusion}
-\label{sec:orgae0d496}
+\label{sec:orgb66cace}
 
 We envision broad and easily deployable autonomous navigation systems. However,
 access to resources and data limits the scope of the brittle autonomous systems

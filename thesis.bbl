@@ -325,6 +325,75 @@
     \field{year}{2019}
   \endentry
 
+  \entry{Dosovitskiy2017}{article}{}
+    \name{author}{5}{}{%
+      {{hash=DA}{%
+         family={Dosovitskiy},
+         familyi={D\bibinitperiod},
+         given={Alexey},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=RG}{%
+         family={Ros},
+         familyi={R\bibinitperiod},
+         given={German},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=CF}{%
+         family={Codevilla},
+         familyi={C\bibinitperiod},
+         given={Felipe},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=LA}{%
+         family={Lopez},
+         familyi={L\bibinitperiod},
+         given={Antonio},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=KV}{%
+         family={Koltun},
+         familyi={K\bibinitperiod},
+         given={Vladlen},
+         giveni={V\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.LG, cs.AI, cs.CV, cs.RO}
+    \strng{namehash}{DA+1}
+    \strng{fullhash}{DARGCFLAKV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{abstract}{%
+    We introduce CARLA, an open-source simulator for autonomous driving
+  research. CARLA has been developed from the ground up to support development,
+  training, and validation of autonomous urban driving systems. In addition to
+  open-source code and protocols, CARLA provides open digital assets (urban
+  layouts, buildings, vehicles) that were created for this purpose and can be
+  used freely. The simulation platform supports flexible specification of
+  sensor suites and environmental conditions. We use CARLA to study the
+  performance of three approaches to autonomous driving: a classic modular
+  pipeline, an end-to-end model trained via imitation learning, and an
+  end-to-end model trained via reinforcement learning. The approaches are
+  evaluated in controlled scenarios of increasing difficulty, and their
+  performance is examined via metrics provided by CARLA, illustrating the
+  platform's utility for autonomous driving research. The supplementary video
+  can be viewed at https://youtu.be/Hp8Dz-Zek2E%
+    }
+    \verb{eprint}
+    \verb 1711.03938
+    \endverb
+    \field{title}{CARLA: An Open Urban Driving Simulator}
+    \verb{file}
+    \verb :http\://arxiv.org/pdf/1711.03938v1:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.LG}
+    \field{month}{11}
+    \field{year}{2017}
+  \endentry
+
   \entry{Filos2020}{article}{}
     \name{author}{6}{}{%
       {{hash=FA}{%

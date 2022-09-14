@@ -21,9 +21,7 @@
 #+BEGIN_SRC emacs-lisp :exports none :results none
   (org-latex-export-to-latex)
   (shell-command-to-string (concat "de-macro " (file-name-base (buffer-file-name)) ".tex && latexmk -bibtex-cond1 -pdflua " (file-name-base (buffer-file-name)) "-clean.tex"))
-  (shell-command-to-string "git add . && git commit -a -m \"initial commit\" && git push
-")
-  #+END_SRC
+#+END_SRC
 
 #+BEGIN_COMMENT
 
@@ -611,8 +609,8 @@ and only focusing the on the convolutional encoder.
 
 \input{table/table1}
 
-Contrary to DeepVO \cite{Wang2017} and PoseConvGRU \cite{Zhai2019}, which uses a
-huge 10-layered CNN architechtures, we used a very simple and lightweight
+Contrary to DeepVO \cite{Wang2017} and PoseConvGRU \cite{Zhai2019}, which uses
+huge 10-layered CNN architechtures, we use a very simple and lightweight
 5-layered CNN architechture as shown in Table \ref{table1}. Each layer is
 followed by an application of ReLU nonlinear activation function. We keep the
 kernel size to 3, padding size to 1 for all the layers. The channel dimension
@@ -622,13 +620,23 @@ this is that, having small receptive field in the first 2 layers encourages the
 network to learn about the fine-grained geometric details in the pair of images
 which is essential for relative motion estimation. On the other hand, the large
 receptive field in the later layers enforces the network to ignore the global
-context and also helps in reducing the number of learnable parameters as well.
+context and also helps in reducing the number of learnable parameters as
+well. The input to the CNN are a sequence of \(n+1\), \(256 \x 256\) RGB driving
+scenes from CARLA. With \(n+1\) sequential driving scenes, we can obtain \(n\)
+sets of image pairs taking two adjacent frames at a time. These image pairs are
+then fed to the 5-layered CNN to obtain a feature maps of size \(1 \x 1 \x
+1024\) for each image pair. Contrary to the typical training process with
+augmented data for CNNs, we only use the original images for accurate relative
+motion estimation, because performing any pre-processing operation to the images
+such as blurring, adding noise, random clipping etc., can hamper the network to
+learn the geometric relationship of the objects in the images.
 
+*Memory-propagating Module:* 
 
 The feature-encoding module
 encodes the short-term motion feature in an image pair, while the memory-
 propagating module captures the long-term motion feature in the consecutive
-image pairs.The visual memory is implemented with convolutional gated re-
+image pairs. The visual memory is implemented with convolutional gated re-
 current units, which allows propagating information over time. At each time
 step, two consecutive RGB images are stacked together to form a 6 channels
 tensor for module-1 to learn how to extract motion information and estimate
@@ -782,26 +790,21 @@ scenarios specified:
 
   
 ** Dataset
-We use the CARLA [21] simulator for training
-and testing, specifically CARLA 0.9.10 which consists of
-8 publicly available towns. We use 7 towns for training
-and hold out Town05 for evaluation. For generating train-
-ing data, we roll out an expert policy designed to drive us-
-ing privileged information from the simulation and store
-data at 2FPS. Please refer to the supplementary material
-for additional details. We select Town05 for evaluation
-due to the large diversity in drivable regions compared to
-other CARLA towns, e.g. multi-lane and single-lane roads,
-highways and exits, bridges and underpasses. We consider
-two evaluation settings: (1) Town05 Short: 10 short routes
-of 100-500m comprising 3 intersections each, (2) Town05
-Long: 10 long routes of 1000-2000m comprising 10 inter-
-sections each. Each route consists of a high density of dy-
-namic agents and adversarial scenarios which are spawned
-at predefined positions along the route. Since we focus on
-handling dynamic agents and adversarial scenarios, we de-
-couple this aspect from generalization across weather con-
-ditions and evaluate only on ClearNoon weather.
+We use the CARLA \cite{Dosovitskiy2017} simulator for training and testing,
+specifically CARLA 0.9.10 which consists of 8 publicly available towns. We use 7
+towns for training and hold out Town05 for evaluation. For generating training
+data, we roll out an expert policy designed to drive using privileged
+information from the simulation and store data at 2 FPS. Please refer to the
+supplementary material for additional details. We select Town05 for evaluation
+due to the large diversity in drivable regions compared to other CARLA towns,
+e.g. multi-lane and single-lane roads, highways and exits, bridges and
+underpasses. We consider two evaluation settings: (1) Town05 Short: 10 short
+routes of 100-500m comprising 3 intersections each, (2) Town05 Long: 10 long
+routes of 1000-2000m comprising 10 intersections each. Each route consists of
+a high density of dynamic agents and adversarial scenarios which are spawned
+at predefined positions along the route. Since we focus on handling dynamic
+agents and adversarial scenarios, we decouple this aspect from generalization
+across weather conditions and evaluate only on ClearNoon weather.
 ** Evaluation Metrics <<metric>> 
 For the CARLA Autonomous Driving Leaderboard, the driving performance of an
 agent is characterized by a set of chosen metrics that considers different
