@@ -7,6 +7,7 @@
 #+DATE: 
 #+KEYWORDS:
 #+OPTIONS: toc:nil
+#+OPTIONS: H:5 num:t
 #+SETUPFILE: ~/Templates/org/headers.org
 #+LATEX_HEADER: \usepackage[left=3cm,right=3cm,top=3cm,bottom=4cm]{geometry}
 #+LATEX_HEADER: \usepackage[backend=bibtex]{biblatex}
@@ -18,9 +19,24 @@
 #+LATEX_HEADER: \sethlcolor{Goldenrod}\renewcommand{\sout}{\hl}
 #+LATEX_HEADER: \usepackage{fontspec}\setmainfont{Times New Roman}
 
+#+LATEX_HEADER: \makeatletter \newcommand\subsubsubsection{\@startsection{paragraph}{4}{\z@}{-2.5ex\@plus -1ex \@minus -.25ex}{1.25ex \@plus .25ex}{\normalfont\normalsize\bfseries}} \newcommand\subsubsubsubsection{\@startsection{subparagraph}{5}{\z@}{-2.5ex\@plus -1ex \@minus -.25ex}{1.25ex \@plus .25ex}{\normalfont\normalsize\bfseries}} \makeatother
+
+
+#+LATEX_HEADER: \setcounter{secnumdepth}{5} \setcounter{tocdepth}{10}
+
+#+LATEX_HEADER: \newcommand{\vth}{\v{\th}}
+
 #+BEGIN_SRC emacs-lisp :exports none :results none
   (org-latex-export-to-latex)
   (shell-command-to-string (concat "de-macro " (file-name-base (buffer-file-name)) ".tex && latexmk -bibtex-cond1 -pdflua " (file-name-base (buffer-file-name)) "-clean.tex"))
+  (add-to-list 'org-latex-classes
+             '("article"
+               "\\documentclass{article}"
+               ("\\section{%s}" . "\\section*{%s}")
+               ("\\subsection{%s}" . "\\subsection*{%s}")
+               ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+               ("\\subsubsubsection{%s}" . "\\subsubsubsection*{%s}")
+               ("\\subsubsubsubsection{%s}" . "\\subsubsubsubsection*{%s}")))
 #+END_SRC
 
 #+BEGIN_COMMENT
@@ -137,6 +153,11 @@ In this section we will describe our evaluation methodology, introduce the basel
 - Pedestrian coming after the vehicle already past and then collide with the
   vehicle, or ego-vehicle turns/chnages lane first but the car behind could not
   stop and therefore make a slight collision
+- Talk about why we didn't consider real dataset:
+  - the cause of high infraction score in the first 2 dataset is beacuse the red
+    lights are not visible
+  - in the pami datset they are visible but it uses middle crop -> the
+    corresponding crop from real data can be hard to obtain
 
 
 
@@ -375,7 +396,7 @@ In summary, the main contributions of this work are:
 # !Orgnaziation of the rest of the thesis:
 We organize the structure of the thesis as follows. We first provide an overview
 of the learning-based pipeline in SAP and its limitations in Section [[related_work]]. We
-then introduce details of our methodology in Section [[method]], followed by the
+then introduce details of our methodology in Section [[problem_setting]], followed by the
 description of the baseline methods and the effectiveness of our proposed model
 compared to the baselines both quantitatively and qualitatively in Section
 [[results]].
@@ -447,7 +468,7 @@ different task.[11]
 *** Action-Conditioned Contrastive Policy Pretraining
 
 **** COMMENT Content
-* Method <<method>>
+* Problem Setting <<problem_setting>>
 #+BEGIN_COMMENT
 2.1 Task Definition
 
@@ -528,11 +549,20 @@ a more robust and generalized vision-based navigation policy (Sec. 3.5).
    *Global Planner:* We follow the standard protocol of CARLA 0.9.10 and assume that
    high-level goal locations G are pro- vided as GPS coordinates. Note that
    these goal locations are sparse and can be hundreds of meters apart, as
-   opposed to the local waypoints predicted by the policy π .
+   opposed to the local waypoints predicted by the policy \(\pi_{\v{\th}}\).
    +For one of the self-supervised learning methods, we will slightly augment
    the output space of this function in Section+ [[wpn]].
    
 ** Input and Output Parameterization
+We note that, even though our collected expert demostrations +and the youtube
+driving videos+ are sequential, we do not use temporal data for
+training. Contrary to our intuition of getting better generalization in
+decision-making from sequential observations, the prior works on IL for
+autonomous driving have shown that using observation histories may not lead to
+performance gain \cite{Haan2019,Muller2006,Bansal2018,Wang2019a}. Thus, We use a
+single time-step input.
+
+
 Input Representation: Following [45, 23], we convert the
 LiDAR point cloud into a 2-bin histogram over a 2D BEV
 grid with a fixed resolution. We consider the points within
@@ -583,95 +613,6 @@ magnitude of a weighted average of the vectors between waypoints of consecutive
 time-steps whereas the lateral controller takes in their orientation. For the
 PID controllers, we use the same configuration as in the author-provided
 codebase of \cite{Chen2019}. Implementation de- tails can be found in the supplementary.
-** Self-supervised Approaches
-In this section we will introduce our proposed method and also explore some
-prior works in our self-driving framework.
-
-*** Learning with Pseudolabels
-*** Deep Visual Odometry
-In this section, we will introduce our proposed method for self-supervised
-learning for autonomous driving. Our key idea is to generate pseudo-labels for
-unlabeled driving scenes by exploiting a learning-based ego-motion estimation
-method because of its desirable properties of robustness to image noise and
-camera calibration independence. Moreover, in our expert driving dataset the
-weather conditions and the time of the day changes from frame to frame. For this
-reason learning-based method is the best way to estimate ego-motions than
-classical methods. We use an end-to-end learning approach following
-\cite{Wang2017, Zhai2019} to train the model to map directly from input image
-pairs to an estimate of ego-motion (in our use case, estimate of relative
-translation is sufficient). The model we used, is a two module Long-term
-Recurrent Convolutional Neural Networks.
-
-*Feature-encoding Module:* In order to learn the geometric relationships from
-two adjacent images, we use the following CNN architechture, inspired by
-FlowNetSimple architechture \cite{Fischer2015} ignoring the decoder part of it
-and only focusing the on the convolutional encoder.
-
-\input{table/table1}
-
-Contrary to DeepVO \cite{Wang2017} and PoseConvGRU \cite{Zhai2019}, which uses
-huge 10-layered CNN architechtures, we use a very simple and lightweight
-5-layered CNN architechture as shown in Table \ref{table1}. Each layer is
-followed by an application of ReLU nonlinear activation function. We keep the
-kernel size to 3, padding size to 1 for all the layers. The channel dimension
-doubles in each subsequent layers. We use maxpool of size 2 in the first 2
-layers and use maxpool of size 4 for the rest of the layers. The reason behind
-this is that, having small receptive field in the first 2 layers encourages the
-network to learn about the fine-grained geometric details in the pair of images
-which is essential for relative motion estimation. On the other hand, the large
-receptive field in the later layers enforces the network to ignore the global
-context and also helps in reducing the number of learnable parameters as
-well. The input to the CNN are a sequence of \(n+1\), \(256 \x 256\) RGB driving
-scenes from CARLA. With \(n+1\) sequential driving scenes, we can obtain \(n\)
-sets of image pairs taking two adjacent frames at a time. These image pairs are
-then fed to the 5-layered CNN to obtain a feature maps of size \(1 \x 1 \x
-1024\) for each image pair. Contrary to the typical training process with
-augmented data for CNNs, we only use the original images for accurate relative
-motion estimation, because performing any pre-processing operation to the images
-such as blurring, adding noise, random clipping etc., can hamper the network to
-learn the geometric relationship of the objects in the images.
-
-*Memory-propagating Module:* 
-
-The feature-encoding module
-encodes the short-term motion feature in an image pair, while the memory-
-propagating module captures the long-term motion feature in the consecutive
-image pairs. The visual memory is implemented with convolutional gated re-
-current units, which allows propagating information over time. At each time
-step, two consecutive RGB images are stacked together to form a 6 channels
-tensor for module-1 to learn how to extract motion information and estimate
-poses. The sequence of output maps is then passed through a stacked ConvGRU module to generate the relative transformation pose of each image pair. We also
-augment the training data by randomly skipping frames to simulate the veloc-
-ity variation which results in a better performance in turning and high-velocity
-situations. Randomly horizontal flipping and temporal flipping of the sequences
-is also performed. We evaluate the performance of our proposed approach on
-the KITTI Visual Odometry benchmark. The experiments show a competitive
-performance of the proposed method to the geometric method and encourage
-further exploration of learning based methods for the purpose of estimating
-camera ego-motion even though geometrical methods demonstrate promising
-results.
-
-
-Self-supervised learning aims at gathering more labels to unlabeled inputs so
-that we can generate better representation of the input. In self-driving task
-our output is the waypoints. Which can be estimated completely independent of
-the driving task and we can generate accurate estimation of the waypoints.
-
-There are two ways to generate better representations of the inputs
-1. Contrastive learning
-   This kind of learning try to learn a representation that describe the image
-   as a whole. Does not find the representation that is actually important to
-   the downstream task.
-2. by generating pseudolabels
-   
-
-it also predicts
-accurate ego-motion estimation, 
-*** SelfD
-    In this section we will discuss the pri
-*** Self-supervised Representation Learning
-**** Action Conditioned Policy Pretraining
-**** DINO
 ** Loss Function
 Following [8], we train the network using an L1 loss be-
 tween the predicted waypoints and the ground truth way-
@@ -686,58 +627,6 @@ t=1
 Note that the ground truth waypoints {wtgt } which are avail-
 able only at training time are different from the sparse goal
 locations G provided at both training and test time.
-** Implementation Details
-
-*** Input and Output Parameterization
-Input Representation: Following [45, 23], we convert the
-LiDAR point cloud into a 2-bin histogram over a 2D BEV
-grid with a fixed resolution. We consider the points within
-32m in front of the ego-vehicle and 16m to each of the sides,
-thereby encompassing a BEV grid of 32m × 32m. We di-
-vide the grid into blocks of 0.125m × 0.125m which results
-in a resolution of 256 × 256 pixels. For the histogram, we
-discretize the height dimension into 2 bins representing the
-points on/below and above the ground plane. This results in
-a two-channel pseudo-image of size 256 × 256 pixels. For
-the RGB input, we consider the front camera with a FOV
-of 100◦ . We extract the front image at a resolution of 400
-× 300 pixels which we crop to 256 × 256 to remove radial
-distortion at the edges.
-Output Representation: We predict the future trajectory
-W of the ego-vehicle in BEV space, centered at the current
-coordinate frame of the ego-vehicle. The trajectory is repre-
-sented by a sequence of 2D waypoints, {wt = (xt , yt )}Tt=1 .
-We use T = 4, which is the default number of waypoints
-required by our inverse dynamics model.
-
-*** Dataset
-
-*** Data Preprocessing Pipeline <<datapp>>
-
-
-*** Training and Inference
-
-* Experimental Results <<results>>
-
-#+BEGIN_COMMENT
-3.1 Methodology
-
-What are criteria you are using to evaluate your method? What specific hypotheses does your experiment test? Describe the experimental methodology that you used. What are the dependent and independent variables? What is the training/test data that was used, and why is it realistic or interesting? Exactly what performance data did you collect and how are you presenting and analyzing it? Comparisons to competing methods that address the same problem are particularly useful.
-
-3.2 Results
-
-Present the quantitative results of your experiments. Graphical data presentation such as graphs and histograms are frequently better than tables. What are the basic differences revealed in the data. Are they statistically significant?
-
-3.3 Discussion
-
-Is your hypothesis supported? What conclusions do the results support about the strengths and weaknesses of your method compared to other methods? How can the results be explained in terms of the underlying properties of the algorithm and/or the data.
-#+END_COMMENT
-In this section, we describe our experimental setup, com-
-pare the driving performance of our approach against sev-
-eral baselines, conduct an infraction analysis to study dif-
-ferent failure cases, visualize the attention maps of Trans-
-Fuser and present an ablation study to highlight the impor-
-tance of different components of our model.
 
 ** Task
 We consider the task of navigation along a set of
@@ -788,7 +677,376 @@ scenarios specified:
 - The agent must perform a right turn at an intersection with crossing traffic
 - Crossing an unsignalized intersection.
 
-  
+* Self-supervised Learning Approaches
+In this section we will introduce our proposed method and also explore some
+prior works in our self-driving framework.
+
+** Learning with Pseudolabels
+Contrary to SelfD approach, we do not need to rely on the model's understanding
+of driving for pseudo-labels
+*** Deep Visual Odometry
+In this section, we will introduce our proposed method for self-supervised
+learning for autonomous driving. Our key idea is to generate pseudo-labels for
+unlabeled driving scenes by exploiting a learning-based ego-motion estimation
+method because of its desirable properties of robustness to image noise and
+camera calibration independence. Moreover, in our expert driving dataset the
+weather conditions and the time of the day changes from frame to frame. For this
+reason learning-based method is the best way to estimate ego-motions than
+classical methods. We use an end-to-end learning approach following
+\cite{Wang2017, Zhai2019} to train the model to map directly from input image
+pairs to an estimate of ego-motion (in our use case, estimate of relative
+translation is sufficient). The model we used, is a two module Long-term
+Recurrent Convolutional Neural Networks.
+
+*Feature-encoding Module:* In order to learn the geometric relationships from
+two adjacent images, we use the following CNN architechture, inspired by
+FlowNetSimple architechture \cite{Fischer2015} ignoring the decoder part of it
+and only focusing the on the convolutional encoder.
+
+\input{table/table1}
+
+Contrary to DeepVO \cite{Wang2017} and PoseConvGRU \cite{Zhai2019}, which uses
+huge 10-layered CNN architechtures, we use a very simple and lightweight
+5-layered CNN architechture as shown in Table \ref{table1}. Each layer is
+followed by an application of ReLU nonlinear activation function. We keep the
+kernel size to 3, padding size to 1 for all the layers. The channel dimension
+doubles in each subsequent layers. We use maxpool of size 2 in the first 2
+layers and use maxpool of size 4 for the rest of the layers. The reason behind
+this is that, having small receptive field in the first 2 layers encourages the
+network to learn about the fine-grained geometric details in the pair of images
+which is essential for relative motion estimation. On the other hand, the large
+receptive field in the later layers enforces the network to ignore the global
+context and also helps in reducing the number of learnable parameters as
+well. The input to the CNN are a sequence of \(n+1\), \(256 \x 256\) RGB driving
+scenes from CARLA. With \(n+1\) sequential driving scenes, we can obtain \(n\)
+sets of image pairs taking two adjacent frames at a time. These image pairs are
+then fed to the 5-layered CNN to obtain a feature maps of size \(1 \x 1 \x
+1024\) for each image pair. Contrary to the typical training process with
+augmented data for CNNs, we only use the original images for accurate relative
+motion estimation, because performing any pre-processing operation to the images
+such as blurring, adding noise, random clipping etc., can hamper the network to
+learn the geometric relationship of the objects in the images.
+
+*Memory-propagating Module:* Following \cite{Zhai2019}, we use a stacked ConvGRU
+(convolutional gated recurrent unit) \cite{Ballas2015} as our memory-propagating
+module as showns in +Fig.+. The memory module builds a set of chronological
+visual representations from the CNN embeddedings of the sequence of image
+pairs. Because of its ability of remember histories, ConvGRU can capture the
+geometric relationships coming from the previous frames of images, and then
+estimate the relative motion for the current frame utilizing the geometric
+constraint within multiple frames. Also, ConvGRUs are appropriate for this
+module as they are simple yet powerful. They contain fewer gates compared to
+ConvLSTMs and thus reduce the number of learnable parameters and also provide
+similar performance as ConvLSTMs \cite{Chung2014}. In our implementation, we
+flatten the \(1 \x 1 \x 1024\)-dimensional CNN embeddeding into a feature
+vector, which we then further process through a fully connected layer and reduce
+its dimensions to 256 for computational efficiency before passing it to the
+ConvGRU. Following \cite{Filos2020}, we use a single layer ConvGRU followed by a
+linear layer which takes in the hidden state and predicts the relative
+translation of the ego-vehicle implied by the pair of images. Finally, we
+accumulate all the relative translations to compute the ego-vehicle trajectory.
+
++should include the math?+
++plot pseudowaypoints+
+
+The feature-encoding module
+encodes the short-term motion feature in an image pair, while the memory-
+propagating module captures the long-term motion feature in the consecutive
+image pairs. The visual memory is implemented with convolutional gated re-
+current units, which allows propagating information over time. At each time
+step, two consecutive RGB images are stacked together to form a 6 channels
+tensor for module-1 to learn how to extract motion information and estimate
+poses. The sequence of output maps is then passed through a stacked ConvGRU module to generate the relative transformation pose of each image pair. We also
+augment the training data by randomly skipping frames to simulate the veloc-
+ity variation which results in a better performance in turning and high-velocity
+situations. Randomly horizontal flipping and temporal flipping of the sequences
+is also performed. We evaluate the performance of our proposed approach on
+the KITTI Visual Odometry benchmark. The experiments show a competitive
+performance of the proposed method to the geometric method and encourage
+further exploration of learning based methods for the purpose of estimating
+camera ego-motion even though geometrical methods demonstrate promising
+results.
+
+
+Self-supervised learning aims at gathering more labels to unlabeled inputs so
+that we can generate better representation of the input. In self-driving task
+our output is the waypoints. Which can be estimated completely independent of
+the driving task and we can generate accurate estimation of the waypoints.
+
+There are two ways to generate better representations of the inputs
+1. Contrastive learning
+   This kind of learning try to learn a representation that describe the image
+   as a whole. Does not find the representation that is actually important to
+   the downstream task.
+2. by generating pseudolabels
+   
+
+it also predicts
+accurate ego-motion estimation, 
+*** SelfD
+    In this section we will discuss the semi-supervised approach ``SelfD''
+    by Zhang et al. \cite{Zhang2022a}.
+**** Conditional Imitation Learning from Observations
+To make use of the unlabeled driving scenes containing diverse navigational
+experience, the authors propose `Conditional Imitation Learning from
+Observations' (CILfO) \cite{Zhang2022a} framework. The framework suggests a way
+to generate pseudo-labels for the unlabeled driving scenes. We explore the
+framework in our autonomous driving setting for self-supervised learning. We
+consider two conditional commands i.e. navigational command and target point
+separately in our experiments +see?+. Thus, with this method we recover the
+waypoints \(\hat{\bf w}\), the conditional command \(\hat{c}\) and speed
+\(\hat{v}\) to construct a dataset \[\hat{\DD}=\set{(\bf I_{i}, \hat v_{i}, \hat
+c_{i}), \bf w_{i}}_{i=1}^{M}\] which can be then use to train a policy using
+behaviour cloning.
+**** Initial Data Assumption
+The CILfO learning task assumes access to a small labeled dataset to learn an
+initial policy mapping using human expert demonstrations. We then use this
+learned policy to gather pseduo-labels for the unlabeled data. This assumption
+is reasonable considering that there are several publicly available driving
+datasets with included action labels \cite{Geiger2012AreWR,Argoverse2}. In this
+work, we use a small subset of a labeled dataset collected from an expert policy
+roll out in CARLA \cite{Dosovitskiy2017}.
+
+**** Self-supervised Training Process
+In this section, we discuss the proposed generalized training method for
+leveraging unconstrained and unlabeled demonstration data. The proposed
+semi-supervised policy training process, SelfD, can be learned in three
+summarized steps:
+    1. Use a small, labeled domain-specific dataset \(\DD\) to learn an initial
+       observations-to-BEV policy \(\pi_{\v{\th}}\) via imitation.
+    2. Obtain a large pseudo-labeled dataset \(\hat{\DD}\) by leveraging
+       sampling from \(\pi_{\v{\th}}\).
+    3. Pre-train a generalized policy \(\pi_{\v{\th}}\) on \(\hat{\DD}\) and
+       fine-tune on the clean labels of \(\DD\).
+
+Note that we re-use the parameter symbol \(\v{\th}\) throughout
+the steps to simplify notation. @@latex:\hl{Our iterative semi-supervised
+training enables effectively augmenting the knowledge and
+robustness of an initially trained policy. As described
+next, our proposed initial step facilitates learning a platform
+and perspective-agnostic policy during subsequent training
+steps by directly reasoning in a BEV planning space.}@@ 
+
+3.3. BEV Plan Network
+In this section, we propose a suitable output represen-
+tation to account for arbitrary cameras, viewpoints and
+scene layouts. Current monocular planners generally pre-
+dict waypoints in the image plane to align with an input
+image [13, 49]. The waypoints are then transformed to a
+BEV plan using carefully calibrated camera intrinsic and
+extrinsic (e.g., rotation, height) parameters [13]. Thus, pol-
+icy models are often trained and evaluated within a fixed
+pre-assumed setup. In contrast, SelfD predicts a future plan
+parameterized by waypoints in the BEV plan space directly.
+Based on our experiments in Sec. 4, we demonstrate this
+choice to be crucial for real-world planning across settings.
+The predicted generalized BEV waypoints can be paired
+with a low-level controller, e.g., a PID controller [13, 49].
+Due to the difficulty in learning a monocular-to-BEV plan
+mapping, we follow recent work in confidence-aware learn-
+ing [38] to train an augmented model fθ : X → Y × R
+with quality estimates σ ∈ R. Our training loss function in
+Eqn. 1 is defined as
+L = Lplan + λLquality
+(3)
+where Lplan is the L1 distance between ground-truth and
+predicted waypoints, Lquality is a binary cross-entropy
+loss [38, 78], and the λ hyper-parameter balances the tasks.
+3.4. “What If” Pseudo-Labeling of Unlabeled Data
+Given a set of unlabeled images U, we sample from the
+trained conditional policy fθ in a semi-supervised training
+process. While the speed and command inputs to fθ can be
+recovered through visual odometry techniques [73], these
+result in highly noisy trajectories in our online video set-
+tings (discussed in Sec. 4). As the demonstrations in our
+data may be unsafe or difficult to recover, we propose to
+leverage a single-frame pseudo-labeling mechanism. Our
+key insight is to employ the conditional model fθ to gener-
+ate multiple hypothetical future trajectories in a process re-
+ferred to as “what if” augmentation. Beyond resolving the
+missing speed and command inputs, our proposed augmen-
+tation provides additional supervision, i.e., a conditional
+agent that better reasons on what it might need to do, for in-
+stance, if it had to turn left instead of right at an intersection
+(Fig. 2). In contrast to related work in policy learning and
+distillation [13], sampling from the teacher agent is more
+challenging as the agent is not exposed to extensive 3D per-
+ception knowledge about the world and is being evaluated
+outside of its training settings.
+We repeatedly sample v̂ and ĉ uniformly and rely on
+the conditional model to provide pseudo-labels (ŷ, σ̂) =
+fθ (I, v̂, ĉ) for additional supervision across all conditional
+branches and speed observations. In this manner, querying
+the “teacher” model fθ enables us to generate various sce-
+narios beyond the original demonstration. In particular, as
+discussed in Sec. 4, we find self-training strategies to pro-
+vide limited generalization gains without this “what if” data
+augmentation step. This augmentation strategy enables our
+single-frame pseudo-labeling approach to significantly out-
+perform approaches that are more elaborate to train at scale,
+as they may involve additional modules relying on approxi-
+mating ŷ, ĉ, and v̂ from video. Finally, to avoid incorporat-
+ing potentially noisy trajectories, the corresponding quality
+estimates σ̂ can be used to process and filter examples in
+the pseudo-labeled dataset D̂.
+3.5. Model Pre-Training and Fine-Tuning
+As a final training step, we re-train the waypoint network
+fθ from scratch over the large and diverse dataset D̂. The
+pre-trained policy can then be further fine-tuned over the
+original dataset D, thus leveraging the additional knowledge
+gained from D̂ to improve its performance. We note that
+we employ separate training over the two datasets D̂ and D
+and rely on knowledge transfer through learned represen-
+tations as it reduces the need for any careful hyperparam-
+eter tuning beyond the overall learning rate. For instance,
+Caine et al. [8] empirically demonstrate the importance of
+delicately optimizing the ratio of labeled to pseudo-labeled
+data when mixing the datasets for a 3D object detection
+task, while also showing it to vary among object categories,
+e.g., pedestrians vs. vehicles. Thus, through a pre-training
+mechanism, we avoid the need to carefully mix the cleanly
+labeled and pseudo-labeled datasets [8, 65, 78].
+3.6. Implementation Details
+Speed: 0.24 Speed: 16.21 Speed: 2.84
+Score: 0.6 Score: 0.09 Score: 0.42
+Cmd: 1
+Cmd: 2
+Cmd: 3
+We implement our BEV waypoint prediction network
+fθ leveraging a state-of-the-art conditional sensorimotor
+agent [13]. However, as discussed in Sec. 3.2, we do not
+assume a fixed known BEV perspective transform. Thus,
+we remove the fixed perspective transformation layer which
+restricts scalability and replace it with a per-branch BEV
+prediction module (see supplementary for additional imple-
+mentation and architecture details). During training we use
+a learning rate of 1e−3 and resize images to 400 × 225.
+** Self-supervised Representation Learning
+*** Action Conditioned Policy Pretraining
+*** OVRL
+In this section, we discuss OVRL\cite{Yadav2022}, a two-stage learning approach
+proposed by Yadav et. al. and incorporate it in our autonomous driving
+framework. As an overview, this learning approach includes an encoder
+pretraining step using DINO, followed by downstream policy learning via behavior
+cloning.
+**** Self-supervised Pretraining
+As the first step, a visual encoder is pretrained using DINO \cite{Caron2021}, a
+simple but effective self-supervised learning algorithm. DINO uses knowledge
+distillation as a mechanism for self-training, where the student network
+\(g_{\vth_{s}}\) is trained to match the output of the teacher network
+\(g_{\vth_{t}}\).  As illustrated in +Figure 2(left)+, it takes an input image
+\(x\) and using the multi-crop strategy introduced in \cite{Caron2020}, it
+generates multiple distorted views or crops from it, specifically, it produces
+two global views (\(x_{1}^{g}\) and \(x_{2}^{g}\)) at \(224\x 224\) resolution
+and eight local views \(x^{l}\) at a lower resolution (\(96\x 96\)). All crops
+are passed through the student network while only the global views are passed
+through the teacher network.  The student and teacher networks both output \(K\)
+dimensional feature vectors for each view, which are converted into probability
+distributions (\(P_{s}\) and \(P_{t}\)) using a temperature scaled softmax
+function as follows:
+\[P_{s}(x)^{(i)}=\q{\exp\inp{g_{\vth_{s}}(x)^{(i)}/\t_{s}}}{\sum_{k=1}^{K}\exp\inp{g_{\vth_{s}}(x)^{(k)}/\t_{s}}}\]
+where the temperature parameter \(\t_{s}\) controls the sharpness of the output
+distribution, and a similar formula holds for \(P_{t}\) with temperature
+\(\t_{t}\). Now, given a fixed teacher network \(g_{\vth_{t}}\), the student
+network learns to match the distribution of the teacher network by minimizing
+the cross-entropy loss:
+\[\LL(\vth_{s})=\sum_{x\in{x_{1}^{g},x_{2}^{g}}}\sum_{x'\in
+\set{x_{1}^{g},x_{2}^{g}}\u\set{x^{l}_{i}}_{i=1}^{8}}P_{t}(x)\log(P_{s}(x')).\] The
+teacher network parameters are updated as an exponential moving average of the
+student network parameters.
+
+Representation learning by self-supervised learning algorithm is always prone to
+collapse, i.e., the network can converge to a trivial solution by predicting the
+same representation for every image. To avoid collapse, DINO centers and
+sharpens the teacher’s output before the softmax operation. Specifically, the
+centering operation adds the term \(c\) to the teacher’s output, which is
+updated as follows: \(c\la mc+(1-m)\q1B\sum_{i=0}^{B}g_{\vth_{t}}(x_{i})\),
+where \(m>0\) is a momentum parameter and \(B\) is the batch size. Sharpening is
+achieved by setting low value for the temperature parameter \(\t_{t}\) for the
+teacher softmax normalization. Thus, centering prevents one dimension to
+dominate but encourages collapse to the uniform distribution, while the
+sharpening has the opposite effect. Applying both operations balances their
+effects which is sufficient to avoid collapse in presence of a momentum teacher.
+
+@@latex:\hl{We use the convolutional layers in a modified ResNet50 [21] architecture com-
+bined with a projection head for the student and teacher networks. Specifically,
+we modify the ResNet50 by 1) reducing the number of output channels at every
+layer by half (i.e. using 32 ResNet baseplanes instead of 64) and 2) using Group-
+Norm [48] instead of BatchNorm in our backbone, similar to DDPPO [47]. The
+projection head is a 3-layer MLP (Multi-Layer Perceptron) with 2048 hidden
+units followed by l2 norm and a weight normalized fully connected layer of K
+dimension. We keep the BatchNorm in the MLP, however the whole projection
+head is discarded after training.}@@ 
+
+**** Downstream Learning
+
+
+We illustrate DINO in
+the case of one single pair of views (x1 , x2 ) for simplicity. The
+model passes two different random transformations of an input
+image to the student and teacher networks. Both networks have
+the same architecture but different parameters. The output of the
+teacher network is centered with a mean computed over the batch.
+Each networks outputs a K dimensional feature that is normalized
+with a temperature softmax over the feature dimension. Their
+similarity is then measured with a cross-entropy loss. We apply a
+stop-gradient (sg) operator on the teacher to propagate gradients
+only through the student. The teacher parameters are updated with
+an exponential moving average (ema) of the student parameters.
+
+* Experimental Results <<results>>
+
+#+BEGIN_COMMENT
+3.1 Methodology
+
+What are criteria you are using to evaluate your method? What specific hypotheses does your experiment test? Describe the experimental methodology that you used. What are the dependent and independent variables? What is the training/test data that was used, and why is it realistic or interesting? Exactly what performance data did you collect and how are you presenting and analyzing it? Comparisons to competing methods that address the same problem are particularly useful.
+
+3.2 Results
+
+Present the quantitative results of your experiments. Graphical data presentation such as graphs and histograms are frequently better than tables. What are the basic differences revealed in the data. Are they statistically significant?
+
+3.3 Discussion
+
+Is your hypothesis supported? What conclusions do the results support about the strengths and weaknesses of your method compared to other methods? How can the results be explained in terms of the underlying properties of the algorithm and/or the data.
+#+END_COMMENT
+In this section, we describe our experimental setup, com-
+pare the driving performance of our approach against sev-
+eral baselines, conduct an infraction analysis to study dif-
+ferent failure cases, visualize the attention maps of Trans-
+Fuser and present an ablation study to highlight the impor-
+tance of different components of our model.
+ 
+** Implementation Details
+
+*** Input and Output Parameterization
+Input Representation: Following [45, 23], we convert the
+LiDAR point cloud into a 2-bin histogram over a 2D BEV
+grid with a fixed resolution. We consider the points within
+32m in front of the ego-vehicle and 16m to each of the sides,
+thereby encompassing a BEV grid of 32m × 32m. We di-
+vide the grid into blocks of 0.125m × 0.125m which results
+in a resolution of 256 × 256 pixels. For the histogram, we
+discretize the height dimension into 2 bins representing the
+points on/below and above the ground plane. This results in
+a two-channel pseudo-image of size 256 × 256 pixels. For
+the RGB input, we consider the front camera with a FOV
+of 100◦ . We extract the front image at a resolution of 400
+× 300 pixels which we crop to 256 × 256 to remove radial
+distortion at the edges.
+Output Representation: We predict the future trajectory
+W of the ego-vehicle in BEV space, centered at the current
+coordinate frame of the ego-vehicle. The trajectory is repre-
+sented by a sequence of 2D waypoints, {wt = (xt , yt )}Tt=1 .
+We use T = 4, which is the default number of waypoints
+required by our inverse dynamics model.
+
+*** Dataset
+
+*** Data Preprocessing Pipeline <<datapp>>
+
+
+*** Training and Inference
+
 ** Dataset
 We use the CARLA \cite{Dosovitskiy2017} simulator for training and testing,
 specifically CARLA 0.9.10 which consists of 8 publicly available towns. We use 7
@@ -878,4 +1136,5 @@ decesion. Even though, it can successful in perfect route completion, it
 sometimes results in infractions due to invisibilty for example, ego-vehicle
 changes lane but the rear vehicle collide with it or the passenger starts
 walking after the car already have gone past it.
+
 \printbibliography
