@@ -155,3 +155,7 @@ DeepVO
   dataset1-dataloader1-imgaug1-acc0-nav0-tp1-pc0-thresh0.33-whatif0-ssf-st[1,..,4]-sst[1,..,10]
 
 Pick the best in SelfD and train with youtube data
+
+
+- [ ] deepvo 4 towns
+- [ ] 

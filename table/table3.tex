@@ -1,0 +1,124 @@
+\begin{table}
+\centering
+      ~\clap{
+{\footnotesize
+\begin{longtable}{|l|l|r|r|r|}
+\hline
+{\bfseries Datasets} &
+{\bfseries Method} &
+\raggedleft{\bfseries DS \((\ua)\)} &
+\raggedleft{\bfseries RC \((\ua)\)} &
+\raggedleft\arraybslash{\bfseries IS \((\ua)\)}\\\hline
+Labeled Dataset: \(\DD\) &
+AIM (w/o confidence) &
+\raggedleft 7.83 {\textpm} 0.56 &
+\raggedleft 51.01 {\textpm} 4.68 &
+\raggedleft\arraybslash 0.32 {\textpm} 0.03\\\hhline{~----}
+~
+ &
+AIM (w/ confidence) &
+\raggedleft 5.97 {\textpm} 0.78 &
+\raggedleft 54.35 {\textpm} 5.88 &
+\raggedleft\arraybslash 0.19 {\textpm} 0.02\\\hline
+Unlabeled Datasets: \(\UU_{\tx{CARLA}}\) &
+SelfD (w/o What If, w/o confidence) &
+\raggedleft 6.07 {\textpm} 0.41 &
+\raggedleft 58.36 {\textpm} 3.08 &
+\raggedleft\arraybslash 0.17 {\textpm} 0.02\\\hhline{~----}
+Labeled Dataset: \(\DD\) &
+SelfD (w/o What If, w/ confidence) &
+\raggedleft 8.3 {\textpm} 2.75 &
+\raggedleft 59.89 {\textpm} 9.87 &
+\raggedleft\arraybslash 0.22 {\textpm} 0.03\\\hhline{~----}
+~
+ &
+SelfD (w/ What If, w/o confidence) &
+\raggedleft 5.02 {\textpm} 0.51 &
+\raggedleft 53.32 {\textpm} 3.98 &
+\raggedleft\arraybslash 0.18 {\textpm} 0.01\\\hhline{~----}
+~
+ &
+SelfD (w/ What If, w/ confidence) &
+\raggedleft 4.67 {\textpm} 0.86 &
+\raggedleft 49.15 {\textpm} 6.43 &
+\raggedleft\arraybslash 0.15 {\textpm} 0.02\\\hhline{~----}
+~
+ &
+SemiD (transductive training) &
+\raggedleft{\bfseries 13.25 {\textpm} 2.55} &
+\raggedleft{\bfseries 95.06 {\textpm} 5.33} &
+\raggedleft\arraybslash{\bfseries 0.13 {\textpm} 0.02}\\\hhline{~----}
+~
+ &
+SemiD (finetuned) &
+\raggedleft 12.58 {\textpm} 0.32 &
+\raggedleft 90.88 {\textpm} 3.91 &
+\raggedleft\arraybslash 0.14 {\textpm} 0.02\\\hline
+Unlabeled Datasets: \(\UU_{\tx{CARLA + YouTube}}\) &
+SelfD (w/o What If, w/o confidence) &
+\raggedleft 6.66 {\textpm} 1.98 &
+\raggedleft 51.44 {\textpm} 7.23 &
+\raggedleft\arraybslash 0.23 {\textpm} 0.03\\\hhline{~----}
+Labeled Dataset: \(\DD\) &
+SelfD (w/o What If, w/ confidence) &
+\raggedleft 5.17 {\textpm} 1.59 &
+\raggedleft 55.46 {\textpm} 8.57 &
+\raggedleft\arraybslash 0.16 {\textpm} 0.05\\\hhline{~----}
+~
+ &
+SelfD (w/ What If, w/o confidence) &
+\raggedleft 7.28 {\textpm} 0.65 &
+\raggedleft 47.21 {\textpm} 5.03 &
+\raggedleft\arraybslash 0.26 {\textpm} 0.02\\\hhline{~----}
+~
+ &
+SelfD (w/ What If, w/ confidence) &
+\raggedleft 6.22 {\textpm} 1.12 &
+\raggedleft 51.34 {\textpm} 6.8 &
+\raggedleft\arraybslash 0.21 {\textpm} 0.03\\\hhline{~----}
+~
+ &
+SemiD (transductive training) &
+\raggedleft 8.87 {\textpm} 2.01 &
+\raggedleft 92.93 {\textpm} 6.77 &
+\raggedleft\arraybslash 0.11 {\textpm} 0.03\\\hhline{~----}
+~
+ &
+SemiD (finetuned) &
+\raggedleft 10.15 {\textpm} 1.23 &
+\raggedleft 93.38 {\textpm} 6.31 &
+\raggedleft\arraybslash 0.1 {\textpm} 0.01\\\hhline{~----}
+~
+ &
+OVRL &
+\raggedleft 7.78 {\textpm} 1.26 &
+\raggedleft 83.13 {\textpm} 7.78 &
+\raggedleft\arraybslash 0.12 {\textpm} 0.04\\\hhline{~----}
+~
+ &
+OVRL + SemiD (transductive training) &
+\raggedleft 5.51 {\textpm} 2.26 &
+\raggedleft{\bfseries 97.54 {\textpm} 2.74} &
+\raggedleft\arraybslash 0.06 {\textpm} 0.02\\\hhline{~----}
+~
+ &
+OVRL + SemiD (finetuned) &
+\raggedleft 9.79 {\textpm} 1.22 &
+\raggedleft 90.66 {\textpm} 0.29 &
+\raggedleft\arraybslash 0.14 {\textpm} 0.01\\\hline
+Unlabeled Datasets: \(\UU_{\tx{YouTube}}\) &
+SemiD (transductive training) &
+\raggedleft{\bfseries {}-} &
+\raggedleft{\bfseries {}-} &
+\raggedleft\arraybslash{\bfseries {}-}\\\hhline{~----}
+Labeled Dataset: \(\DD\) &
+SemiD (finetuned) &
+\raggedleft {}- &
+\raggedleft {}- &
+\raggedleft\arraybslash {}-\\\hline
+\caption{Results on the NEAT evaluation routes for sensorimotor agent (AIM) trained with various semi-supervised and self-supervised learning approaches}
+\label{table3}
+\end{longtable}
+}
+}
+\end{table}

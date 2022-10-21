@@ -1,5 +1,56 @@
-\contentsline {chapter}{\numberline {1}Introduction}{11}{}%
-\contentsline {section}{\numberline {1.1}Problem Statement}{11}{}%
-\contentsline {chapter}{\numberline {2}Conclusion}{13}{}%
-\contentsline {chapter}{\numberline {A}Blub}{15}{}%
+\contentsline {chapter}{\numberline {1}Introduction}{11}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Related Work }{13}{chapter.2}%
+\contentsline {section}{\numberline {2.1}End-to-End Autonomous Driving}{13}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Imitation Learning}{13}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Semi-Supervised Learning for Navigation }{14}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Semi-supervised Learning}{14}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Learning by Cheating}{14}{subsection.2.3.2}%
+\contentsline {section}{\numberline {2.4}Self-Supervised Visual Representation Learning }{15}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Self-supervised learning}{15}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Contrastive Learning}{15}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Non-Contrastive Learning}{15}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.4}Action-COnditioned Policy Pretraining (ACO)}{16}{subsection.2.4.4}%
+\contentsline {chapter}{\numberline {3}Autonomous Driving Framework }{17}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Imitation Learning }{17}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Input and Output Representations}{18}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Input Representation}{18}{subsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.1.1}Driving Scenes}{18}{subsubsection.3.2.1.1}%
+\contentsline {subsubsection}{\numberline {3.2.1.2}Global Planner}{18}{subsubsection.3.2.1.2}%
+\contentsline {subsection}{\numberline {3.2.2}Output Representation}{18}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Waypoint Prediction Network }{20}{section.3.3}%
+\contentsline {section}{\numberline {3.4}PID Controller}{20}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Loss Function }{21}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Learning Approaches }{23}{chapter.4}%
+\contentsline {section}{\numberline {4.1}SemiD: Semi-supervised Driving with Deep Visual Odometry }{23}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Deep Visual Odometry}{24}{subsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.1.1}Feature-encoding Module}{24}{subsubsection.4.1.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.1.2}Memory-propagating Module}{25}{subsubsection.4.1.1.2}%
+\contentsline {subsection}{\numberline {4.1.2}Generating Pseduo-labels for Video frames}{25}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Model Pre-Training and Fine-Tuning}{27}{subsection.4.1.3}%
+\contentsline {section}{\numberline {4.2}SelfD: Self-Learning Large-Scale Driving Policies}{29}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Conditional Imitation Learning from Observations}{29}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Initial Data Assumption}{29}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Self-supervised Training Process}{30}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}BEV Plan Network}{30}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}``What If'' Pseudo-Labeling of the Unlabeled Data }{30}{subsection.4.2.5}%
+\contentsline {subsection}{\numberline {4.2.6}Model Pre-Training and Fine-Tuning }{31}{subsection.4.2.6}%
+\contentsline {section}{\numberline {4.3}OVRL: Offline Visual Representation Learning}{31}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Self-supervised Pretraining}{32}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Implementation Details}{34}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Downstream Learning}{34}{subsection.4.3.3}%
+\contentsline {chapter}{\numberline {5}Experimental Results }{35}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Task}{35}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Implementation Details}{36}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Data Cleansing}{36}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Stratified Sampling}{36}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Image Augmentation}{37}{subsection.5.2.3}%
+\contentsline {section}{\numberline {5.3}Dataset }{37}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Evaluation Metrics }{38}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Route Completion (RC)}{38}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Infraction Score (IS)}{38}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}Driving Score (DS)}{39}{subsection.5.4.3}%
+\contentsline {section}{\numberline {5.5}Results}{39}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Performance of Supervised Training}{39}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}Perfomance of the Learning Approaches}{40}{subsection.5.5.2}%
+\contentsline {chapter}{\numberline {6}Conclusion }{45}{chapter.6}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

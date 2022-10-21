@@ -1,0 +1,492 @@
+% This file was converted to LaTeX by Writer2LaTeX ver. 1.6.1
+% see http://writer2latex.sourceforge.net for more info
+\documentclass[letterpaper]{article}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\usepackage{color}
+\usepackage{array}
+\usepackage{supertabular}
+\usepackage{hhline}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue, urlcolor=blue}
+\usepackage{polyglossia}
+\setdefaultlanguage[variant=american]{english}
+\makeatletter
+\newcommand\arraybslash{\let\\\@arraycr}
+\makeatother
+% Page layout (geometry)
+\setlength\voffset{-1in}
+\setlength\hoffset{-1in}
+\setlength\topmargin{0.7874in}
+\setlength\oddsidemargin{0.7874in}
+\setlength\textheight{9.4251995in}
+\setlength\textwidth{6.9251995in}
+\setlength\footskip{0.0cm}
+\setlength\headheight{0cm}
+\setlength\headsep{0cm}
+% Footnote rule
+\setlength{\skip\footins}{0.0469in}
+\renewcommand\footnoterule{\vspace*{-0.0071in}\setlength\leftskip{0pt}\setlength\rightskip{0pt plus 1fil}\noindent\textcolor{black}{\rule{0.25\columnwidth}{0.0071in}}\vspace*{0.0398in}}
+% Pages styles
+\makeatletter
+\newcommand\ps@Standard{
+  \renewcommand\@oddhead{}
+  \renewcommand\@evenhead{}
+  \renewcommand\@oddfoot{}
+  \renewcommand\@evenfoot{}
+  \renewcommand\thepage{\arabic{page}}
+}
+\makeatother
+\pagestyle{Standard}
+\setlength\tabcolsep{1mm}
+\renewcommand\arraystretch{1.3}
+\title{}
+\author{}
+\date{2022-09-13}
+\begin{document}
+CNN
+
+\begin{flushleft}
+\tablefirsthead{}
+\tablehead{}
+\tabletail{}
+\tablelasttail{}
+\begin{supertabular}{m{0.31435984in}|m{0.5351598in}|m{0.39485985in}|m{0.29485986in}|m{0.43725982in}|m{0.9705598in}}
+\hline
+\raggedleft Layer &
+\raggedleft Kernel Size &
+\raggedleft Padding &
+\raggedleft Stride &
+\raggedleft Max Pool &
+\raggedleft\arraybslash Number of Channels\\\hline
+\raggedleft Input &
+\raggedleft - &
+\raggedleft - &
+\raggedleft - &
+\raggedleft - &
+\raggedleft\arraybslash 6\\
+\raggedleft Conv1 &
+\raggedleft 3 x 3 &
+\raggedleft 1 &
+\raggedleft 0 &
+\raggedleft 2 &
+\raggedleft\arraybslash 64\\
+\raggedleft Conv2 &
+\raggedleft 3 x 3 &
+\raggedleft 1 &
+\raggedleft 0 &
+\raggedleft 2 &
+\raggedleft\arraybslash 128\\
+\raggedleft Conv3 &
+\raggedleft 3 x 3 &
+\raggedleft 1 &
+\raggedleft 0 &
+\raggedleft 4 &
+\raggedleft\arraybslash 256\\
+\raggedleft Conv4 &
+\raggedleft 3 x 3 &
+\raggedleft 1 &
+\raggedleft 0 &
+\raggedleft 4 &
+\raggedleft\arraybslash 512\\
+\raggedleft Conv5 &
+\raggedleft 3 x 3 &
+\raggedleft 1 &
+\raggedleft 0 &
+\raggedleft 4 &
+\raggedleft\arraybslash 1024\\\hline
+\end{supertabular}
+\end{flushleft}
+
+\bigskip
+
+
+\bigskip
+
+AIM
+
+\begin{center}
+\tablefirsthead{}
+\tablehead{}
+\tabletail{}
+\tablelasttail{}
+\begin{supertabular}{|m{1.3212599in}|m{1.4115599in}|m{1.1136599in}|m{1.2795599in}|m{1.4052598in}|}
+\hline
+~
+ &
+\raggedleft Supervised (All towns, b128) &
+\raggedleft Supervised (All towns) &
+\raggedleft Supervised (first 4 towns) &
+\raggedleft\arraybslash Self-Supervised + Finetuned\\\hline
+Avg. driving score &
+\raggedleft 23.09 ± 6.9 &
+\raggedleft 18.05 ± 3.46 &
+\raggedleft 12.95 ± 4.45 &
+\raggedleft\arraybslash 10.54 ± 1.25\\\hline
+Avg. route completion &
+\raggedleft 87.28 ± 2.84 &
+\raggedleft 41.63 ± 4.59 &
+\raggedleft 57.16 ± 9.78 &
+\raggedleft\arraybslash 18.15 ± 0.37\\\hline
+Avg. infraction penalty &
+\raggedleft 0.31 ± 0.1 &
+\raggedleft 0.59 ± 0.06 &
+\raggedleft 0.37 ± 0.04 &
+\raggedleft\arraybslash 0.59 ± 0.04\\\hline
+Collisions with pedestrians &
+\raggedleft 0.21 ± 0.24 &
+\raggedleft 0.14 ± 0.12 &
+\raggedleft 0.39 ± 0.14 &
+\raggedleft\arraybslash 0.15 ± 0.21\\\hline
+Collisions with vehicles &
+\raggedleft 0.51 ± 0.22 &
+\raggedleft 1.6 ± 0.42 &
+\raggedleft 1.66 ± 0.48 &
+\raggedleft\arraybslash 0.78 ± 0.02\\\hline
+Collisions with layout &
+\raggedleft 0.02 ± 0.03 &
+\raggedleft 0.07 ± 0.11 &
+\raggedleft 0.44 ± 0.3 &
+\raggedleft\arraybslash 2.8 ± 0.83\\\hline
+Red lights infractions &
+\raggedleft 1.22 ± 1.36 &
+\raggedleft 2 ± 0.19 &
+\raggedleft 3.13 ± 0.46 &
+\raggedleft\arraybslash 1.79 ± 0.46\\\hline
+Stop sign infractions &
+\raggedleft 0.42 ± 0.48 &
+\raggedleft 0.52 ± 0.12 &
+\raggedleft 0.57 ± 0.26 &
+\raggedleft\arraybslash 0.08 ± 0.17\\\hline
+Off-road infractions &
+\raggedleft 0.39 ± 0.49 &
+\raggedleft 1.49 ± 0.12 &
+\raggedleft 0.45 ± 0.18 &
+\raggedleft\arraybslash 4.88 ± 10.3\\\hline
+Route deviations &
+\raggedleft 0 ± 0 &
+\raggedleft 0 ± 0 &
+\raggedleft 0 ± 0 &
+\raggedleft\arraybslash 2.25 ± 0.66\\\hline
+Route timeouts &
+\raggedleft 0 ± 0 &
+\raggedleft 0.07 ± 0.12 &
+\raggedleft 0 ± 0 &
+\raggedleft\arraybslash 0 ± 0\\\hline
+Agent blocked &
+\raggedleft 0.24 ± 0.08 &
+\raggedleft 1.59 ± 0.55 &
+\raggedleft 1.07 ± 0.32 &
+\raggedleft\arraybslash 1.32 ± 0.51\\\hline
+\end{supertabular}
+\end{center}
+
+\bigskip
+
+AIM with Navigational Command
+
+\begin{flushleft}
+\tablefirsthead{}
+\tablehead{}
+\tabletail{}
+\tablelasttail{}
+\begin{supertabular}{|m{1.2719599in}|m{1.0712599in}|}
+\hline
+~
+ &
+\raggedleft\arraybslash Supervised (All towns)\\\hline
+Avg. driving score &
+\raggedleft\arraybslash 8.01 ± 1.1\\\hline
+Avg. route completion &
+\raggedleft\arraybslash 10.23 ± 1.78\\\hline
+Avg. infraction penalty &
+\raggedleft\arraybslash 0.85 ± 0.13\\\hline
+Collisions with pedestrians &
+\raggedleft\arraybslash 0.39 ± 0.55\\\hline
+Collisions with vehicles &
+\raggedleft\arraybslash 0.87 ± 0.12\\\hline
+Collisions with layout &
+\raggedleft\arraybslash 0.78 ± 1.11\\\hline
+Red lights infractions &
+\raggedleft\arraybslash 1.26 ± 0.44\\\hline
+Stop sign infractions &
+\raggedleft\arraybslash 0 ± 0\\\hline
+Off-road infractions &
+\raggedleft\arraybslash 5.6 ± 7.79\\\hline
+Route deviations &
+\raggedleft\arraybslash 5.36 ± 3.15\\\hline
+Route timeouts &
+\raggedleft\arraybslash 0 ± 0\\\hline
+Agent blocked &
+\raggedleft\arraybslash 3.3 ± 1.98\\\hline
+\end{supertabular}
+\end{flushleft}
+
+\bigskip
+
+AIM with DeepVO
+
+\begin{flushleft}
+\tablefirsthead{}
+\tablehead{}
+\tabletail{}
+\tablelasttail{}
+\begin{supertabular}{|m{1.2719599in}|m{0.7663598in}|m{1.3525599in}|}
+\hline
+~
+ &
+\raggedleft Self-Supervised &
+\raggedleft\arraybslash Self-Supervised + Finetuned\\\hline
+Avg. driving score &
+10.33 ± 1.35 &
+24.71 ± 3.04\\\hline
+Avg. route completion &
+80.41 ± 5.29 &
+76.53 ± 6.18\\\hline
+Avg. infraction penalty &
+0.19 ± 0.06 &
+0.39 ± 0.03\\\hline
+Collisions with pedestrians &
+0.13 ± 0.09 &
+0.35 ± 0.08\\\hline
+Collisions with vehicles &
+1.71 ± 0.22 &
+0.99 ± 0.26\\\hline
+Collisions with layout &
+0.62 ± 0.2 &
+0.03 ± 0.06\\\hline
+Red lights infractions &
+4.24 ± 0.28 &
+2.42 ± 0.41\\\hline
+Stop sign infractions &
+0.55 ± 0.19 &
+0.56 ± 0.09\\\hline
+Off-road infractions &
+2.62 ± 0.31 &
+0.23 ± 0.25\\\hline
+Route deviations &
+0 ± 0 &
+0 ± 0\\\hline
+Route timeouts &
+0 ± 0 &
+0 ± 0\\\hline
+Agent blocked &
+0.46 ± 0.06 &
+0.42 ± 0.12\\\hline
+\end{supertabular}
+\end{flushleft}
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+
+\begin{center}
+\tablefirsthead{}
+\tablehead{}
+\tabletail{}
+\tablelasttail{}
+\begin{supertabular}{|m{1.3775599in}|m{1.6094599in}|m{1.4962599in}|m{2.12686in}|}
+\hline
+~
+ &
+\raggedleft AIM Nav Supervised (All towns) &
+\raggedleft AIM DeepVO Self-Supervised &
+\raggedleft\arraybslash AIM DeepVO Self-Supervised + Finetuned\\\hline
+Avg. driving score &
+\raggedleft 8.01 ± 1.1 &
+\raggedleft 10.33 ± 1.35 &
+\raggedleft\arraybslash 24.71 ± 3.04\\\hline
+Avg. route completion &
+\raggedleft 10.23 ± 1.78 &
+\raggedleft 80.41 ± 5.29 &
+\raggedleft\arraybslash 76.53 ± 6.18\\\hline
+Avg. infraction penalty &
+\raggedleft 0.85 ± 0.13 &
+\raggedleft 0.19 ± 0.06 &
+\raggedleft\arraybslash 0.39 ± 0.03\\\hline
+Collisions with pedestrians &
+\raggedleft 0.39 ± 0.55 &
+\raggedleft 0.13 ± 0.09 &
+\raggedleft\arraybslash 0.35 ± 0.08\\\hline
+Collisions with vehicles &
+\raggedleft 0.87 ± 0.12 &
+\raggedleft 1.71 ± 0.22 &
+\raggedleft\arraybslash 0.99 ± 0.26\\\hline
+Collisions with layout &
+\raggedleft 0.78 ± 1.11 &
+\raggedleft 0.62 ± 0.2 &
+\raggedleft\arraybslash 0.03 ± 0.06\\\hline
+Red lights infractions &
+\raggedleft 1.26 ± 0.44 &
+\raggedleft 4.24 ± 0.28 &
+\raggedleft\arraybslash 2.42 ± 0.41\\\hline
+Stop sign infractions &
+\raggedleft 0 ± 0 &
+\raggedleft 0.55 ± 0.19 &
+\raggedleft\arraybslash 0.56 ± 0.09\\\hline
+Off-road infractions &
+\raggedleft 5.6 ± 7.79 &
+\raggedleft 2.62 ± 0.31 &
+\raggedleft\arraybslash 0.23 ± 0.25\\\hline
+Route deviations &
+\raggedleft 5.36 ± 3.15 &
+\raggedleft 0 ± 0 &
+\raggedleft\arraybslash 0 ± 0\\\hline
+Route timeouts &
+\raggedleft 0 ± 0 &
+\raggedleft 0 ± 0 &
+\raggedleft\arraybslash 0 ± 0\\\hline
+Agent blocked &
+\raggedleft 3.3 ± 1.98 &
+\raggedleft 0.46 ± 0.06 &
+\raggedleft\arraybslash 0.42 ± 0.12\\\hline
+\end{supertabular}
+\end{center}
+
+\bigskip
+
+
+\bigskip
+
+\begin{center}
+\tablefirsthead{}
+\tablehead{}
+\tabletail{}
+\tablelasttail{}
+\begin{supertabular}{|m{0.9448598in}|m{0.7865598in}|m{0.68865985in}|m{0.7490598in}|m{0.7865598in}|m{0.7865598in}|m{0.7663598in}|m{0.7872598in}|}
+\hline
+~
+ &
+\multicolumn{1}{m{0.7865598in}}{AIM} &
+\multicolumn{1}{m{0.68865985in}}{~
+} &
+\multicolumn{1}{m{0.7490598in}}{~
+} &
+~
+ &
+AIM NAV &
+\multicolumn{1}{m{0.7663598in}}{AIM DeepVO} &
+~
+\\\hline
+~
+ &
+\raggedleft Supervised (All towns, b128) &
+\raggedleft Supervised (All towns) &
+\raggedleft Supervised (first 4 towns) &
+\raggedleft Self-Supervised + Finetuned &
+\raggedleft Supervised (All towns) &
+\raggedleft Self-Supervised &
+\raggedleft\arraybslash Self-Supervised + Finetuned\\\hline
+Avg. driving score &
+\raggedleft 23.09 ± 6.9 &
+\raggedleft 18.05 ± 3.46 &
+\raggedleft 12.95 ± 4.45 &
+\raggedleft 10.54 ± 1.25 &
+\raggedleft 8.01 ± 1.1 &
+\raggedleft 10.33 ± 1.35 &
+\raggedleft\arraybslash 24.71 ± 3.04\\\hline
+Avg. route completion &
+\raggedleft 87.28 ± 2.84 &
+\raggedleft 41.63 ± 4.59 &
+\raggedleft 57.16 ± 9.78 &
+\raggedleft 18.15 ± 0.37 &
+\raggedleft 10.23 ± 1.78 &
+\raggedleft 80.41 ± 5.29 &
+\raggedleft\arraybslash 76.53 ± 6.18\\\hline
+Avg. infraction penalty &
+\raggedleft 0.31 ± 0.1 &
+\raggedleft 0.59 ± 0.06 &
+\raggedleft 0.37 ± 0.04 &
+\raggedleft 0.59 ± 0.04 &
+\raggedleft 0.85 ± 0.13 &
+\raggedleft 0.19 ± 0.06 &
+\raggedleft\arraybslash 0.39 ± 0.03\\\hline
+Collisions with pedestrians &
+\raggedleft 0.21 ± 0.24 &
+\raggedleft 0.14 ± 0.12 &
+\raggedleft 0.39 ± 0.14 &
+\raggedleft 0.15 ± 0.21 &
+\raggedleft 0.39 ± 0.55 &
+\raggedleft 0.13 ± 0.09 &
+\raggedleft\arraybslash 0.35 ± 0.08\\\hline
+Collisions with vehicles &
+\raggedleft 0.51 ± 0.22 &
+\raggedleft 1.6 ± 0.42 &
+\raggedleft 1.66 ± 0.48 &
+\raggedleft 0.78 ± 0.02 &
+\raggedleft 0.87 ± 0.12 &
+\raggedleft 1.71 ± 0.22 &
+\raggedleft\arraybslash 0.99 ± 0.26\\\hline
+Collisions with layout &
+\raggedleft 0.02 ± 0.03 &
+\raggedleft 0.07 ± 0.11 &
+\raggedleft 0.44 ± 0.3 &
+\raggedleft 2.8 ± 0.83 &
+\raggedleft 0.78 ± 1.11 &
+\raggedleft 0.62 ± 0.2 &
+\raggedleft\arraybslash 0.03 ± 0.06\\\hline
+Red lights infractions &
+\raggedleft 1.22 ± 1.36 &
+\raggedleft 2 ± 0.19 &
+\raggedleft 3.13 ± 0.46 &
+\raggedleft 1.79 ± 0.46 &
+\raggedleft 1.26 ± 0.44 &
+\raggedleft 4.24 ± 0.28 &
+\raggedleft\arraybslash 2.42 ± 0.41\\\hline
+Stop sign infractions &
+\raggedleft 0.42 ± 0.48 &
+\raggedleft 0.52 ± 0.12 &
+\raggedleft 0.57 ± 0.26 &
+\raggedleft 0.08 ± 0.17 &
+\raggedleft 0 ± 0 &
+\raggedleft 0.55 ± 0.19 &
+\raggedleft\arraybslash 0.56 ± 0.09\\\hline
+Off-road infractions &
+\raggedleft 0.39 ± 0.49 &
+\raggedleft 1.49 ± 0.12 &
+\raggedleft 0.45 ± 0.18 &
+\raggedleft 4.88 ± 10.3 &
+\raggedleft 5.6 ± 7.79 &
+\raggedleft 2.62 ± 0.31 &
+\raggedleft\arraybslash 0.23 ± 0.25\\\hline
+Route deviations &
+\raggedleft 0 ± 0 &
+\raggedleft 0 ± 0 &
+\raggedleft 0 ± 0 &
+\raggedleft 2.25 ± 0.66 &
+\raggedleft 5.36 ± 3.15 &
+\raggedleft 0 ± 0 &
+\raggedleft\arraybslash 0 ± 0\\\hline
+Route timeouts &
+\raggedleft 0 ± 0 &
+\raggedleft 0.07 ± 0.12 &
+\raggedleft 0 ± 0 &
+\raggedleft 0 ± 0 &
+\raggedleft 0 ± 0 &
+\raggedleft 0 ± 0 &
+\raggedleft\arraybslash 0 ± 0\\\hline
+Agent blocked &
+\raggedleft 0.24 ± 0.08 &
+\raggedleft 1.59 ± 0.55 &
+\raggedleft 1.07 ± 0.32 &
+\raggedleft 1.32 ± 0.51 &
+\raggedleft 3.3 ± 1.98 &
+\raggedleft 0.46 ± 0.06 &
+\raggedleft\arraybslash 0.42 ± 0.12\\\hline
+\end{supertabular}
+\end{center}
+
+\bigskip
+\end{document}

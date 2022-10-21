@@ -1891,4 +1891,566 @@
   pages        = {6818--6827},
 }
 
+@Misc{,
+  pages = {10--11},
+}
+
+@Misc{2019,
+  title = {bibitem{Waymo2019} Waymo open dataset: An autonomous driving dataset},
+  year  = {2019},
+  date  = {2019},
+}
+
+@InBook{Bansal2019a,
+  author    = {Bansal, Mayank and Krizhevsky, Alex and Ogale, Abhijit~s},
+  year      = {2019},
+  booktitle = {newblock Chauffeurnet: Learning to drive by imitating the best and synthesizing the worst. newblock In {em Proc. Robotics: Science and Systems (RSS)}},
+  date      = {2019},
+}
+
+@InBook{Behl2020a,
+  author    = {Behl, Aseem and Chitta, Kashyap and Prakash, Aditya and Ohn-Bar, Eshed and Geiger, Andreas},
+  publisher = {IEEE},
+  title     = {Label Efficient Visual Abstractions for Autonomous Driving},
+  year      = {2020},
+  month     = {10},
+  booktitle = {2020 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  date      = {2020-10-24},
+  day       = {24},
+  doi       = {10.1109/iros45743.2020.9340641},
+}
+
+@InBook{2015,
+  publisher = {newblock Princeton University Press},
+  year      = {2015},
+  volume    = {2045},
+  booktitle = {bibitem{Bellman2015Princeton} Richard Bellman. newblock {em Adaptive Control Processes - {A} Guided Tour}},
+  date      = {2015},
+}
+
+@InBook{Casas2020a,
+  author    = {Casas, Sergio and Gulino, Cole and Liao, Renjie and Urtasun, Raquel},
+  publisher = {IEEE},
+  title     = {SpAGNN: Spatially-Aware Graph Neural Networks for Relational Behavior Forecasting from Sensor Data},
+  year      = {2020},
+  month     = {5},
+  booktitle = {2020 IEEE International Conference on Robotics and Automation (ICRA)},
+  date      = {2020-05},
+  doi       = {10.1109/icra40945.2020.9196697},
+}
+
+@InBook{Casas2018a,
+  author    = {Casas, Sergio and Luo, Wenjie and Urtasun, Raquel},
+  year      = {2018},
+  booktitle = {newblock Intentnet: Learning to predict intention from raw sensor data. newblock In {em Proc. Conf. on Robot Learning (CoRL)}},
+  date      = {2018},
+}
+
+@Article{Chen2009,
+  author    = {Chen, Can and Fragonara, Luca and Tsourdos, Antonios},
+  journal   = {IEEE Access},
+  title     = {RoIFusion: 3D Object Detection From LiDAR and Vision},
+  year      = {2009},
+  pages     = {51710-51721},
+  volume    = {9},
+  date      = {2009},
+  doi       = {10.1109/access.2021.3070379},
+  publisher = {Institute of Electrical and Electronics Engineers (IEEE)},
+}
+
+@InBook{Chen2019b,
+  author    = {Chen, Dian and Zhou, Brady},
+  year      = {2019},
+  booktitle = {Vladlen Koltun, and Philipp Krähenbühl. newblock Learning by cheating. newblock In {em Proc. Conf. on Robot Learning (CoRL)}},
+  date      = {2019},
+}
+
+@Misc{Bibitemchen2020arxivKeChen2006,
+  author = {Bibitem{chen2020arxiv} Ke Chen, Ryan and Oldja, Nikolai and Smolyanskiy, Stan and Birchfield, Alexander and Popov, David and Wehr, Ibrahim and Eden, Joachim and Pehserl},
+  title  = {newblock Mvlidarnet: Real-time multi-class scene understanding for autonomous driving using multiple views. newblock {em arXiv.org}},
+  year   = {2006},
+  date   = {2006},
+}
+
+@InBook{Bibitemchen2020icmlMarkChen2020,
+  author    = {Bibitem{chen2020icml} Mark Chen, A and Radford, Jeff and Wu, Heewoo and Jun, Prafulla and Dhariwal, David and Luan, Ilya and Sutskever},
+  year      = {2020},
+  booktitle = {newblock Generative pretraining from pixels. newblock In {em Proc. of the International Conf. on Machine learning (ICML)}},
+  date      = {2020},
+}
+
+@Article{Chen2017a,
+  author    = {Chen, Shitao and Zhang, Songyi and Shang, Jinghao and Chen, Badong and Zheng, Nanning},
+  journal   = {IEEE Transactions on Cognitive and Developmental Systems},
+  title     = {Brain-Inspired Cognitive Model With Attention for Self-Driving Cars},
+  year      = {2017},
+  number    = {1},
+  pages     = {13-25},
+  volume    = {11},
+  date      = {2017},
+  doi       = {10.1109/tcds.2017.2717451},
+  publisher = {Institute of Electrical and Electronics Engineers (IEEE)},
+}
+
+@InBook{Chen2019c,
+  author    = {Chen, Yilun and Dong, Chiyu and Palanisamy, Praveen and Mudalige, Priyantha and Muelling, Katharina and Dolan, John},
+  publisher = {IEEE},
+  title     = {Attention-based Hierarchical Deep Reinforcement Learning for Lane Change Behaviors in Autonomous Driving},
+  year      = {2019},
+  month     = {11},
+  booktitle = {2019 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  date      = {2019-11},
+  doi       = {10.1109/iros40897.2019.8968565},
+}
+
+@InBook{2019a,
+  year      = {2019},
+  booktitle = {bibitem{Choi2019ICCV} Chiho Choi and Behzad Dariush. newblock Looking to relations for future trajectory forecast. newblock In {em Proc. of the IEEE International Conf. on Computer Vision (ICCV)}},
+  date      = {2019},
+}
+
+@InBook{Codevilla2019a,
+  author    = {Codevilla, Felipe and Santana, Eder and Lopez, Antonio and Gaidon, Adrien},
+  publisher = {IEEE},
+  title     = {Exploring the Limitations of Behavior Cloning for Autonomous Driving},
+  year      = {2019},
+  month     = {10},
+  booktitle = {2019 IEEE/CVF International Conference on Computer Vision (ICCV)},
+  date      = {2019-10},
+  doi       = {10.1109/iccv.2019.00942},
+}
+
+@InBook{Cordts2016a,
+  author    = {Cordts, Marius and Omran, Mohamed and Ramos, Sebastian and Rehfeld, Timo and Enzweiler, Markus and Benenson, Rodrigo and Franke, Uwe and Roth, Stefan and Schiele, Bernt},
+  publisher = {IEEE},
+  title     = {The Cityscapes Dataset for Semantic Urban Scene Understanding},
+  year      = {2016},
+  month     = {6},
+  booktitle = {2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+  date      = {2016-06},
+  doi       = {10.1109/cvpr.2016.350},
+}
+
+@InBook{Bibitemdjuric2020arxivNemanjaDjuric2000,
+  author    = {Bibitem{djuric2020arxiv} Nemanja Djuric, Henggang and Cui, Zhaoen and Su, Shangxuan and Wu, Huahua and Wang, Fang{-}chieh and Chou, Luisa~san and Martin, Song and Feng, Rui and Hu, Yang and Xu, Alyssa and Dayan, Sidney and Zhang and Brian~c and Becker, Gregory~p and Meyer},
+  year      = {2000},
+  booktitle = {Carlos Vallespi{-}Gonzalez, and Carl~K. Wellington. newblock Multixnet: Multiclass multistage multimodal motion prediction. newblock {em arXiv.org}},
+  date      = {2000},
+}
+
+@InBook{Dosovitskiy2010,
+  author    = {Dosovitskiy, Alexey and Beyer, Lucas and Kolesnikov, Alexander and Weissenborn, Dirk and Zhai, Xiaohua and Unterthiner, Thomas and Dehghani, Mostafa and Minderer, Matthias and Heigold, Georg and Gelly, Sylvain and Uszkoreit, Jakob and Houlsby, Neil},
+  year      = {2010},
+  booktitle = {newblock An image is worth 16x16 words: Transformers for image recognition at scale. newblock {em arXiv.org}},
+  date      = {2010},
+}
+
+@Misc{Bibitemfadadu2020arxivSudeepFadadu2008,
+  author = {Bibitem{fadadu2020arxiv} Sudeep Fadadu, Shreyash and Pandey, Darshan and Hegde, Yi and Shi},
+  title  = {Fang{-}Chieh Chou, Nemanja Djuric, and Carlos Vallespi{-}Gonzalez. newblock Multi-view fusion of sensor data for improved perception and prediction in autonomous driving},
+  year   = {2008},
+  date   = {2008},
+}
+
+@InBook{Bibitemfilos2020icmlAngelosFilos2020,
+  author    = {Bibitem{filos2020icml} Angelos Filos, Panagiotis and Tigas, Rowan and Mcallister, Nicholas and Rhinehart, Sergey and Levine, Yarin and Gal},
+  title     = {newblock Can autonomous vehicles identify, recover from, and adapt to distribution shifts?},
+  year      = {2020},
+  booktitle = {newblock In {em Proc. of the International Conf. on Machine learning (ICML)}},
+  date      = {2020},
+}
+
+@InBook{Fu1875,
+  author    = {Fu, Chen and Dong, Chiyu and Mertz, Christoph and Dolan, John},
+  publisher = {IEEE},
+  title     = {Depth Completion via Inductive Fusion of Planar LIDAR and Monocular Camera},
+  year      = {1875},
+  booktitle = {2020 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  date      = {1875},
+  doi       = {10.1109/iros45743.2020.9341385},
+}
+
+@InBook{Gaidon2016,
+  author    = {Gaidon, Adrien and Wang, Qiao and Cabon, Yohann and Vig, Eleonora},
+  publisher = {IEEE},
+  title     = {VirtualWorlds as Proxy for Multi-object Tracking Analysis},
+  year      = {2016},
+  month     = {6},
+  booktitle = {2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+  date      = {2016-06},
+  doi       = {10.1109/cvpr.2016.470},
+}
+
+@InBook{Geiger2012a,
+  author    = {Geiger, Andreas and Lenz, Philip and Urtasun, Raquel},
+  publisher = {IEEE},
+  title     = {Are we ready for autonomous driving? The KITTI vision benchmark suite},
+  year      = {2012},
+  month     = {6},
+  booktitle = {2012 IEEE Conference on Computer Vision and Pattern Recognition},
+  date      = {2012-06},
+  doi       = {10.1109/cvpr.2012.6248074},
+}
+
+@InBook{Bibitemhe2016cvprKaimingHe2016,
+  author    = {Bibitem{he2016cvpr} Kaiming He, Xiangyu and Zhang},
+  title     = {Shaoqing Ren, and Jian Sun. newblock Deep residual learning for image recognition. newblock In},
+  year      = {2016},
+  booktitle = {{em Proc. IEEE Conf. on Computer Vision and Pattern Recognition (CVPR)}},
+  date      = {2016},
+}
+
+@InBook{Huang2019a,
+  author    = {Huang, Yingfan and Bi, Huikun and Li, Zhaoxin and Mao, Tianlu and Wang, Zhaoqi},
+  publisher = {IEEE},
+  title     = {STGAT: Modeling Spatial-Temporal Interactions for Human Trajectory Prediction},
+  year      = {2019},
+  month     = {10},
+  booktitle = {2019 IEEE/CVF International Conference on Computer Vision (ICCV)},
+  date      = {2019-10},
+  doi       = {10.1109/iccv.2019.00637},
+}
+
+@InBook{Ivanovic2019a,
+  author    = {Ivanovic, Boris and Pavone, Marco},
+  publisher = {IEEE},
+  title     = {The Trajectron: Probabilistic Multi-Agent Trajectory Modeling With Dynamic Spatiotemporal Graphs},
+  year      = {2019},
+  month     = {10},
+  booktitle = {2019 IEEE/CVF International Conference on Computer Vision (ICCV)},
+  date      = {2019-10},
+  doi       = {10.1109/iccv.2019.00246},
+}
+
+@InBook{Kosaraju2019a,
+  author    = {Kosaraju, Vineet and Sadeghian, Amir and Mart{'{i}}n{-}mart{'{i}}n, Roberto and Ian~d and Reid, Hamid and Rezatofighi, Silvio and Savarese},
+  title     = {newblock Social-bigat: Multimodal trajectory forecasting using bicycle-gan and graph attention networks},
+  year      = {2019},
+  booktitle = {newblock In {em Advances in Neural Information Processing Systems (NeurIPS)}},
+  date      = {2019},
+}
+
+@InBook{Ku2018,
+  author    = {Ku, Jason and Mozifian, Melissa and Lee, Jungwook and Harakeh, Ali and Waslander, Steven~l},
+  year      = {2018},
+  booktitle = {newblock Joint 3d proposal generation and object detection from view aggregation. newblock In {em Proc. IEEE International Conf. on Intelligent Robots and Systems (IROS)}},
+  date      = {2018},
+}
+
+@InBook{Bibitemli2020irosLingyunlukeLi2020,
+  author    = {Bibitem{li2020iros} Lingyun~luke Li, Bin and Yang, Ming and Liang, Wenyuan and Zeng, Mengye and Ren, Sean and Segal, Raquel and Urtasun},
+  title     = {newblock End-to-end contextual perception and prediction with interaction transformer. newblock In},
+  year      = {2020},
+  booktitle = {{em Proc. IEEE International Conf. on Intelligent Robots and Systems (IROS)}},
+  date      = {2020},
+}
+
+@InBook{Liang2019a,
+  author    = {Liang, Ming and Yang, Bin and Chen, Yun and Hu, Rui and Urtasun, Raquel},
+  publisher = {IEEE},
+  title     = {Multi-Task Multi-Sensor Fusion for 3D Object Detection},
+  year      = {2019},
+  month     = {6},
+  booktitle = {2019 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  date      = {2019-06},
+  doi       = {10.1109/cvpr.2019.00752},
+}
+
+@InBook{Liang2018b,
+  author    = {Liang, Ming and Yang, Bin and Wang, Shenlong and Urtasun, Raquel},
+  pages     = {663-678},
+  publisher = {Springer International Publishing},
+  title     = {Deep Continuous Fusion for Multi-sensor 3D Object Detection},
+  year      = {2018},
+  booktitle = {Computer Vision – ECCV 2018},
+  date      = {2018},
+  doi       = {10.1007/978-3-030-01270-0_39},
+}
+
+@InBook{Liang2020a,
+  author    = {Liang, Ming and Yang, Bin and Zeng, Wenyuan and Chen, Yun and Hu, Rui and Casas, Sergio and Urtasun, Raquel},
+  publisher = {IEEE},
+  title     = {PnPNet: End-to-End Perception and Prediction With Tracking in the Loop},
+  year      = {2020},
+  month     = {6},
+  booktitle = {2020 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  date      = {2020-06},
+  doi       = {10.1109/cvpr42600.2020.01157},
+}
+
+@InBook{Bibitemluo2018cvprWenjieLuo2018,
+  author    = {Bibitem{luo2018cvpr} Wenjie Luo, Bin and Yang, Raquel and Urtasun},
+  title     = {newblock Fast and furious: Real time end-to-end 3d detection, tracking and motion forecasting with a single convolutional net. newblock In},
+  year      = {2018},
+  booktitle = {{em Proc. IEEE Conf. on Computer Vision and Pattern Recognition (CVPR)}},
+  date      = {2018},
+}
+
+@InBook{p2019,
+  author    = {Gregory~p and Meyer, Jake and Charland, Darshan and Hegde},
+  title     = {Ankit Laddha, and Carlos Vallespi{-}Gonzalez. newblock Sensor fusion for joint 3d object detection and semantic segmentation. newblock In},
+  year      = {2019},
+  booktitle = {{em Proc. IEEE Conf. on Computer Vision and Pattern Recognition (CVPR) Workshops}},
+  date      = {2019},
+}
+
+@Misc{p2003,
+  author = {Gregory~p and Meyer, Jake and Charland, Shreyash and Pandey},
+  title  = {Ankit Laddha, Carlos Vallespi{-}Gonzalez, and Carl~K. Wellington. newblock Laserflow: Efficient and probabilistic object detection and motion forecasting. newblock {em arXiv.org}},
+  year   = {2003},
+  date   = {2003},
+}
+
+@InBook{p2019a,
+  author    = {Gregory~p and Meyer, Ankit and Laddha, Eric and Kee},
+  title     = {Carlos Vallespi{-}Gonzalez, and Carl~K. Wellington. newblock Lasernet: An efficient probabilistic 3d object detector for autonomous driving. newblock In},
+  year      = {2019},
+  booktitle = {{em Proc. IEEE Conf. on Computer Vision and Pattern Recognition (CVPR)}},
+  date      = {2019},
+}
+
+@InBook{Muller2005,
+  author    = {Muller, Urs and Ben, Jan and Cosatto, Eric},
+  title     = {Beat Flepp, and Yann LeCun. newblock Off-road obstacle avoidance through end-to-end learning},
+  year      = {2005},
+  booktitle = {newblock In {em Advances in Neural Information Processing Systems (NeurIPS)}},
+  date      = {2005},
+}
+
+@InBook{EshedOhnBar2020,
+  editor    = {bibitem{Ohn-Bar2020CVPR} Eshed Ohn-Bar, Aditya Prakash, Aseem Behl},
+  year      = {2020},
+  booktitle = {Kashyap Chitta, and Andreas Geiger. newblock Learning situational driving. newblock In {em Proc. IEEE Conf. on Computer Vision and Pattern Recognition (CVPR)}},
+  date      = {2020},
+}
+
+@InBook{Prakash2020a,
+  author    = {Prakash, Aditya and Behl, Aseem and Ohn-Bar, Eshed and Chitta, Kashyap and Geiger, Andreas},
+  publisher = {IEEE},
+  title     = {Exploring Data Aggregation in Policy Learning for Vision-Based Urban Autonomous Driving},
+  year      = {2020},
+  month     = {6},
+  booktitle = {2020 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  date      = {2020-06},
+  doi       = {10.1109/cvpr42600.2020.01178},
+}
+
+@Misc{DiQi2001,
+  author = {Di Qi, L and Su and Song, E and Cui, Taroon and Bharti, Arun and Sacheti},
+  title  = {newblock Imagebert: Cross-modal pre-training with large-scale weak-supervised image-text data},
+  year   = {2001},
+  date   = {2001},
+}
+
+@InBook{Bibitemqi2018cvprXiaojuanQi2018,
+  author    = {Bibitem{qi2018cvpr} Xiaojuan Qi, Qifeng and Chen, Jiaya and Jia, Vladlen and Koltun},
+  title     = {newblock Semi-parametric image synthesis. newblock In},
+  year      = {2018},
+  booktitle = {{em Proc. IEEE Conf. on Computer Vision and Pattern Recognition (CVPR)}},
+  date      = {2018},
+}
+
+@InBook{Rhinehart2019,
+  author    = {Rhinehart, Nicholas and Mcallister, Rowan and Kitani, Kris and Levine, Sergey},
+  year      = {2019},
+  booktitle = {newblock {PRECOG:} prediction conditioned on goals in visual multi-agent settings. newblock In {em Proc. of the IEEE International Conf. on Computer Vision (ICCV)}},
+  date      = {2019},
+}
+
+@InBook{Rhinehart2020a,
+  author    = {Rhinehart, Nicholas and He, Jeff and Packer, Charles and Wright, Matthew and Mcallister, Rowan and Gonzalez, Joseph and Levine, Sergey},
+  publisher = {IEEE},
+  title     = {Contingencies from Observations: Tractable Contingency Planning with Learned Behavior Models},
+  year      = {2020},
+  booktitle = {2021 IEEE International Conference on Robotics and Automation (ICRA)},
+  date      = {2020},
+  doi       = {10.1109/icra48506.2021.9561683},
+}
+
+@InBook{Richter2016,
+  author    = {Richter, Stephan and Vineet, Vibhav and Roth, Stefan and Koltun, Vladlen},
+  pages     = {102-118},
+  publisher = {Springer International Publishing},
+  title     = {Playing for Data: Ground Truth from Computer Games},
+  year      = {2016},
+  booktitle = {Computer Vision – ECCV 2016},
+  date      = {2016},
+  doi       = {10.1007/978-3-319-46475-6_7},
+}
+
+@InBook{Bibitemros2016cvprGermanRos2016,
+  author    = {Bibitem{ros2016cvpr} German Ros, Laura and Sellart, Joanna and Materzynska, David and Vazquez, Antonio and Lopez},
+  title     = {newblock The synthia dataset: A large collection of synthetic images for semantic segmentation of urban scenes. newblock In},
+  year      = {2016},
+  booktitle = {{em Proc. IEEE Conf. on Computer Vision and Pattern Recognition (CVPR)}},
+  date      = {2016},
+}
+
+@InBook{Sadeghian2019a,
+  author    = {Sadeghian, Amir and Kosaraju, Vineet and Sadeghian, Ali and Hirose, Noriaki and Rezatofighi, Hamid and Savarese, Silvio},
+  publisher = {IEEE},
+  title     = {SoPhie: An Attentive GAN for Predicting Paths Compliant to Social and Physical Constraints},
+  year      = {2019},
+  month     = {6},
+  booktitle = {2019 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  date      = {2019-06},
+  doi       = {10.1109/cvpr.2019.00144},
+}
+
+@InBook{Bibitemsadeghian2018eccvAmirSadeghian2018,
+  author    = {Bibitem{sadeghian2018eccv} Amir Sadeghian, Ferdinand and Legros, Maxime and Voisin, Ricky and Vesel},
+  title     = {Alexandre Alahi, and Silvio Savarese. newblock Car-net: Clairvoyant attentive recurrent network. newblock In},
+  year      = {2018},
+  booktitle = {{em Proc. of the European Conf. on Computer Vision (ECCV)}},
+  date      = {2018},
+}
+
+@InBook{Sobh2018,
+  author    = {Sobh, Ibrahim and Amin, Loay and Abdelkarim, Sherif and Elmadawy, Khaled and Saeed, M and Abdeltawab, Omar and Gamal, M and Sallab, Ahmad~el},
+  title     = {newblock End-to-end multi-modal sensors fusion system for urban automated driving},
+  year      = {2018},
+  booktitle = {newblock In {em Advances in Neural Information Processing Systems (NeurIPS) Workshops}},
+  date      = {2018},
+}
+
+@InBook{Sun2019a,
+  author    = {Sun, Chen and Myers, Austin and Vondrick, Carl and Murphy, Kevin and Schmid, Cordelia},
+  publisher = {IEEE},
+  title     = {VideoBERT: A Joint Model for Video and Language Representation Learning},
+  year      = {2019},
+  month     = {10},
+  booktitle = {2019 IEEE/CVF International Conference on Computer Vision (ICCV)},
+  date      = {2019-10},
+  doi       = {10.1109/iccv.2019.00756},
+}
+
+@InBook{Toromanoff2020a,
+  author    = {Toromanoff, Marin and Wirbel, Emilie and Moutarde, Fabien},
+  publisher = {IEEE},
+  title     = {End-to-End Model-Free Reinforcement Learning for Urban Driving Using Implicit Affordances},
+  year      = {2020},
+  month     = {6},
+  booktitle = {2020 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  date      = {2020-06},
+  doi       = {10.1109/cvpr42600.2020.00718},
+}
+
+@InBook{Vaswani2017,
+  author    = {Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan~n and Kaiser, Lukasz and Polosukhin, Illia},
+  year      = {2017},
+  booktitle = {newblock Attention is all you need. newblock In {em Advances in Neural Information Processing Systems (NeurIPS)}},
+  date      = {2017},
+}
+
+@InBook{Bibitemwang2019irosDequanWang2019,
+  author    = {Bibitem{wang2019iros} Dequan Wang, Coline and Devin, Qi{-}zhi and Cai},
+  year      = {2019},
+  booktitle = {Philipp Kr{"{a}}henb{"{u}}hl, and Trevor Darrell. newblock Monocular plan view networks for autonomous driving. newblock In {em Proc. IEEE International Conf. on Intelligent Robots and Systems (IROS)}},
+  date      = {2019},
+}
+
+@InBook{Wei1153,
+  author    = {Wei, Bob and Ren, Mengye and Zeng, Wenyuan and Liang, Ming and Yang, Bin and Urtasun, Raquel},
+  publisher = {IEEE},
+  title     = {Perceive, Attend, and Drive: Learning Spatial Attention for Safe Self-Driving},
+  year      = {1153},
+  booktitle = {2021 IEEE International Conference on Robotics and Automation (ICRA)},
+  date      = {1153},
+  doi       = {10.1109/icra48506.2021.9561904},
+}
+
+@InBook{Bibitemwen2020neuripsChuanWen2020,
+  author    = {Bibitem{wen2020neurips} Chuan Wen, Jierui and Lin, Trevor and Darrell, Dinesh and Jayaraman, Yang and Gao},
+  year      = {2020},
+  booktitle = {newblock Fighting copycat agents in behavioral cloning from observation histories. newblock In {em Advances in Neural Information Processing Systems (NeurIPS)}},
+  date      = {2020},
+}
+
+@InBook{Xiao1906,
+  author    = {Xiao, Yi and Codevilla, Felipe and Gurram, Akhil},
+  year      = {1906},
+  booktitle = {Onay Urfalioglu, and Antonio~M. L{'{o}}pez. newblock Multimodal end-to-end autonomous driving. newblock {em arXiv.org}},
+  date      = {1906},
+}
+
+@InBook{Xu2017a,
+  author    = {Xu, Huazhe and Gao, Yang and Yu, Fisher and Darrell, Trevor},
+  publisher = {IEEE},
+  title     = {End-to-End Learning of Driving Models from Large-Scale Video Datasets},
+  year      = {2017},
+  month     = {7},
+  booktitle = {2017 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+  date      = {2017-07},
+  doi       = {10.1109/cvpr.2017.376},
+}
+
+@InBook{Xu2019,
+  author    = {Xu, Yan and Zhu, Xinge and Shi, Jianping and Zhang, Guofeng and Bao, Hujun and Li, Hongsheng},
+  publisher = {IEEE},
+  title     = {Depth Completion From Sparse LiDAR Data With Depth-Normal Constraints},
+  year      = {2019},
+  month     = {10},
+  booktitle = {2019 IEEE/CVF International Conference on Computer Vision (ICCV)},
+  date      = {2019-10},
+  doi       = {10.1109/iccv.2019.00290},
+}
+
+@InBook{You2020,
+  author    = {You, Yurong and Wang, Yan and Chao, Wei{-}lun and Garg, Divyansh and Pleiss, Geoff and Bharath Hariharan and Mark~e and Campbell, Kilian~q and Weinberger},
+  title     = {newblock Pseudo-lidar++: Accurate depth for 3d object detection in autonomous driving. newblock In},
+  year      = {2020},
+  booktitle = {{em Proc. of the International Conf. on Learning Representations (ICLR)}},
+  date      = {2020},
+}
+
+@InBook{Fisheryu2018,
+  author    = {Fisher {yu}, Wenqi and {xian}},
+  title     = {Yingying {Chen}, Fangchen {Liu}, Mike {Liao}},
+  year      = {2018},
+  booktitle = {Vashisht {Madhavan}, and Trevor {Darrell}. newblock {BDD100K: A Diverse Driving Video Database with Scalable Annotation Tooling}. newblock {em arXiv.org}, 1805.04687},
+  date      = {2018},
+}
+
+@InBook{Zhang2020a,
+  author    = {Zhang, Zhishuai and Gao, Jiyang and Mao, Junhua and Liu, Yukai and Anguelov, Dragomir and Li, Congcong},
+  publisher = {IEEE},
+  title     = {STINet: Spatio-Temporal-Interactive Network for Pedestrian Detection and Trajectory Prediction},
+  year      = {2020},
+  month     = {6},
+  booktitle = {2020 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  date      = {2020-06},
+  doi       = {10.1109/cvpr42600.2020.01136},
+}
+
+@Misc{Zhao1912,
+  author = {Zhao, Albert and He, Tong and Liang, Yitao and Huang, Haibin},
+  title  = {Guy~Van den Broeck, and Stefano Soatto. newblock Lates: Latent space distillation for teacher-student driving policy learning. newblock {em arXiv.org}},
+  year   = {1912},
+  date   = {1912},
+}
+
+@Article{Zhou2019a,
+  author    = {Zhou, Brady and Krähenbühl, Philipp and Koltun, Vladlen},
+  journal   = {Science Robotics},
+  title     = {Does computer vision matter for action?},
+  year      = {2019},
+  month     = {5},
+  number    = {30},
+  volume    = {4},
+  date      = {2019-05-22},
+  day       = {22},
+  doi       = {10.1126/scirobotics.aaw6661},
+  publisher = {American Association for the Advancement of Science (AAAS)},
+}
+
+@InBook{Zhou2019b,
+  author    = {Zhou, Yin and Tuzel, Oncel},
+  publisher = {IEEE},
+  title     = {VoxelNet: End-to-End Learning for Point Cloud Based 3D Object Detection},
+  year      = {2019},
+  booktitle = {2018 IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  date      = {2019},
+  doi       = {10.1109/cvpr.2018.00472},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

@@ -1,0 +1,4848 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nty/global//global/global}
+  \entry{article}{article}{}
+    \name{author}{2}{}{%
+      {{hash=BM}{%
+         family={Bain},
+         familyi={B\bibinitperiod},
+         given={Michael},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=SC}{%
+         family={Sammut},
+         familyi={S\bibinitperiod},
+         given={Claude},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BMSC1}
+    \strng{fullhash}{BMSC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{title}{A Framework for Behavioural Cloning}
+    \field{volume}{15}
+    \field{month}{03}
+    \field{year}{2000}
+  \endentry
+
+  \entry{Ballas2015}{article}{}
+    \name{author}{4}{}{%
+      {{hash=BN}{%
+         family={Ballas},
+         familyi={B\bibinitperiod},
+         given={Nicolas},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=YL}{%
+         family={Yao},
+         familyi={Y\bibinitperiod},
+         given={Li},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=PC}{%
+         family={Pal},
+         familyi={P\bibinitperiod},
+         given={Chris},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=CA}{%
+         family={Courville},
+         familyi={C\bibinitperiod},
+         given={Aaron},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.CV, cs.LG, cs.NE}
+    \strng{namehash}{BN+1}
+    \strng{fullhash}{BNYLPCCA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{abstract}{%
+    We propose an approach to learn spatio-temporal features in videos from
+  intermediate visual representations we call "percepts" using
+  Gated-Recurrent-Unit Recurrent Networks (GRUs).Our method relies on percepts
+  that are extracted from all level of a deep convolutional network trained on
+  the large ImageNet dataset. While high-level percepts contain highly
+  discriminative information, they tend to have a low-spatial resolution.
+  Low-level percepts, on the other hand, preserve a higher spatial resolution
+  from which we can model finer motion patterns. Using low-level percepts can
+  leads to high-dimensionality video representations. To mitigate this effect
+  and control the model number of parameters, we introduce a variant of the GRU
+  model that leverages the convolution operations to enforce sparse
+  connectivity of the model units and share parameters across the input spatial
+  locations. We empirically validate our approach on both Human Action
+  Recognition and Video Captioning tasks. In particular, we achieve results
+  equivalent to state-of-art on the YouTube2Text dataset using a simpler
+  text-decoder model and without extra 3D CNN features.%
+    }
+    \verb{eprint}
+    \verb 1511.06432
+    \endverb
+    \field{title}{Delving Deeper into Convolutional Networks for Learning Video
+  Representations}
+    \verb{file}
+    \verb :http\://arxiv.org/pdf/1511.06432v4:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{month}{11}
+    \field{year}{2015}
+  \endentry
+
+  \entry{Bansal2018}{article}{}
+    \name{author}{3}{}{%
+      {{hash=BM}{%
+         family={Bansal},
+         familyi={B\bibinitperiod},
+         given={Mayank},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=KA}{%
+         family={Krizhevsky},
+         familyi={K\bibinitperiod},
+         given={Alex},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=OA}{%
+         family={Ogale},
+         familyi={O\bibinitperiod},
+         given={Abhijit},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.RO, cs.CV, cs.LG}
+    \strng{namehash}{BMKAOA1}
+    \strng{fullhash}{BMKAOA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{abstract}{%
+    Our goal is to train a policy for autonomous driving via imitation learning
+  that is robust enough to drive a real vehicle. We find that standard behavior
+  cloning is insufficient for handling complex driving scenarios, even when we
+  leverage a perception system for preprocessing the input and a controller for
+  executing the output on the car: 30 million examples are still not enough. We
+  propose exposing the learner to synthesized data in the form of perturbations
+  to the expert's driving, which creates interesting situations such as
+  collisions and/or going off the road. Rather than purely imitating all data,
+  we augment the imitation loss with additional losses that penalize
+  undesirable events and encourage progress -- the perturbations then provide
+  an important signal for these losses and lead to robustness of the learned
+  model. We show that the ChauffeurNet model can handle complex situations in
+  simulation, and present ablation experiments that emphasize the importance of
+  each of our proposed changes and show that the model is responding to the
+  appropriate causal factors. Finally, we demonstrate the model driving a car
+  in the real world.%
+    }
+    \verb{eprint}
+    \verb 1812.03079
+    \endverb
+    \field{title}{ChauffeurNet: Learning to Drive by Imitating the Best and
+  Synthesizing the Worst}
+    \verb{file}
+    \verb :Bansal2018 - ChauffeurNet_ Learning to Drive by Imitating the Best a
+    \verb nd Synthesizing the Worst.pdf:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.RO}
+    \field{month}{12}
+    \field{year}{2018}
+  \endentry
+
+  \entry{Behl2020}{article}{}
+    \name{author}{5}{}{%
+      {{hash=BA}{%
+         family={Behl},
+         familyi={B\bibinitperiod},
+         given={Aseem},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=CK}{%
+         family={Chitta},
+         familyi={C\bibinitperiod},
+         given={Kashyap},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=PA}{%
+         family={Prakash},
+         familyi={P\bibinitperiod},
+         given={Aditya},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=OBE}{%
+         family={Ohn-Bar},
+         familyi={O\bibinithyphendelim B\bibinitperiod},
+         given={Eshed},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=GA}{%
+         family={Geiger},
+         familyi={G\bibinitperiod},
+         given={Andreas},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.CV, cs.AI, cs.RO}
+    \strng{namehash}{BA+1}
+    \strng{fullhash}{BACKPAOBEGA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{abstract}{%
+    It is well known that semantic segmentation can be used as an effective
+  intermediate representation for learning driving policies. However, the task
+  of street scene semantic segmentation requires expensive annotations.
+  Furthermore, segmentation algorithms are often trained irrespective of the
+  actual driving task, using auxiliary image-space loss functions which are not
+  guaranteed to maximize driving metrics such as safety or distance traveled
+  per intervention. In this work, we seek to quantify the impact of reducing
+  segmentation annotation costs on learned behavior cloning agents. We analyze
+  several segmentation-based intermediate representations. We use these visual
+  abstractions to systematically study the trade-off between annotation
+  efficiency and driving performance, i.e., the types of classes labeled, the
+  number of image samples used to learn the visual abstraction model, and their
+  granularity (e.g., object masks vs. 2D bounding boxes). Our analysis uncovers
+  several practical insights into how segmentation-based visual abstractions
+  can be exploited in a more label efficient manner. Surprisingly, we find that
+  state-of-the-art driving performance can be achieved with orders of magnitude
+  reduction in annotation cost. Beyond label efficiency, we find several
+  additional training benefits when leveraging visual abstractions, such as a
+  significant reduction in the variance of the learned policy when compared to
+  state-of-the-art end-to-end driving models.%
+    }
+    \verb{eprint}
+    \verb 2005.10091
+    \endverb
+    \field{title}{Label Efficient Visual Abstractions for Autonomous Driving}
+    \verb{file}
+    \verb :Behl2020 - Label Efficient Visual Abstractions for Autonomous Drivin
+    \verb g.pdf:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{month}{05}
+    \field{year}{2020}
+  \endentry
+
+  \entry{10.2307/j.ctt183ph6v}{book}{}
+    \name{author}{1}{}{%
+      {{hash=BR}{%
+         family={BELLMAN},
+         familyi={B\bibinitperiod},
+         given={RICHARD},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Princeton University Press}%
+    }
+    \strng{namehash}{BR1}
+    \strng{fullhash}{BR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{abstract}{%
+    The book description for "Adaptive Control Processes" is currently
+  unavailable.%
+    }
+    \field{isbn}{9780691079011}
+    \field{title}{Adaptive Control Processes: A Guided Tour}
+    \verb{url}
+    \verb http://www.jstor.org/stable/j.ctt183ph6v
+    \endverb
+    \field{year}{1961}
+    \field{urlday}{10}
+    \field{urlmonth}{09}
+    \field{urlyear}{2022}
+  \endentry
+
+  \entry{Bojarski2016}{article}{}
+    \name{author}{13}{}{%
+      {{hash=BM}{%
+         family={Bojarski},
+         familyi={B\bibinitperiod},
+         given={Mariusz},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=TDD}{%
+         family={Testa},
+         familyi={T\bibinitperiod},
+         given={Davide\bibnamedelima Del},
+         giveni={D\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=DD}{%
+         family={Dworakowski},
+         familyi={D\bibinitperiod},
+         given={Daniel},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=FB}{%
+         family={Firner},
+         familyi={F\bibinitperiod},
+         given={Bernhard},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=FB}{%
+         family={Flepp},
+         familyi={F\bibinitperiod},
+         given={Beat},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=GP}{%
+         family={Goyal},
+         familyi={G\bibinitperiod},
+         given={Prasoon},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=JLD}{%
+         family={Jackel},
+         familyi={J\bibinitperiod},
+         given={Lawrence\bibnamedelima D.},
+         giveni={L\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=MM}{%
+         family={Monfort},
+         familyi={M\bibinitperiod},
+         given={Mathew},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=MU}{%
+         family={Muller},
+         familyi={M\bibinitperiod},
+         given={Urs},
+         giveni={U\bibinitperiod},
+      }}%
+      {{hash=ZJ}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Jiakai},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=ZX}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Xin},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=ZJ}{%
+         family={Zhao},
+         familyi={Z\bibinitperiod},
+         given={Jake},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=ZK}{%
+         family={Zieba},
+         familyi={Z\bibinitperiod},
+         given={Karol},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.CV, cs.LG, cs.NE}
+    \strng{namehash}{BM+1}
+    \strng{fullhash}{BMTDDDDFBFBGPJLDMMMUZJZXZJZK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{abstract}{%
+    We trained a convolutional neural network (CNN) to map raw pixels from a
+  single front-facing camera directly to steering commands. This end-to-end
+  approach proved surprisingly powerful. With minimum training data from humans
+  the system learns to drive in traffic on local roads with or without lane
+  markings and on highways. It also operates in areas with unclear visual
+  guidance such as in parking lots and on unpaved roads. The system
+  automatically learns internal representations of the necessary processing
+  steps such as detecting useful road features with only the human steering
+  angle as the training signal. We never explicitly trained it to detect, for
+  example, the outline of roads. Compared to explicit decomposition of the
+  problem, such as lane marking detection, path planning, and control, our
+  end-to-end system optimizes all processing steps simultaneously. We argue
+  that this will eventually lead to better performance and smaller systems.
+  Better performance will result because the internal components self-optimize
+  to maximize overall system performance, instead of optimizing human-selected
+  intermediate criteria, e.g., lane detection. Such criteria understandably are
+  selected for ease of human interpretation which doesn't automatically
+  guarantee maximum system performance. Smaller networks are possible because
+  the system learns to solve the problem with the minimal number of processing
+  steps. We used an NVIDIA DevBox and Torch 7 for training and an NVIDIA
+  DRIVE(TM) PX self-driving car computer also running Torch 7 for determining
+  where to drive. The system operates at 30 frames per second (FPS).%
+    }
+    \verb{eprint}
+    \verb 1604.07316
+    \endverb
+    \field{title}{End to End Learning for Self-Driving Cars}
+    \verb{file}
+    \verb :http\://arxiv.org/pdf/1604.07316v1:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{month}{04}
+    \field{year}{2016}
+  \endentry
+
+  \entry{Buehler2020}{article}{}
+    \name{author}{6}{}{%
+      {{hash=BA}{%
+         family={Bühler},
+         familyi={B\bibinitperiod},
+         given={Andreas},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=GA}{%
+         family={Gaidon},
+         familyi={G\bibinitperiod},
+         given={Adrien},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=CA}{%
+         family={Cramariuc},
+         familyi={C\bibinitperiod},
+         given={Andrei},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=AR}{%
+         family={Ambrus},
+         familyi={A\bibinitperiod},
+         given={Rares},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=RG}{%
+         family={Rosman},
+         familyi={R\bibinitperiod},
+         given={Guy},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=BW}{%
+         family={Burgard},
+         familyi={B\bibinitperiod},
+         given={Wolfram},
+         giveni={W\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.CV, cs.LG, cs.RO}
+    \strng{namehash}{BA+2}
+    \strng{fullhash}{BAGACAARRGBW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{abstract}{%
+    Safe autonomous driving requires robust detection of other traffic
+  participants. However, robust does not mean perfect, and safe systems
+  typically minimize missed detections at the expense of a higher false
+  positive rate. This results in conservative and yet potentially dangerous
+  behavior such as avoiding imaginary obstacles. In the context of behavioral
+  cloning, perceptual errors at training time can lead to learning difficulties
+  or wrong policies, as expert demonstrations might be inconsistent with the
+  perceived world state. In this work, we propose a behavioral cloning approach
+  that can safely leverage imperfect perception without being conservative. Our
+  core contribution is a novel representation of perceptual uncertainty for
+  learning to plan. We propose a new probabilistic birds-eye-view semantic grid
+  to encode the noisy output of object perception systems. We then leverage
+  expert demonstrations to learn an imitative driving policy using this
+  probabilistic representation. Using the CARLA simulator, we show that our
+  approach can safely overcome critical false positives that would otherwise
+  lead to catastrophic failures or conservative behavior.%
+    }
+    \verb{eprint}
+    \verb 2008.12969
+    \endverb
+    \field{title}{Driving Through Ghosts: Behavioral Cloning with False
+  Positives}
+    \verb{file}
+    \verb :Buehler2020 - Driving through Ghosts_ Behavioral Cloning with False
+    \verb Positives.pdf:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{month}{08}
+    \field{year}{2020}
+  \endentry
+
+  \entry{Caine2021}{article}{}
+    \name{author}{7}{}{%
+      {{hash=CB}{%
+         family={Caine},
+         familyi={C\bibinitperiod},
+         given={Benjamin},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=RR}{%
+         family={Roelofs},
+         familyi={R\bibinitperiod},
+         given={Rebecca},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=VV}{%
+         family={Vasudevan},
+         familyi={V\bibinitperiod},
+         given={Vijay},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=NJ}{%
+         family={Ngiam},
+         familyi={N\bibinitperiod},
+         given={Jiquan},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=CY}{%
+         family={Chai},
+         familyi={C\bibinitperiod},
+         given={Yuning},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=CZ}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Zhifeng},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=SJ}{%
+         family={Shlens},
+         familyi={S\bibinitperiod},
+         given={Jonathon},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.CV, cs.LG}
+    \strng{namehash}{CB+1}
+    \strng{fullhash}{CBRRVVNJCYCZSJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{abstract}{%
+    To safely deploy autonomous vehicles, onboard perception systems must work
+  reliably at high accuracy across a diverse set of environments and
+  geographies. One of the most common techniques to improve the efficacy of
+  such systems in new domains involves collecting large labeled datasets, but
+  such datasets can be extremely costly to obtain, especially if each new
+  deployment geography requires additional data with expensive 3D bounding box
+  annotations. We demonstrate that pseudo-labeling for 3D object detection is
+  an effective way to exploit less expensive and more widely available
+  unlabeled data, and can lead to performance gains across various
+  architectures, data augmentation strategies, and sizes of the labeled
+  dataset. Overall, we show that better teacher models lead to better student
+  models, and that we can distill expensive teachers into efficient, simple
+  students. Specifically, we demonstrate that pseudo-label-trained student
+  models can outperform supervised models trained on 3-10 times the amount of
+  labeled examples. Using PointPillars [24], a two-year-old architecture, as
+  our student model, we are able to achieve state of the art accuracy simply by
+  leveraging large quantities of pseudo-labeled data. Lastly, we show that
+  these student models generalize better than supervised models to a new domain
+  in which we only have unlabeled data, making pseudo-label training an
+  effective form of unsupervised domain adaptation.%
+    }
+    \verb{eprint}
+    \verb 2103.02093
+    \endverb
+    \field{title}{Pseudo-labeling for Scalable 3D Object Detection}
+    \verb{file}
+    \verb :http\://arxiv.org/pdf/2103.02093v1:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{month}{03}
+    \field{year}{2021}
+  \endentry
+
+  \entry{Caron2021}{article}{}
+    \name{author}{7}{}{%
+      {{hash=CM}{%
+         family={Caron},
+         familyi={C\bibinitperiod},
+         given={Mathilde},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=TH}{%
+         family={Touvron},
+         familyi={T\bibinitperiod},
+         given={Hugo},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=MI}{%
+         family={Misra},
+         familyi={M\bibinitperiod},
+         given={Ishan},
+         giveni={I\bibinitperiod},
+      }}%
+      {{hash=JH}{%
+         family={Jégou},
+         familyi={J\bibinitperiod},
+         given={Hervé},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=MJ}{%
+         family={Mairal},
+         familyi={M\bibinitperiod},
+         given={Julien},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=BP}{%
+         family={Bojanowski},
+         familyi={B\bibinitperiod},
+         given={Piotr},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=JA}{%
+         family={Joulin},
+         familyi={J\bibinitperiod},
+         given={Armand},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.CV}
+    \strng{namehash}{CM+1}
+    \strng{fullhash}{CMTHMIJHMJBPJA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{abstract}{%
+    In this paper, we question if self-supervised learning provides new
+  properties to Vision Transformer (ViT) that stand out compared to
+  convolutional networks (convnets). Beyond the fact that adapting
+  self-supervised methods to this architecture works particularly well, we make
+  the following observations: first, self-supervised ViT features contain
+  explicit information about the semantic segmentation of an image, which does
+  not emerge as clearly with supervised ViTs, nor with convnets. Second, these
+  features are also excellent k-NN classifiers, reaching 78.3% top-1 on
+  ImageNet with a small ViT. Our study also underlines the importance of
+  momentum encoder, multi-crop training, and the use of small patches with
+  ViTs. We implement our findings into a simple self-supervised method, called
+  DINO, which we interpret as a form of self-distillation with no labels. We
+  show the synergy between DINO and ViTs by achieving 80.1% top-1 on ImageNet
+  in linear evaluation with ViT-Base.%
+    }
+    \verb{eprint}
+    \verb 2104.14294
+    \endverb
+    \field{title}{Emerging Properties in Self-Supervised Vision Transformers}
+    \verb{file}
+    \verb :Caron2021 - Emerging Properties in Self Supervised Vision Transforme
+    \verb rs.pdf:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{month}{04}
+    \field{year}{2021}
+  \endentry
+
+  \entry{Caron2020}{article}{}
+    \name{author}{6}{}{%
+      {{hash=CM}{%
+         family={Caron},
+         familyi={C\bibinitperiod},
+         given={Mathilde},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=MI}{%
+         family={Misra},
+         familyi={M\bibinitperiod},
+         given={Ishan},
+         giveni={I\bibinitperiod},
+      }}%
+      {{hash=MJ}{%
+         family={Mairal},
+         familyi={M\bibinitperiod},
+         given={Julien},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=GP}{%
+         family={Goyal},
+         familyi={G\bibinitperiod},
+         given={Priya},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=BP}{%
+         family={Bojanowski},
+         familyi={B\bibinitperiod},
+         given={Piotr},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=JA}{%
+         family={Joulin},
+         familyi={J\bibinitperiod},
+         given={Armand},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.CV}
+    \strng{namehash}{CM+1}
+    \strng{fullhash}{CMMIMJGPBPJA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{abstract}{%
+    Unsupervised image representations have significantly reduced the gap with
+  supervised pretraining, notably with the recent achievements of contrastive
+  learning methods. These contrastive methods typically work online and rely on
+  a large number of explicit pairwise feature comparisons, which is
+  computationally challenging. In this paper, we propose an online algorithm,
+  SwAV, that takes advantage of contrastive methods without requiring to
+  compute pairwise comparisons. Specifically, our method simultaneously
+  clusters the data while enforcing consistency between cluster assignments
+  produced for different augmentations (or views) of the same image, instead of
+  comparing features directly as in contrastive learning. Simply put, we use a
+  swapped prediction mechanism where we predict the cluster assignment of a
+  view from the representation of another view. Our method can be trained with
+  large and small batches and can scale to unlimited amounts of data. Compared
+  to previous contrastive methods, our method is more memory efficient since it
+  does not require a large memory bank or a special momentum network. In
+  addition, we also propose a new data augmentation strategy, multi-crop, that
+  uses a mix of views with different resolutions in place of two
+  full-resolution views, without increasing the memory or compute requirements
+  much. We validate our findings by achieving 75.3% top-1 accuracy on ImageNet
+  with ResNet-50, as well as surpassing supervised pretraining on all the
+  considered transfer tasks.%
+    }
+    \verb{eprint}
+    \verb 2006.09882
+    \endverb
+    \field{title}{Unsupervised Learning of Visual Features by Contrasting
+  Cluster Assignments}
+    \verb{file}
+    \verb :http\://arxiv.org/pdf/2006.09882v5:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{month}{06}
+    \field{year}{2020}
+  \endentry
+
+  \entry{Casas2021}{article}{}
+    \name{author}{3}{}{%
+      {{hash=CS}{%
+         family={Casas},
+         familyi={C\bibinitperiod},
+         given={Sergio},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=SA}{%
+         family={Sadat},
+         familyi={S\bibinitperiod},
+         given={Abbas},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=UR}{%
+         family={Urtasun},
+         familyi={U\bibinitperiod},
+         given={Raquel},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.RO, cs.AI, cs.CV, cs.LG}
+    \strng{namehash}{CSSAUR1}
+    \strng{fullhash}{CSSAUR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{abstract}{%
+    High-definition maps (HD maps) are a key component of most modern
+  self-driving systems due to their valuable semantic and geometric
+  information. Unfortunately, building HD maps has proven hard to scale due to
+  their cost as well as the requirements they impose in the localization system
+  that has to work everywhere with centimeter-level accuracy. Being able to
+  drive without an HD map would be very beneficial to scale self-driving
+  solutions as well as to increase the failure tolerance of existing ones
+  (e.g., if localization fails or the map is not up-to-date). Towards this
+  goal, we propose MP3, an end-to-end approach to mapless driving where the
+  input is raw sensor data and a high-level command (e.g., turn left at the
+  intersection). MP3 predicts intermediate representations in the form of an
+  online map and the current and future state of dynamic agents, and exploits
+  them in a novel neural motion planner to make interpretable decisions taking
+  into account uncertainty. We show that our approach is significantly safer,
+  more comfortable, and can follow commands better than the baselines in
+  challenging long-term closed-loop simulations, as well as when compared to an
+  expert driver in a large-scale real-world dataset.%
+    }
+    \verb{eprint}
+    \verb 2101.06806
+    \endverb
+    \field{title}{MP3: A Unified Model to Map, Perceive, Predict and Plan}
+    \verb{file}
+    \verb :http\://arxiv.org/pdf/2101.06806v1:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.RO}
+    \field{month}{01}
+    \field{year}{2021}
+  \endentry
+
+  \entry{Chang2020}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=CM}{%
+         family={Chang},
+         familyi={C\bibinitperiod},
+         given={Matthew},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=GA}{%
+         family={Gupta},
+         familyi={G\bibinitperiod},
+         given={Arjun},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=GS}{%
+         family={Gupta},
+         familyi={G\bibinitperiod},
+         given={Saurabh},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \name{editor}{5}{}{%
+      {{hash=LH}{%
+         family={Larochelle},
+         familyi={L\bibinitperiod},
+         given={H.},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=RM}{%
+         family={Ranzato},
+         familyi={R\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=HR}{%
+         family={Hadsell},
+         familyi={H\bibinitperiod},
+         given={R.},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=BM}{%
+         family={Balcan},
+         familyi={B\bibinitperiod},
+         given={M.F.},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=LH}{%
+         family={Lin},
+         familyi={L\bibinitperiod},
+         given={H.},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Curran Associates, Inc.}%
+    }
+    \strng{namehash}{CMGAGS1}
+    \strng{fullhash}{CMGAGS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{booktitle}{Advances in Neural Information Processing Systems}
+    \field{pages}{4283\bibrangedash 4294}
+    \field{title}{Semantic Visual Navigation by Watching YouTube Videos}
+    \verb{url}
+    \verb https://proceedings.neurips.cc/paper/2020/file/2cd4e8a2ce081c3d7c32c3
+    \verb cde4312ef7-Paper.pdf
+    \endverb
+    \field{volume}{33}
+    \verb{file}
+    \verb :2cd4e8a2ce081c3d7c32c3cde4312ef7-Paper.pdf:PDF
+    \endverb
+    \field{year}{2020}
+  \endentry
+
+  \entry{7410669}{inproceedings}{}
+    \name{author}{4}{}{%
+      {{hash=CC}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Chenyi},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=SA}{%
+         family={Seff},
+         familyi={S\bibinitperiod},
+         given={Ari},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=KA}{%
+         family={Kornhauser},
+         familyi={K\bibinitperiod},
+         given={Alain},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=XJ}{%
+         family={Xiao},
+         familyi={X\bibinitperiod},
+         given={Jianxiong},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CC+1}
+    \strng{fullhash}{CCSAKAXJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{booktitle}{2015 IEEE International Conference on Computer Vision
+  (ICCV)}
+    \verb{doi}
+    \verb 10.1109/ICCV.2015.312
+    \endverb
+    \field{pages}{2722\bibrangedash 2730}
+    \field{title}{DeepDriving: Learning Affordance for Direct Perception in
+  Autonomous Driving}
+    \field{year}{2015}
+  \endentry
+
+  \entry{chen2021learning}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=CD}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Dian},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=KV}{%
+         family={Koltun},
+         familyi={K\bibinitperiod},
+         given={Vladlen},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=KP}{%
+         family={Kr{\"a}henb{\"u}hl},
+         familyi={K\bibinitperiod},
+         given={Philipp},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CDKVKP1}
+    \strng{fullhash}{CDKVKP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{booktitle}{ICCV}
+    \field{title}{Learning to drive from a world on rails}
+    \field{year}{2021}
+  \endentry
+
+  \entry{Chen2019}{article}{}
+    \name{author}{4}{}{%
+      {{hash=CD}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Dian},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=ZB}{%
+         family={Zhou},
+         familyi={Z\bibinitperiod},
+         given={Brady},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=KV}{%
+         family={Koltun},
+         familyi={K\bibinitperiod},
+         given={Vladlen},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=KP}{%
+         family={Krähenbühl},
+         familyi={K\bibinitperiod},
+         given={Philipp},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.RO, cs.AI, cs.CV, cs.LG}
+    \strng{namehash}{CD+1}
+    \strng{fullhash}{CDZBKVKP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{abstract}{%
+    Vision-based urban driving is hard. The autonomous system needs to learn to
+  perceive the world and act in it. We show that this challenging learning
+  problem can be simplified by decomposing it into two stages. We first train
+  an agent that has access to privileged information. This privileged agent
+  cheats by observing the ground-truth layout of the environment and the
+  positions of all traffic participants. In the second stage, the privileged
+  agent acts as a teacher that trains a purely vision-based sensorimotor agent.
+  The resulting sensorimotor agent does not have access to any privileged
+  information and does not cheat. This two-stage training procedure is
+  counter-intuitive at first, but has a number of important advantages that we
+  analyze and empirically demonstrate. We use the presented approach to train a
+  vision-based autonomous driving system that substantially outperforms the
+  state of the art on the CARLA benchmark and the recent NoCrash benchmark. Our
+  approach achieves, for the first time, 100% success rate on all tasks in the
+  original CARLA benchmark, sets a new record on the NoCrash benchmark, and
+  reduces the frequency of infractions by an order of magnitude compared to the
+  prior state of the art. For the video that summarizes this work, see
+  https://youtu.be/u9ZCxxD-UUw%
+    }
+    \verb{eprint}
+    \verb 1912.12294
+    \endverb
+    \field{title}{Learning by Cheating}
+    \verb{file}
+    \verb :Chen2019 - Learning by Cheating.pdf:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.RO}
+    \field{month}{12}
+    \field{year}{2019}
+  \endentry
+
+  \entry{Chen2020a}{article}{}
+    \name{author}{4}{}{%
+      {{hash=CT}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Ting},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=KS}{%
+         family={Kornblith},
+         familyi={K\bibinitperiod},
+         given={Simon},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=NM}{%
+         family={Norouzi},
+         familyi={N\bibinitperiod},
+         given={Mohammad},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=HG}{%
+         family={Hinton},
+         familyi={H\bibinitperiod},
+         given={Geoffrey},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.LG, cs.CV, stat.ML}
+    \strng{namehash}{CT+1}
+    \strng{fullhash}{CTKSNMHG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{abstract}{%
+    This paper presents SimCLR: a simple framework for contrastive learning of
+  visual representations. We simplify recently proposed contrastive
+  self-supervised learning algorithms without requiring specialized
+  architectures or a memory bank. In order to understand what enables the
+  contrastive prediction tasks to learn useful representations, we
+  systematically study the major components of our framework. We show that (1)
+  composition of data augmentations plays a critical role in defining effective
+  predictive tasks, (2) introducing a learnable nonlinear transformation
+  between the representation and the contrastive loss substantially improves
+  the quality of the learned representations, and (3) contrastive learning
+  benefits from larger batch sizes and more training steps compared to
+  supervised learning. By combining these findings, we are able to considerably
+  outperform previous methods for self-supervised and semi-supervised learning
+  on ImageNet. A linear classifier trained on self-supervised representations
+  learned by SimCLR achieves 76.5% top-1 accuracy, which is a 7% relative
+  improvement over previous state-of-the-art, matching the performance of a
+  supervised ResNet-50. When fine-tuned on only 1% of the labels, we achieve
+  85.8% top-5 accuracy, outperforming AlexNet with 100X fewer labels.%
+    }
+    \verb{eprint}
+    \verb 2002.05709
+    \endverb
+    \field{title}{A Simple Framework for Contrastive Learning of Visual
+  Representations}
+    \verb{file}
+    \verb :Chen2020a - A Simple Framework for Contrastive Learning of Visual Re
+    \verb presentations.pdf:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.LG}
+    \field{month}{02}
+    \field{year}{2020}
+  \endentry
+
+  \entry{Chen2020}{article}{}
+    \name{author}{2}{}{%
+      {{hash=CX}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Xinlei},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=HK}{%
+         family={He},
+         familyi={H\bibinitperiod},
+         given={Kaiming},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.CV, cs.LG}
+    \strng{namehash}{CXHK1}
+    \strng{fullhash}{CXHK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{abstract}{%
+    Siamese networks have become a common structure in various recent models
+  for unsupervised visual representation learning. These models maximize the
+  similarity between two augmentations of one image, subject to certain
+  conditions for avoiding collapsing solutions. In this paper, we report
+  surprising empirical results that simple Siamese networks can learn
+  meaningful representations even using none of the following: (i) negative
+  sample pairs, (ii) large batches, (iii) momentum encoders. Our experiments
+  show that collapsing solutions do exist for the loss and structure, but a
+  stop-gradient operation plays an essential role in preventing collapsing. We
+  provide a hypothesis on the implication of stop-gradient, and further show
+  proof-of-concept experiments verifying it. Our "SimSiam" method achieves
+  competitive results on ImageNet and downstream tasks. We hope this simple
+  baseline will motivate people to rethink the roles of Siamese architectures
+  for unsupervised representation learning. Code will be made available.%
+    }
+    \verb{eprint}
+    \verb 2011.10566
+    \endverb
+    \field{title}{Exploring Simple Siamese Representation Learning}
+    \verb{file}
+    \verb :Chen2020 - Exploring Simple Siamese Representation Learning.pdf:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{month}{11}
+    \field{year}{2020}
+  \endentry
+
+  \entry{Chitta2021}{article}{}
+    \name{author}{3}{}{%
+      {{hash=CK}{%
+         family={Chitta},
+         familyi={C\bibinitperiod},
+         given={Kashyap},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=PA}{%
+         family={Prakash},
+         familyi={P\bibinitperiod},
+         given={Aditya},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=GA}{%
+         family={Geiger},
+         familyi={G\bibinitperiod},
+         given={Andreas},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.CV, cs.AI, cs.LG, cs.RO}
+    \strng{namehash}{CKPAGA1}
+    \strng{fullhash}{CKPAGA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{abstract}{%
+    Efficient reasoning about the semantic, spatial, and temporal structure of
+  a scene is a crucial prerequisite for autonomous driving. We present NEural
+  ATtention fields (NEAT), a novel representation that enables such reasoning
+  for end-to-end imitation learning models. NEAT is a continuous function which
+  maps locations in Bird's Eye View (BEV) scene coordinates to waypoints and
+  semantics, using intermediate attention maps to iteratively compress
+  high-dimensional 2D image features into a compact representation. This allows
+  our model to selectively attend to relevant regions in the input while
+  ignoring information irrelevant to the driving task, effectively associating
+  the images with the BEV representation. In a new evaluation setting involving
+  adverse environmental conditions and challenging scenarios, NEAT outperforms
+  several strong baselines and achieves driving scores on par with the
+  privileged CARLA expert used to generate its training data. Furthermore,
+  visualizing the attention maps for models with NEAT intermediate
+  representations provides improved interpretability.%
+    }
+    \verb{eprint}
+    \verb 2109.04456
+    \endverb
+    \field{title}{NEAT: Neural Attention Fields for End-to-End Autonomous
+  Driving}
+    \verb{file}
+    \verb :Chitta2021 - NEAT_ Neural Attention Fields for End to End Autonomous
+    \verb  Driving.pdf:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{month}{09}
+    \field{year}{2021}
+  \endentry
+
+  \entry{Cho2014}{article}{}
+    \name{author}{7}{}{%
+      {{hash=CK}{%
+         family={Cho},
+         familyi={C\bibinitperiod},
+         given={Kyunghyun},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=vMB}{%
+         prefix={van},
+         prefixi={v\bibinitperiod},
+         family={Merrienboer},
+         familyi={M\bibinitperiod},
+         given={Bart},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=GC}{%
+         family={Gulcehre},
+         familyi={G\bibinitperiod},
+         given={Caglar},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=BD}{%
+         family={Bahdanau},
+         familyi={B\bibinitperiod},
+         given={Dzmitry},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=BF}{%
+         family={Bougares},
+         familyi={B\bibinitperiod},
+         given={Fethi},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=SH}{%
+         family={Schwenk},
+         familyi={S\bibinitperiod},
+         given={Holger},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=BY}{%
+         family={Bengio},
+         familyi={B\bibinitperiod},
+         given={Yoshua},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.CL, cs.LG, cs.NE, stat.ML}
+    \strng{namehash}{CK+1}
+    \strng{fullhash}{CKMBvGCBDBFSHBY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{abstract}{%
+    In this paper, we propose a novel neural network model called RNN
+  Encoder-Decoder that consists of two recurrent neural networks (RNN). One RNN
+  encodes a sequence of symbols into a fixed-length vector representation, and
+  the other decodes the representation into another sequence of symbols. The
+  encoder and decoder of the proposed model are jointly trained to maximize the
+  conditional probability of a target sequence given a source sequence. The
+  performance of a statistical machine translation system is empirically found
+  to improve by using the conditional probabilities of phrase pairs computed by
+  the RNN Encoder-Decoder as an additional feature in the existing log-linear
+  model. Qualitatively, we show that the proposed model learns a semantically
+  and syntactically meaningful representation of linguistic phrases.%
+    }
+    \verb{eprint}
+    \verb 1406.1078
+    \endverb
+    \field{title}{Learning Phrase Representations using RNN Encoder-Decoder for
+  Statistical Machine Translation}
+    \verb{file}
+    \verb :http\://arxiv.org/pdf/1406.1078v3:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CL}
+    \field{month}{06}
+    \field{year}{2014}
+  \endentry
+
+  \entry{Chung2014}{article}{}
+    \name{author}{4}{}{%
+      {{hash=CJ}{%
+         family={Chung},
+         familyi={C\bibinitperiod},
+         given={Junyoung},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=GC}{%
+         family={Gulcehre},
+         familyi={G\bibinitperiod},
+         given={Caglar},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=CK}{%
+         family={Cho},
+         familyi={C\bibinitperiod},
+         given={KyungHyun},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=BY}{%
+         family={Bengio},
+         familyi={B\bibinitperiod},
+         given={Yoshua},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.NE, cs.LG}
+    \strng{namehash}{CJ+1}
+    \strng{fullhash}{CJGCCKBY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{abstract}{%
+    In this paper we compare different types of recurrent units in recurrent
+  neural networks (RNNs). Especially, we focus on more sophisticated units that
+  implement a gating mechanism, such as a long short-term memory (LSTM) unit
+  and a recently proposed gated recurrent unit (GRU). We evaluate these
+  recurrent units on the tasks of polyphonic music modeling and speech signal
+  modeling. Our experiments revealed that these advanced recurrent units are
+  indeed better than more traditional recurrent units such as tanh units. Also,
+  we found GRU to be comparable to LSTM.%
+    }
+    \verb{eprint}
+    \verb 1412.3555
+    \endverb
+    \field{title}{Empirical Evaluation of Gated Recurrent Neural Networks on
+  Sequence Modeling}
+    \verb{file}
+    \verb :http\://arxiv.org/pdf/1412.3555v1:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.NE}
+    \field{month}{12}
+    \field{year}{2014}
+  \endentry
+
+  \entry{Codevilla2017}{article}{}
+    \name{author}{5}{}{%
+      {{hash=CF}{%
+         family={Codevilla},
+         familyi={C\bibinitperiod},
+         given={Felipe},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=MM}{%
+         family={Müller},
+         familyi={M\bibinitperiod},
+         given={Matthias},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=LA}{%
+         family={López},
+         familyi={L\bibinitperiod},
+         given={Antonio},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=KV}{%
+         family={Koltun},
+         familyi={K\bibinitperiod},
+         given={Vladlen},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=DA}{%
+         family={Dosovitskiy},
+         familyi={D\bibinitperiod},
+         given={Alexey},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.RO, cs.CV, cs.LG}
+    \strng{namehash}{CF+1}
+    \strng{fullhash}{CFMMLAKVDA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{abstract}{%
+    Deep networks trained on demonstrations of human driving have learned to
+  follow roads and avoid obstacles. However, driving policies trained via
+  imitation learning cannot be controlled at test time. A vehicle trained
+  end-to-end to imitate an expert cannot be guided to take a specific turn at
+  an upcoming intersection. This limits the utility of such systems. We propose
+  to condition imitation learning on high-level command input. At test time,
+  the learned driving policy functions as a chauffeur that handles sensorimotor
+  coordination but continues to respond to navigational commands. We evaluate
+  different architectures for conditional imitation learning in vision-based
+  driving. We conduct experiments in realistic three-dimensional simulations of
+  urban driving and on a 1/5 scale robotic truck that is trained to drive in a
+  residential area. Both systems drive based on visual input yet remain
+  responsive to high-level navigational commands. The supplementary video can
+  be viewed at https://youtu.be/cFtnflNe5fM%
+    }
+    \verb{eprint}
+    \verb 1710.02410
+    \endverb
+    \field{title}{End-to-end Driving via Conditional Imitation Learning}
+    \verb{file}
+    \verb :Codevilla2017 - End to End Driving Via Conditional Imitation Learnin
+    \verb g.pdf:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.RO}
+    \field{month}{10}
+    \field{year}{2017}
+  \endentry
+
+  \entry{Codevilla2019}{article}{}
+    \name{author}{4}{}{%
+      {{hash=CF}{%
+         family={Codevilla},
+         familyi={C\bibinitperiod},
+         given={Felipe},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=SE}{%
+         family={Santana},
+         familyi={S\bibinitperiod},
+         given={Eder},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=LAM}{%
+         family={López},
+         familyi={L\bibinitperiod},
+         given={Antonio\bibnamedelima M.},
+         giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=GA}{%
+         family={Gaidon},
+         familyi={G\bibinitperiod},
+         given={Adrien},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.CV, cs.AI}
+    \strng{namehash}{CF+1}
+    \strng{fullhash}{CFSELAMGA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{abstract}{%
+    Driving requires reacting to a wide variety of complex environment
+  conditions and agent behaviors. Explicitly modeling each possible scenario is
+  unrealistic. In contrast, imitation learning can, in theory, leverage data
+  from large fleets of human-driven cars. Behavior cloning in particular has
+  been successfully used to learn simple visuomotor policies end-to-end, but
+  scaling to the full spectrum of driving behaviors remains an unsolved
+  problem. In this paper, we propose a new benchmark to experimentally
+  investigate the scalability and limitations of behavior cloning. We show that
+  behavior cloning leads to state-of-the-art results, including in unseen
+  environments, executing complex lateral and longitudinal maneuvers without
+  these reactions being explicitly programmed. However, we confirm well-known
+  limitations (due to dataset bias and overfitting), new generalization issues
+  (due to dynamic objects and the lack of a causal model), and training
+  instability requiring further research before behavior cloning can graduate
+  to real-world driving. The code of the studied behavior cloning approaches
+  can be found at https://github.com/felipecode/coiltraine .%
+    }
+    \verb{eprint}
+    \verb 1904.08980
+    \endverb
+    \field{title}{Exploring the Limitations of Behavior Cloning for Autonomous
+  Driving}
+    \verb{file}
+    \verb :Codevilla2019 - Exploring the Limitations of Behavior Cloning for Au
+    \verb tonomous Driving.pdf:PDF;:http\://arxiv.org/pdf/1904.08980v1:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{month}{04}
+    \field{year}{2019}
+  \endentry
+
+  \entry{Dosovitskiy2017}{article}{}
+    \name{author}{5}{}{%
+      {{hash=DA}{%
+         family={Dosovitskiy},
+         familyi={D\bibinitperiod},
+         given={Alexey},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=RG}{%
+         family={Ros},
+         familyi={R\bibinitperiod},
+         given={German},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=CF}{%
+         family={Codevilla},
+         familyi={C\bibinitperiod},
+         given={Felipe},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=LA}{%
+         family={Lopez},
+         familyi={L\bibinitperiod},
+         given={Antonio},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=KV}{%
+         family={Koltun},
+         familyi={K\bibinitperiod},
+         given={Vladlen},
+         giveni={V\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.LG, cs.AI, cs.CV, cs.RO}
+    \strng{namehash}{DA+1}
+    \strng{fullhash}{DARGCFLAKV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{abstract}{%
+    We introduce CARLA, an open-source simulator for autonomous driving
+  research. CARLA has been developed from the ground up to support development,
+  training, and validation of autonomous urban driving systems. In addition to
+  open-source code and protocols, CARLA provides open digital assets (urban
+  layouts, buildings, vehicles) that were created for this purpose and can be
+  used freely. The simulation platform supports flexible specification of
+  sensor suites and environmental conditions. We use CARLA to study the
+  performance of three approaches to autonomous driving: a classic modular
+  pipeline, an end-to-end model trained via imitation learning, and an
+  end-to-end model trained via reinforcement learning. The approaches are
+  evaluated in controlled scenarios of increasing difficulty, and their
+  performance is examined via metrics provided by CARLA, illustrating the
+  platform's utility for autonomous driving research. The supplementary video
+  can be viewed at https://youtu.be/Hp8Dz-Zek2E%
+    }
+    \verb{eprint}
+    \verb 1711.03938
+    \endverb
+    \field{title}{CARLA: An Open Urban Driving Simulator}
+    \verb{file}
+    \verb :http\://arxiv.org/pdf/1711.03938v1:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.LG}
+    \field{month}{11}
+    \field{year}{2017}
+  \endentry
+
+  \entry{Filos2020}{article}{}
+    \name{author}{6}{}{%
+      {{hash=FA}{%
+         family={Filos},
+         familyi={F\bibinitperiod},
+         given={Angelos},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=TP}{%
+         family={Tigas},
+         familyi={T\bibinitperiod},
+         given={Panagiotis},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=MR}{%
+         family={McAllister},
+         familyi={M\bibinitperiod},
+         given={Rowan},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=RN}{%
+         family={Rhinehart},
+         familyi={R\bibinitperiod},
+         given={Nicholas},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=LS}{%
+         family={Levine},
+         familyi={L\bibinitperiod},
+         given={Sergey},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=GY}{%
+         family={Gal},
+         familyi={G\bibinitperiod},
+         given={Yarin},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.LG, cs.RO, stat.ML}
+    \strng{namehash}{FA+1}
+    \strng{fullhash}{FATPMRRNLSGY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{abstract}{%
+    Out-of-training-distribution (OOD) scenarios are a common challenge of
+  learning agents at deployment, typically leading to arbitrary deductions and
+  poorly-informed decisions. In principle, detection of and adaptation to OOD
+  scenes can mitigate their adverse effects. In this paper, we highlight the
+  limitations of current approaches to novel driving scenes and propose an
+  epistemic uncertainty-aware planning method, called \emph{robust imitative
+  planning} (RIP). Our method can detect and recover from some distribution
+  shifts, reducing the overconfident and catastrophic extrapolations in OOD
+  scenes. If the model's uncertainty is too great to suggest a safe course of
+  action, the model can instead query the expert driver for feedback, enabling
+  sample-efficient online adaptation, a variant of our method we term
+  \emph{adaptive robust imitative planning} (AdaRIP). Our methods outperform
+  current state-of-the-art approaches in the nuScenes \emph{prediction}
+  challenge, but since no benchmark evaluating OOD detection and adaption
+  currently exists to assess \emph{control}, we introduce an autonomous car
+  novel-scene benchmark, \texttt{CARNOVEL}, to evaluate the robustness of
+  driving agents to a suite of tasks with distribution shifts.%
+    }
+    \verb{eprint}
+    \verb 2006.14911
+    \endverb
+    \field{title}{Can Autonomous Vehicles Identify, Recover From, and Adapt to
+  Distribution Shifts?}
+    \verb{file}
+    \verb :http\://arxiv.org/pdf/2006.14911v2:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.LG}
+    \field{month}{06}
+    \field{year}{2020}
+  \endentry
+
+  \entry{Fischer2015}{article}{}
+    \name{author}{9}{}{%
+      {{hash=FP}{%
+         family={Fischer},
+         familyi={F\bibinitperiod},
+         given={Philipp},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=DA}{%
+         family={Dosovitskiy},
+         familyi={D\bibinitperiod},
+         given={Alexey},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=IE}{%
+         family={Ilg},
+         familyi={I\bibinitperiod},
+         given={Eddy},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=HP}{%
+         family={Häusser},
+         familyi={H\bibinitperiod},
+         given={Philip},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=HC}{%
+         family={Hazırbaş},
+         familyi={H\bibinitperiod},
+         given={Caner},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=GV}{%
+         family={Golkov},
+         familyi={G\bibinitperiod},
+         given={Vladimir},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=vdSP}{%
+         prefix={van\bibnamedelima der},
+         prefixi={v\bibinitperiod\bibinitdelim d\bibinitperiod},
+         family={Smagt},
+         familyi={S\bibinitperiod},
+         given={Patrick},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=CD}{%
+         family={Cremers},
+         familyi={C\bibinitperiod},
+         given={Daniel},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=BT}{%
+         family={Brox},
+         familyi={B\bibinitperiod},
+         given={Thomas},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.CV, cs.LG, I.2.6; I.4.8}
+    \strng{namehash}{FP+1}
+    \strng{fullhash}{FPDAIEHPHCGVSPvdCDBT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{abstract}{%
+    Convolutional neural networks (CNNs) have recently been very successful in
+  a variety of computer vision tasks, especially on those linked to
+  recognition. Optical flow estimation has not been among the tasks where CNNs
+  were successful. In this paper we construct appropriate CNNs which are
+  capable of solving the optical flow estimation problem as a supervised
+  learning task. We propose and compare two architectures: a generic
+  architecture and another one including a layer that correlates feature
+  vectors at different image locations. Since existing ground truth data sets
+  are not sufficiently large to train a CNN, we generate a synthetic Flying
+  Chairs dataset. We show that networks trained on this unrealistic data still
+  generalize very well to existing datasets such as Sintel and KITTI, achieving
+  competitive accuracy at frame rates of 5 to 10 fps.%
+    }
+    \verb{eprint}
+    \verb 1504.06852
+    \endverb
+    \field{title}{FlowNet: Learning Optical Flow with Convolutional Networks}
+    \verb{file}
+    \verb :http\://arxiv.org/pdf/1504.06852v2:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{month}{04}
+    \field{year}{2015}
+  \endentry
+
+  \entry{Geiger2012AreWR}{article}{}
+    \name{author}{3}{}{%
+      {{hash=GA}{%
+         family={Geiger},
+         familyi={G\bibinitperiod},
+         given={Andreas},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=LP}{%
+         family={Lenz},
+         familyi={L\bibinitperiod},
+         given={Philip},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=UR}{%
+         family={Urtasun},
+         familyi={U\bibinitperiod},
+         given={Raquel},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GALPUR1}
+    \strng{fullhash}{GALPUR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{pages}{3354\bibrangedash 3361}
+    \field{title}{Are we ready for autonomous driving? The KITTI vision
+  benchmark suite}
+    \field{journaltitle}{2012 IEEE Conference on Computer Vision and Pattern
+  Recognition}
+    \field{year}{2012}
+  \endentry
+
+  \entry{Goyal2017}{article}{}
+    \name{author}{9}{}{%
+      {{hash=GP}{%
+         family={Goyal},
+         familyi={G\bibinitperiod},
+         given={Priya},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=DP}{%
+         family={Dollár},
+         familyi={D\bibinitperiod},
+         given={Piotr},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=GR}{%
+         family={Girshick},
+         familyi={G\bibinitperiod},
+         given={Ross},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=NP}{%
+         family={Noordhuis},
+         familyi={N\bibinitperiod},
+         given={Pieter},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=WL}{%
+         family={Wesolowski},
+         familyi={W\bibinitperiod},
+         given={Lukasz},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=KA}{%
+         family={Kyrola},
+         familyi={K\bibinitperiod},
+         given={Aapo},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=TA}{%
+         family={Tulloch},
+         familyi={T\bibinitperiod},
+         given={Andrew},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=JY}{%
+         family={Jia},
+         familyi={J\bibinitperiod},
+         given={Yangqing},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=HK}{%
+         family={He},
+         familyi={H\bibinitperiod},
+         given={Kaiming},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.CV, cs.DC, cs.LG}
+    \strng{namehash}{GP+1}
+    \strng{fullhash}{GPDPGRNPWLKATAJYHK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{abstract}{%
+    Deep learning thrives with large neural networks and large datasets.
+  However, larger networks and larger datasets result in longer training times
+  that impede research and development progress. Distributed synchronous SGD
+  offers a potential solution to this problem by dividing SGD minibatches over
+  a pool of parallel workers. Yet to make this scheme efficient, the per-worker
+  workload must be large, which implies nontrivial growth in the SGD minibatch
+  size. In this paper, we empirically show that on the ImageNet dataset large
+  minibatches cause optimization difficulties, but when these are addressed the
+  trained networks exhibit good generalization. Specifically, we show no loss
+  of accuracy when training with large minibatch sizes up to 8192 images. To
+  achieve this result, we adopt a hyper-parameter-free linear scaling rule for
+  adjusting learning rates as a function of minibatch size and develop a new
+  warmup scheme that overcomes optimization challenges early in training. With
+  these simple techniques, our Caffe2-based system trains ResNet-50 with a
+  minibatch size of 8192 on 256 GPUs in one hour, while matching small
+  minibatch accuracy. Using commodity hardware, our implementation achieves
+  ~90% scaling efficiency when moving from 8 to 256 GPUs. Our findings enable
+  training visual recognition models on internet-scale data with high
+  efficiency.%
+    }
+    \verb{eprint}
+    \verb 1706.02677
+    \endverb
+    \field{title}{Accurate, Large Minibatch SGD: Training ImageNet in 1 Hour}
+    \verb{file}
+    \verb :http\://arxiv.org/pdf/1706.02677v2:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{month}{06}
+    \field{year}{2017}
+  \endentry
+
+  \entry{Grill2020}{article}{}
+    \name{author}{14}{}{%
+      {{hash=GJB}{%
+         family={Grill},
+         familyi={G\bibinitperiod},
+         given={Jean-Bastien},
+         giveni={J\bibinithyphendelim B\bibinitperiod},
+      }}%
+      {{hash=SF}{%
+         family={Strub},
+         familyi={S\bibinitperiod},
+         given={Florian},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=AF}{%
+         family={Altché},
+         familyi={A\bibinitperiod},
+         given={Florent},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=TC}{%
+         family={Tallec},
+         familyi={T\bibinitperiod},
+         given={Corentin},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=RPH}{%
+         family={Richemond},
+         familyi={R\bibinitperiod},
+         given={Pierre\bibnamedelima H.},
+         giveni={P\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=BE}{%
+         family={Buchatskaya},
+         familyi={B\bibinitperiod},
+         given={Elena},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=DC}{%
+         family={Doersch},
+         familyi={D\bibinitperiod},
+         given={Carl},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=PBA}{%
+         family={Pires},
+         familyi={P\bibinitperiod},
+         given={Bernardo\bibnamedelima Avila},
+         giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=GZD}{%
+         family={Guo},
+         familyi={G\bibinitperiod},
+         given={Zhaohan\bibnamedelima Daniel},
+         giveni={Z\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=AMG}{%
+         family={Azar},
+         familyi={A\bibinitperiod},
+         given={Mohammad\bibnamedelima Gheshlaghi},
+         giveni={M\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=PB}{%
+         family={Piot},
+         familyi={P\bibinitperiod},
+         given={Bilal},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=KK}{%
+         family={Kavukcuoglu},
+         familyi={K\bibinitperiod},
+         given={Koray},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=MR}{%
+         family={Munos},
+         familyi={M\bibinitperiod},
+         given={Rémi},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=VM}{%
+         family={Valko},
+         familyi={V\bibinitperiod},
+         given={Michal},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.LG, cs.CV, stat.ML}
+    \strng{namehash}{GJB+1}
+    \strng{fullhash}{GJBSFAFTCRPHBEDCPBAGZDAMGPBKKMRVM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{abstract}{%
+    We introduce Bootstrap Your Own Latent (BYOL), a new approach to
+  self-supervised image representation learning. BYOL relies on two neural
+  networks, referred to as online and target networks, that interact and learn
+  from each other. From an augmented view of an image, we train the online
+  network to predict the target network representation of the same image under
+  a different augmented view. At the same time, we update the target network
+  with a slow-moving average of the online network. While state-of-the art
+  methods rely on negative pairs, BYOL achieves a new state of the art without
+  them. BYOL reaches $74.3\%$ top-1 classification accuracy on ImageNet using a
+  linear evaluation with a ResNet-50 architecture and $79.6\%$ with a larger
+  ResNet. We show that BYOL performs on par or better than the current state of
+  the art on both transfer and semi-supervised benchmarks. Our implementation
+  and pretrained models are given on GitHub.%
+    }
+    \verb{eprint}
+    \verb 2006.07733
+    \endverb
+    \field{title}{Bootstrap your own latent: A new approach to self-supervised
+  Learning}
+    \verb{file}
+    \verb :Grill2020 - Bootstrap Your Own Latent_ a New Approach to Self Superv
+    \verb ised Learning.pdf:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.LG}
+    \field{month}{06}
+    \field{year}{2020}
+  \endentry
+
+  \entry{Gupta2017}{article}{}
+    \name{author}{6}{}{%
+      {{hash=GS}{%
+         family={Gupta},
+         familyi={G\bibinitperiod},
+         given={Saurabh},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=TV}{%
+         family={Tolani},
+         familyi={T\bibinitperiod},
+         given={Varun},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=DJ}{%
+         family={Davidson},
+         familyi={D\bibinitperiod},
+         given={James},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=LS}{%
+         family={Levine},
+         familyi={L\bibinitperiod},
+         given={Sergey},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=SR}{%
+         family={Sukthankar},
+         familyi={S\bibinitperiod},
+         given={Rahul},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=MJ}{%
+         family={Malik},
+         familyi={M\bibinitperiod},
+         given={Jitendra},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.CV, cs.AI, cs.LG, cs.RO}
+    \strng{namehash}{GS+1}
+    \strng{fullhash}{GSTVDJLSSRMJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{abstract}{%
+    We introduce a neural architecture for navigation in novel environments.
+  Our proposed architecture learns to map from first-person views and plans a
+  sequence of actions towards goals in the environment. The Cognitive Mapper
+  and Planner (CMP) is based on two key ideas: a) a unified joint architecture
+  for mapping and planning, such that the mapping is driven by the needs of the
+  task, and b) a spatial memory with the ability to plan given an incomplete
+  set of observations about the world. CMP constructs a top-down belief map of
+  the world and applies a differentiable neural net planner to produce the next
+  action at each time step. The accumulated belief of the world enables the
+  agent to track visited regions of the environment. We train and test CMP on
+  navigation problems in simulation environments derived from scans of real
+  world buildings. Our experiments demonstrate that CMP outperforms alternate
+  learning-based architectures, as well as, classical mapping and path planning
+  approaches in many cases. Furthermore, it naturally extends to semantically
+  specified goals, such as 'going to a chair'. We also deploy CMP on physical
+  robots in indoor environments, where it achieves reasonable performance, even
+  though it is trained entirely in simulation.%
+    }
+    \verb{eprint}
+    \verb 1702.03920
+    \endverb
+    \field{title}{Cognitive Mapping and Planning for Visual Navigation}
+    \verb{file}
+    \verb :http\://arxiv.org/pdf/1702.03920v3:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{month}{02}
+    \field{year}{2017}
+  \endentry
+
+  \entry{Haan2019}{article}{}
+    \name{author}{3}{}{%
+      {{hash=dHP}{%
+         prefix={de},
+         prefixi={d\bibinitperiod},
+         family={Haan},
+         familyi={H\bibinitperiod},
+         given={Pim},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=JD}{%
+         family={Jayaraman},
+         familyi={J\bibinitperiod},
+         given={Dinesh},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=LS}{%
+         family={Levine},
+         familyi={L\bibinitperiod},
+         given={Sergey},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.LG, stat.ML}
+    \strng{namehash}{HPdJDLS1}
+    \strng{fullhash}{HPdJDLS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{abstract}{%
+    Behavioral cloning reduces policy learning to supervised learning by
+  training a discriminative model to predict expert actions given observations.
+  Such discriminative models are non-causal: the training procedure is unaware
+  of the causal structure of the interaction between the expert and the
+  environment. We point out that ignoring causality is particularly damaging
+  because of the distributional shift in imitation learning. In particular, it
+  leads to a counter-intuitive "causal misidentification" phenomenon: access to
+  more information can yield worse performance. We investigate how this problem
+  arises, and propose a solution to combat it through targeted
+  interventions---either environment interaction or expert queries---to
+  determine the correct causal model. We show that causal misidentification
+  occurs in several benchmark control domains as well as realistic driving
+  settings, and validate our solution against DAgger and other baselines and
+  ablations.%
+    }
+    \verb{eprint}
+    \verb 1905.11979
+    \endverb
+    \field{title}{Causal Confusion in Imitation Learning}
+    \verb{file}
+    \verb :Haan2019 - Causal Confusion in Imitation Learning.pdf:PDF;:http\://a
+    \verb rxiv.org/pdf/1905.11979v2:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.LG}
+    \field{month}{05}
+    \field{year}{2019}
+  \endentry
+
+  \entry{Hawke2019}{article}{}
+    \name{author}{11}{}{%
+      {{hash=HJ}{%
+         family={Hawke},
+         familyi={H\bibinitperiod},
+         given={Jeffrey},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=SR}{%
+         family={Shen},
+         familyi={S\bibinitperiod},
+         given={Richard},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=GC}{%
+         family={Gurau},
+         familyi={G\bibinitperiod},
+         given={Corina},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=SS}{%
+         family={Sharma},
+         familyi={S\bibinitperiod},
+         given={Siddharth},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=RD}{%
+         family={Reda},
+         familyi={R\bibinitperiod},
+         given={Daniele},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=NN}{%
+         family={Nikolov},
+         familyi={N\bibinitperiod},
+         given={Nikolay},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=MP}{%
+         family={Mazur},
+         familyi={M\bibinitperiod},
+         given={Przemyslaw},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=MS}{%
+         family={Micklethwaite},
+         familyi={M\bibinitperiod},
+         given={Sean},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=GN}{%
+         family={Griffiths},
+         familyi={G\bibinitperiod},
+         given={Nicolas},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=SA}{%
+         family={Shah},
+         familyi={S\bibinitperiod},
+         given={Amar},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=KA}{%
+         family={Kendall},
+         familyi={K\bibinitperiod},
+         given={Alex},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.CV, cs.AI, cs.LG, cs.RO}
+    \strng{namehash}{HJ+1}
+    \strng{fullhash}{HJSRGCSSRDNNMPMSGNSAKA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{abstract}{%
+    Hand-crafting generalised decision-making rules for real-world urban
+  autonomous driving is hard. Alternatively, learning behaviour from
+  easy-to-collect human driving demonstrations is appealing. Prior work has
+  studied imitation learning (IL) for autonomous driving with a number of
+  limitations. Examples include only performing lane-following rather than
+  following a user-defined route, only using a single camera view or heavily
+  cropped frames lacking state observability, only lateral (steering) control,
+  but not longitudinal (speed) control and a lack of interaction with traffic.
+  Importantly, the majority of such systems have been primarily evaluated in
+  simulation - a simple domain, which lacks real-world complexities. Motivated
+  by these challenges, we focus on learning representations of semantics,
+  geometry and motion with computer vision for IL from human driving
+  demonstrations. As our main contribution, we present an end-to-end
+  conditional imitation learning approach, combining both lateral and
+  longitudinal control on a real vehicle for following urban routes with simple
+  traffic. We address inherent dataset bias by data balancing, training our
+  final policy on approximately 30 hours of demonstrations gathered over six
+  months. We evaluate our method on an autonomous vehicle by driving 35km of
+  novel routes in European urban streets.%
+    }
+    \verb{eprint}
+    \verb 1912.00177
+    \endverb
+    \field{title}{Urban Driving with Conditional Imitation Learning}
+    \verb{file}
+    \verb :Hawke2019 - Urban Driving with Conditional Imitation Learning.pdf:PD
+    \verb F
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{month}{11}
+    \field{year}{2019}
+  \endentry
+
+  \entry{He2019}{article}{}
+    \name{author}{5}{}{%
+      {{hash=HK}{%
+         family={He},
+         familyi={H\bibinitperiod},
+         given={Kaiming},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=FH}{%
+         family={Fan},
+         familyi={F\bibinitperiod},
+         given={Haoqi},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=WY}{%
+         family={Wu},
+         familyi={W\bibinitperiod},
+         given={Yuxin},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=XS}{%
+         family={Xie},
+         familyi={X\bibinitperiod},
+         given={Saining},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=GR}{%
+         family={Girshick},
+         familyi={G\bibinitperiod},
+         given={Ross},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.CV}
+    \strng{namehash}{HK+1}
+    \strng{fullhash}{HKFHWYXSGR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{abstract}{%
+    We present Momentum Contrast (MoCo) for unsupervised visual representation
+  learning. From a perspective on contrastive learning as dictionary look-up,
+  we build a dynamic dictionary with a queue and a moving-averaged encoder.
+  This enables building a large and consistent dictionary on-the-fly that
+  facilitates contrastive unsupervised learning. MoCo provides competitive
+  results under the common linear protocol on ImageNet classification. More
+  importantly, the representations learned by MoCo transfer well to downstream
+  tasks. MoCo can outperform its supervised pre-training counterpart in 7
+  detection/segmentation tasks on PASCAL VOC, COCO, and other datasets,
+  sometimes surpassing it by large margins. This suggests that the gap between
+  unsupervised and supervised representation learning has been largely closed
+  in many vision tasks.%
+    }
+    \verb{eprint}
+    \verb 1911.05722
+    \endverb
+    \field{title}{Momentum Contrast for Unsupervised Visual Representation
+  Learning}
+    \verb{file}
+    \verb :He2019 - Momentum Contrast for Unsupervised Visual Representation Le
+    \verb arning.pdf:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{month}{11}
+    \field{year}{2019}
+  \endentry
+
+  \entry{Janai2020}{book}{}
+    \name{author}{4}{}{%
+      {{hash=JJ}{%
+         family={Janai},
+         familyi={J\bibinitperiod},
+         given={Joel},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=GF}{%
+         family={Güney},
+         familyi={G\bibinitperiod},
+         given={Fatma},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=BA}{%
+         family={Behl},
+         familyi={B\bibinitperiod},
+         given={Aseem},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=GA}{%
+         family={Geiger},
+         familyi={G\bibinitperiod},
+         given={Andreas},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{3}{%
+      {Foundations}%
+      {Trends in Computer Graphics}%
+      {Vision}%
+    }
+    \strng{namehash}{JJ+1}
+    \strng{fullhash}{JJGFBAGA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{J}
+    \field{sortinithash}{J}
+    \field{abstract}{%
+    Recent years have witnessed enormous progress in AI-related fields such as
+  computer vision, machine learning, and autonomous vehicles. As with any
+  rapidly growing field, it becomes increasingly difficult to stay up-to-date
+  or enter the field as a beginner. While several survey papers on particular
+  sub-problems have appeared, no comprehensive survey on problems, datasets,
+  and methods in computer vision for autonomous vehicles has been published.
+  This monograph attempts to narrow this gap by providing a survey on the
+  state-of-the-art datasets and techniques. Our survey includes both the
+  historically most relevant literature as well as the current state of the art
+  on several specific topics, including recognition, reconstruction, motion
+  estimation, tracking, scene understanding, and end-to-end learning for
+  autonomous driving. Towards this goal, we analyze the performance of the
+  state of the art on several challenging benchmarking datasets, including
+  KITTI, MOT, and Cityscapes. Besides, we discuss open problems and current
+  research challenges. To ease accessibility and accommodate missing
+  references, we also provide a website that allows navigating topics as well
+  as methods and provides additional information.%
+    }
+    \field{number}{1-3}
+    \field{title}{Computer Vision for Autonomous Vehicles: Problems, Datasets
+  and State of the Art}
+    \field{volume}{12}
+    \field{year}{2020}
+  \endentry
+
+  \entry{Kostrikov2020}{article}{}
+    \name{author}{3}{}{%
+      {{hash=KI}{%
+         family={Kostrikov},
+         familyi={K\bibinitperiod},
+         given={Ilya},
+         giveni={I\bibinitperiod},
+      }}%
+      {{hash=YD}{%
+         family={Yarats},
+         familyi={Y\bibinitperiod},
+         given={Denis},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=FR}{%
+         family={Fergus},
+         familyi={F\bibinitperiod},
+         given={Rob},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.LG, cs.CV, eess.IV, stat.ML}
+    \strng{namehash}{KIYDFR1}
+    \strng{fullhash}{KIYDFR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{abstract}{%
+    We propose a simple data augmentation technique that can be applied to
+  standard model-free reinforcement learning algorithms, enabling robust
+  learning directly from pixels without the need for auxiliary losses or
+  pre-training. The approach leverages input perturbations commonly used in
+  computer vision tasks to regularize the value function. Existing model-free
+  approaches, such as Soft Actor-Critic (SAC), are not able to train deep
+  networks effectively from image pixels. However, the addition of our
+  augmentation method dramatically improves SAC's performance, enabling it to
+  reach state-of-the-art performance on the DeepMind control suite, surpassing
+  model-based (Dreamer, PlaNet, and SLAC) methods and recently proposed
+  contrastive learning (CURL). Our approach can be combined with any model-free
+  reinforcement learning algorithm, requiring only minor modifications. An
+  implementation can be found at
+  https://sites.google.com/view/data-regularized-q.%
+    }
+    \verb{eprint}
+    \verb 2004.13649
+    \endverb
+    \field{title}{Image Augmentation Is All You Need: Regularizing Deep
+  Reinforcement Learning from Pixels}
+    \verb{file}
+    \verb :http\://arxiv.org/pdf/2004.13649v4:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.LG}
+    \field{month}{04}
+    \field{year}{2020}
+  \endentry
+
+  \entry{Laskin2020}{article}{}
+    \name{author}{6}{}{%
+      {{hash=LM}{%
+         family={Laskin},
+         familyi={L\bibinitperiod},
+         given={Michael},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=LK}{%
+         family={Lee},
+         familyi={L\bibinitperiod},
+         given={Kimin},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=SA}{%
+         family={Stooke},
+         familyi={S\bibinitperiod},
+         given={Adam},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=PL}{%
+         family={Pinto},
+         familyi={P\bibinitperiod},
+         given={Lerrel},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=AP}{%
+         family={Abbeel},
+         familyi={A\bibinitperiod},
+         given={Pieter},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=SA}{%
+         family={Srinivas},
+         familyi={S\bibinitperiod},
+         given={Aravind},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.LG, stat.ML}
+    \strng{namehash}{LM+1}
+    \strng{fullhash}{LMLKSAPLAPSA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{abstract}{%
+    Learning from visual observations is a fundamental yet challenging problem
+  in Reinforcement Learning (RL). Although algorithmic advances combined with
+  convolutional neural networks have proved to be a recipe for success, current
+  methods are still lacking on two fronts: (a) data-efficiency of learning and
+  (b) generalization to new environments. To this end, we present Reinforcement
+  Learning with Augmented Data (RAD), a simple plug-and-play module that can
+  enhance most RL algorithms. We perform the first extensive study of general
+  data augmentations for RL on both pixel-based and state-based inputs, and
+  introduce two new data augmentations - random translate and random amplitude
+  scale. We show that augmentations such as random translate, crop, color
+  jitter, patch cutout, random convolutions, and amplitude scale can enable
+  simple RL algorithms to outperform complex state-of-the-art methods across
+  common benchmarks. RAD sets a new state-of-the-art in terms of
+  data-efficiency and final performance on the DeepMind Control Suite benchmark
+  for pixel-based control as well as OpenAI Gym benchmark for state-based
+  control. We further demonstrate that RAD significantly improves test-time
+  generalization over existing methods on several OpenAI ProcGen benchmarks.
+  Our RAD module and training code are available at
+  https://www.github.com/MishaLaskin/rad.%
+    }
+    \verb{eprint}
+    \verb 2004.14990
+    \endverb
+    \field{title}{Reinforcement Learning with Augmented Data}
+    \verb{file}
+    \verb :http\://arxiv.org/pdf/2004.14990v5:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.LG}
+    \field{month}{04}
+    \field{year}{2020}
+  \endentry
+
+  \entry{inproceedings}{inproceedings}{}
+    \name{author}{5}{}{%
+      {{hash=LY}{%
+         family={Lecun},
+         familyi={L\bibinitperiod},
+         given={Yann},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=MU}{%
+         family={Muller},
+         familyi={M\bibinitperiod},
+         given={Urs},
+         giveni={U\bibinitperiod},
+      }}%
+      {{hash=BJ}{%
+         family={Ben},
+         familyi={B\bibinitperiod},
+         given={Jan},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=CE}{%
+         family={Cosatto},
+         familyi={C\bibinitperiod},
+         given={Eric},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=FB}{%
+         family={Flepp},
+         familyi={F\bibinitperiod},
+         given={Beat},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LY+1}
+    \strng{fullhash}{LYMUBJCEFB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{title}{Off-Road Obstacle Avoidance through End-to-End Learning.}
+    \field{month}{01}
+    \field{year}{2005}
+  \endentry
+
+  \entry{Lee2013}{article}{}
+    \name{author}{1}{}{%
+      {{hash=LDH}{%
+         family={Lee},
+         familyi={L\bibinitperiod},
+         given={Dong-Hyun},
+         giveni={D\bibinithyphendelim H\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LDH1}
+    \strng{fullhash}{LDH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{title}{Pseudo-Label : The Simple and Efficient Semi-Supervised
+  Learning Method for Deep Neural Networks}
+    \field{journaltitle}{ICML 2013 Workshop : Challenges in Representation
+  Learning (WREPL)}
+    \field{month}{07}
+    \field{year}{2013}
+  \endentry
+
+  \entry{Li2018}{article}{}
+    \name{author}{6}{}{%
+      {{hash=LG}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Guohao},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=MM}{%
+         family={Müller},
+         familyi={M\bibinitperiod},
+         given={Matthias},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=CV}{%
+         family={Casser},
+         familyi={C\bibinitperiod},
+         given={Vincent},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=SN}{%
+         family={Smith},
+         familyi={S\bibinitperiod},
+         given={Neil},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=MDL}{%
+         family={Michels},
+         familyi={M\bibinitperiod},
+         given={Dominik\bibnamedelima L.},
+         giveni={D\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=GB}{%
+         family={Ghanem},
+         familyi={G\bibinitperiod},
+         given={Bernard},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.CV, cs.LG, cs.RO}
+    \strng{namehash}{LG+1}
+    \strng{fullhash}{LGMMCVSNMDLGB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{abstract}{%
+    Recent work has explored the problem of autonomous navigation by imitating
+  a teacher and learning an end-to-end policy, which directly predicts controls
+  from raw images. However, these approaches tend to be sensitive to mistakes
+  by the teacher and do not scale well to other environments or vehicles. To
+  this end, we propose Observational Imitation Learning (OIL), a novel
+  imitation learning variant that supports online training and automatic
+  selection of optimal behavior by observing multiple imperfect teachers. We
+  apply our proposed methodology to the challenging problems of autonomous
+  driving and UAV racing. For both tasks, we utilize the Sim4CV simulator that
+  enables the generation of large amounts of synthetic training data and also
+  allows for online learning and evaluation. We train a perception network to
+  predict waypoints from raw image data and use OIL to train another network to
+  predict controls from these waypoints. Extensive experiments demonstrate that
+  our trained network outperforms its teachers, conventional imitation learning
+  (IL) and reinforcement learning (RL) baselines and even humans in simulation.
+  The project website is available at
+  https://sites.google.com/kaust.edu.sa/oil/ and a video at
+  https://youtu.be/_rhq8a0qgeg%
+    }
+    \verb{eprint}
+    \verb 1803.01129
+    \endverb
+    \field{title}{OIL: Observational Imitation Learning}
+    \verb{file}
+    \verb :http\://arxiv.org/pdf/1803.01129v3:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{month}{03}
+    \field{year}{2018}
+  \endentry
+
+  \entry{Liang2018}{article}{}
+    \name{author}{4}{}{%
+      {{hash=LX}{%
+         family={Liang},
+         familyi={L\bibinitperiod},
+         given={Xiaodan},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=WT}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Tairui},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=YL}{%
+         family={Yang},
+         familyi={Y\bibinitperiod},
+         given={Luona},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=XE}{%
+         family={Xing},
+         familyi={X\bibinitperiod},
+         given={Eric},
+         giveni={E\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.CV, cs.RO}
+    \strng{namehash}{LX+1}
+    \strng{fullhash}{LXWTYLXE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{abstract}{%
+    Autonomous urban driving navigation with complex multi-agent dynamics is
+  under-explored due to the difficulty of learning an optimal driving policy.
+  The traditional modular pipeline heavily relies on hand-designed rules and
+  the pre-processing perception system while the supervised learning-based
+  models are limited by the accessibility of extensive human experience. We
+  present a general and principled Controllable Imitative Reinforcement
+  Learning (CIRL) approach which successfully makes the driving agent achieve
+  higher success rates based on only vision inputs in a high-fidelity car
+  simulator. To alleviate the low exploration efficiency for large continuous
+  action space that often prohibits the use of classical RL on challenging real
+  tasks, our CIRL explores over a reasonably constrained action space guided by
+  encoded experiences that imitate human demonstrations, building upon Deep
+  Deterministic Policy Gradient (DDPG). Moreover, we propose to specialize
+  adaptive policies and steering-angle reward designs for different control
+  signals (i.e. follow, straight, turn right, turn left) based on the shared
+  representations to improve the model capability in tackling with diverse
+  cases. Extensive experiments on CARLA driving benchmark demonstrate that CIRL
+  substantially outperforms all previous methods in terms of the percentage of
+  successfully completed episodes on a variety of goal-directed driving tasks.
+  We also show its superior generalization capability in unseen environments.
+  To our knowledge, this is the first successful case of the learned driving
+  policy through reinforcement learning in the high-fidelity simulator, which
+  performs better-than supervised imitation learning.%
+    }
+    \verb{eprint}
+    \verb 1807.03776
+    \endverb
+    \field{title}{CIRL: Controllable Imitative Reinforcement Learning for
+  Vision-based Self-driving}
+    \verb{file}
+    \verb :http\://arxiv.org/pdf/1807.03776v1:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{month}{07}
+    \field{year}{2018}
+  \endentry
+
+  \entry{Loshchilov2017}{article}{}
+    \name{author}{2}{}{%
+      {{hash=LI}{%
+         family={Loshchilov},
+         familyi={L\bibinitperiod},
+         given={Ilya},
+         giveni={I\bibinitperiod},
+      }}%
+      {{hash=HF}{%
+         family={Hutter},
+         familyi={H\bibinitperiod},
+         given={Frank},
+         giveni={F\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.LG, cs.NE, math.OC}
+    \strng{namehash}{LIHF1}
+    \strng{fullhash}{LIHF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{abstract}{%
+    L$_2$ regularization and weight decay regularization are equivalent for
+  standard stochastic gradient descent (when rescaled by the learning rate),
+  but as we demonstrate this is \emph{not} the case for adaptive gradient
+  algorithms, such as Adam. While common implementations of these algorithms
+  employ L$_2$ regularization (often calling it "weight decay" in what may be
+  misleading due to the inequivalence we expose), we propose a simple
+  modification to recover the original formulation of weight decay
+  regularization by \emph{decoupling} the weight decay from the optimization
+  steps taken w.r.t. the loss function. We provide empirical evidence that our
+  proposed modification (i) decouples the optimal choice of weight decay factor
+  from the setting of the learning rate for both standard SGD and Adam and (ii)
+  substantially improves Adam's generalization performance, allowing it to
+  compete with SGD with momentum on image classification datasets (on which it
+  was previously typically outperformed by the latter). Our proposed decoupled
+  weight decay has already been adopted by many researchers, and the community
+  has implemented it in TensorFlow and PyTorch; the complete source code for
+  our experiments is available at https://github.com/loshchil/AdamW-and-SGDW%
+    }
+    \verb{eprint}
+    \verb 1711.05101
+    \endverb
+    \field{title}{Decoupled Weight Decay Regularization}
+    \verb{file}
+    \verb :http\://arxiv.org/pdf/1711.05101v3:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.LG}
+    \field{month}{11}
+    \field{year}{2017}
+  \endentry
+
+  \entry{Loshchilov2016}{article}{}
+    \name{author}{2}{}{%
+      {{hash=LI}{%
+         family={Loshchilov},
+         familyi={L\bibinitperiod},
+         given={Ilya},
+         giveni={I\bibinitperiod},
+      }}%
+      {{hash=HF}{%
+         family={Hutter},
+         familyi={H\bibinitperiod},
+         given={Frank},
+         giveni={F\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.LG, cs.NE, math.OC}
+    \strng{namehash}{LIHF1}
+    \strng{fullhash}{LIHF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{abstract}{%
+    Restart techniques are common in gradient-free optimization to deal with
+  multimodal functions. Partial warm restarts are also gaining popularity in
+  gradient-based optimization to improve the rate of convergence in accelerated
+  gradient schemes to deal with ill-conditioned functions. In this paper, we
+  propose a simple warm restart technique for stochastic gradient descent to
+  improve its anytime performance when training deep neural networks. We
+  empirically study its performance on the CIFAR-10 and CIFAR-100 datasets,
+  where we demonstrate new state-of-the-art results at 3.14% and 16.21%,
+  respectively. We also demonstrate its advantages on a dataset of EEG
+  recordings and on a downsampled version of the ImageNet dataset. Our source
+  code is available at https://github.com/loshchil/SGDR%
+    }
+    \verb{eprint}
+    \verb 1608.03983
+    \endverb
+    \field{title}{SGDR: Stochastic Gradient Descent with Warm Restarts}
+    \verb{file}
+    \verb :http\://arxiv.org/pdf/1608.03983v5:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.LG}
+    \field{month}{08}
+    \field{year}{2016}
+  \endentry
+
+  \entry{Mezghani2021}{article}{}
+    \name{author}{7}{}{%
+      {{hash=ML}{%
+         family={Mezghani},
+         familyi={M\bibinitperiod},
+         given={Lina},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=SS}{%
+         family={Sukhbaatar},
+         familyi={S\bibinitperiod},
+         given={Sainbayar},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=LT}{%
+         family={Lavril},
+         familyi={L\bibinitperiod},
+         given={Thibaut},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=MO}{%
+         family={Maksymets},
+         familyi={M\bibinitperiod},
+         given={Oleksandr},
+         giveni={O\bibinitperiod},
+      }}%
+      {{hash=BD}{%
+         family={Batra},
+         familyi={B\bibinitperiod},
+         given={Dhruv},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=BP}{%
+         family={Bojanowski},
+         familyi={B\bibinitperiod},
+         given={Piotr},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=AK}{%
+         family={Alahari},
+         familyi={A\bibinitperiod},
+         given={Karteek},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.CV, cs.RO}
+    \strng{namehash}{ML+1}
+    \strng{fullhash}{MLSSLTMOBDBPAK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{abstract}{%
+    In this work, we present a memory-augmented approach for image-goal
+  navigation. Earlier attempts, including RL-based and SLAM-based approaches
+  have either shown poor generalization performance, or are heavily-reliant on
+  pose/depth sensors. Our method is based on an attention-based end-to-end
+  model that leverages an episodic memory to learn to navigate. First, we train
+  a state-embedding network in a self-supervised fashion, and then use it to
+  embed previously-visited states into the agent's memory. Our navigation
+  policy takes advantage of this information through an attention mechanism. We
+  validate our approach with extensive evaluations, and show that our model
+  establishes a new state of the art on the challenging Gibson dataset.
+  Furthermore, we achieve this impressive performance from RGB input alone,
+  without access to additional information such as position or depth, in stark
+  contrast to related work.%
+    }
+    \verb{eprint}
+    \verb 2101.05181
+    \endverb
+    \field{title}{Memory-Augmented Reinforcement Learning for Image-Goal
+  Navigation}
+    \verb{file}
+    \verb :http\://arxiv.org/pdf/2101.05181v5:PDF
+    \endverb
+    \field{journaltitle}{IEEE/RSJ International Conference on Intelligent
+  Robots and Systems (IROS) 2022}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{month}{01}
+    \field{year}{2021}
+  \endentry
+
+  \entry{Muller2006}{inproceedings}{}
+    \name{author}{5}{}{%
+      {{hash=MU}{%
+         family={Muller},
+         familyi={M\bibinitperiod},
+         given={Urs},
+         giveni={U\bibinitperiod},
+      }}%
+      {{hash=BJ}{%
+         family={Ben},
+         familyi={B\bibinitperiod},
+         given={Jan},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=CE}{%
+         family={Cosatto},
+         familyi={C\bibinitperiod},
+         given={Eric},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=FB}{%
+         family={Flepp},
+         familyi={F\bibinitperiod},
+         given={Beat},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=CYL}{%
+         family={Cun},
+         familyi={C\bibinitperiod},
+         given={Yann\bibnamedelima L},
+         giveni={Y\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MU+1}
+    \strng{fullhash}{MUBJCEFBCYL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{booktitle}{NeurIPS}
+    \field{title}{Off-road obstacle avoidance through end-to-end learning}
+    \field{year}{2006}
+  \endentry
+
+  \entry{Mueller2018}{article}{}
+    \name{author}{4}{}{%
+      {{hash=MM}{%
+         family={Müller},
+         familyi={M\bibinitperiod},
+         given={Matthias},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=DA}{%
+         family={Dosovitskiy},
+         familyi={D\bibinitperiod},
+         given={Alexey},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=GB}{%
+         family={Ghanem},
+         familyi={G\bibinitperiod},
+         given={Bernard},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=KV}{%
+         family={Koltun},
+         familyi={K\bibinitperiod},
+         given={Vladlen},
+         giveni={V\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.RO, cs.CV, cs.LG}
+    \strng{namehash}{MM+1}
+    \strng{fullhash}{MMDAGBKV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{abstract}{%
+    End-to-end approaches to autonomous driving have high sample complexity and
+  are difficult to scale to realistic urban driving. Simulation can help
+  end-to-end driving systems by providing a cheap, safe, and diverse training
+  environment. Yet training driving policies in simulation brings up the
+  problem of transferring such policies to the real world. We present an
+  approach to transferring driving policies from simulation to reality via
+  modularity and abstraction. Our approach is inspired by classic driving
+  systems and aims to combine the benefits of modular architectures and
+  end-to-end deep learning approaches. The key idea is to encapsulate the
+  driving policy such that it is not directly exposed to raw perceptual input
+  or low-level vehicle dynamics. We evaluate the presented approach in
+  simulated urban environments and in the real world. In particular, we
+  transfer a driving policy trained in simulation to a 1/5-scale robotic truck
+  that is deployed in a variety of conditions, with no finetuning, on two
+  continents. The supplementary video can be viewed at
+  https://youtu.be/BrMDJqI6H5U%
+    }
+    \verb{eprint}
+    \verb 1804.09364
+    \endverb
+    \field{title}{Driving Policy Transfer via Modularity and Abstraction}
+    \verb{file}
+    \verb :http\://arxiv.org/pdf/1804.09364v3:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.RO}
+    \field{month}{04}
+    \field{year}{2018}
+  \endentry
+
+  \entry{9157137}{inproceedings}{}
+    \name{author}{5}{}{%
+      {{hash=OBE}{%
+         family={Ohn-Bar},
+         familyi={O\bibinithyphendelim B\bibinitperiod},
+         given={E.},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=PA}{%
+         family={Prakash},
+         familyi={P\bibinitperiod},
+         given={A.},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=BA}{%
+         family={Behl},
+         familyi={B\bibinitperiod},
+         given={A.},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=CK}{%
+         family={Chitta},
+         familyi={C\bibinitperiod},
+         given={K.},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=GA}{%
+         family={Geiger},
+         familyi={G\bibinitperiod},
+         given={A.},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE Computer Society}%
+    }
+    \keyw{task analysis;cloning;training;visualization;optimization;context
+  modeling;cognition}
+    \strng{namehash}{OBE+1}
+    \strng{fullhash}{OBEPABACKGA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{O}
+    \field{sortinithash}{O}
+    \field{booktitle}{2020 IEEE/CVF Conference on Computer Vision and Pattern
+  Recognition (CVPR)}
+    \verb{doi}
+    \verb 10.1109/CVPR42600.2020.01131
+    \endverb
+    \field{pages}{11293\bibrangedash 11302}
+    \field{title}{Learning Situational Driving}
+    \verb{url}
+    \verb https://doi.ieeecomputersociety.org/10.1109/CVPR42600.2020.01131
+    \endverb
+    \list{location}{1}{%
+      {Los Alamitos, CA, USA}%
+    }
+    \verb{file}
+    \verb :Ohn-Bar_Learning_Situational_Driving_CVPR_2020_paper.pdf:PDF
+    \endverb
+    \field{year}{2020}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{Osa2018}{article}{}
+    \name{author}{6}{}{%
+      {{hash=OT}{%
+         family={Osa},
+         familyi={O\bibinitperiod},
+         given={Takayuki},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=PJ}{%
+         family={Pajarinen},
+         familyi={P\bibinitperiod},
+         given={Joni},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=NG}{%
+         family={Neumann},
+         familyi={N\bibinitperiod},
+         given={Gerhard},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=BJA}{%
+         family={Bagnell},
+         familyi={B\bibinitperiod},
+         given={J.\bibnamedelima Andrew},
+         giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=AP}{%
+         family={Abbeel},
+         familyi={A\bibinitperiod},
+         given={Pieter},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=PJ}{%
+         family={Peters},
+         familyi={P\bibinitperiod},
+         given={Jan},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.RO, cs.LG}
+    \strng{namehash}{OT+1}
+    \strng{fullhash}{OTPJNGBJAAPPJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{O}
+    \field{sortinithash}{O}
+    \field{abstract}{%
+    As robots and other intelligent agents move from simple environments and
+  problems to more complex, unstructured settings, manually programming their
+  behavior has become increasingly challenging and expensive. Often, it is
+  easier for a teacher to demonstrate a desired behavior rather than attempt to
+  manually engineer it. This process of learning from demonstrations, and the
+  study of algorithms to do so, is called imitation learning. This work
+  provides an introduction to imitation learning. It covers the underlying
+  assumptions, approaches, and how they relate; the rich set of algorithms
+  developed to tackle the problem; and advice on effective tools and
+  implementation. We intend this paper to serve two audiences. First, we want
+  to familiarize machine learning experts with the challenges of imitation
+  learning, particularly those arising in robotics, and the interesting
+  theoretical and practical distinctions between it and more familiar
+  frameworks like statistical supervised learning theory and reinforcement
+  learning. Second, we want to give roboticists and experts in applied
+  artificial intelligence a broader appreciation for the frameworks and tools
+  available for imitation learning.%
+    }
+    \verb{doi}
+    \verb 10.1561/2300000053
+    \endverb
+    \verb{eprint}
+    \verb 1811.06711
+    \endverb
+    \field{title}{An Algorithmic Perspective on Imitation Learning}
+    \verb{file}
+    \verb :http\://arxiv.org/pdf/1811.06711v1:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.RO}
+    \field{month}{11}
+    \field{year}{2018}
+  \endentry
+
+  \entry{Pomerleau1988}{inproceedings}{}
+    \name{author}{1}{}{%
+      {{hash=PDA}{%
+         family={Pomerleau},
+         familyi={P\bibinitperiod},
+         given={Dean\bibnamedelima A.},
+         giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \name{editor}{1}{}{%
+      {{hash=TD}{%
+         family={Touretzky},
+         familyi={T\bibinitperiod},
+         given={D.},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Morgan-Kaufmann}%
+    }
+    \strng{namehash}{PDA1}
+    \strng{fullhash}{PDA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{booktitle}{Advances in Neural Information Processing Systems}
+    \field{title}{ALVINN: An Autonomous Land Vehicle in a Neural Network}
+    \verb{url}
+    \verb https://proceedings.neurips.cc/paper/1988/file/812b4ba287f5ee0bc9d43b
+    \verb bf5bbe87fb-Paper.pdf
+    \endverb
+    \field{volume}{1}
+    \field{year}{1988}
+  \endentry
+
+  \entry{Prakash2021}{article}{}
+    \name{author}{3}{}{%
+      {{hash=PA}{%
+         family={Prakash},
+         familyi={P\bibinitperiod},
+         given={Aditya},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=CK}{%
+         family={Chitta},
+         familyi={C\bibinitperiod},
+         given={Kashyap},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=GA}{%
+         family={Geiger},
+         familyi={G\bibinitperiod},
+         given={Andreas},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.CV, cs.AI, cs.LG, cs.RO}
+    \strng{namehash}{PACKGA1}
+    \strng{fullhash}{PACKGA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{abstract}{%
+    How should representations from complementary sensors be integrated for
+  autonomous driving? Geometry-based sensor fusion has shown great promise for
+  perception tasks such as object detection and motion forecasting. However,
+  for the actual driving task, the global context of the 3D scene is key, e.g.
+  a change in traffic light state can affect the behavior of a vehicle
+  geometrically distant from that traffic light. Geometry alone may therefore
+  be insufficient for effectively fusing representations in end-to-end driving
+  models. In this work, we demonstrate that imitation learning policies based
+  on existing sensor fusion methods under-perform in the presence of a high
+  density of dynamic agents and complex scenarios, which require global
+  contextual reasoning, such as handling traffic oncoming from multiple
+  directions at uncontrolled intersections. Therefore, we propose TransFuser, a
+  novel Multi-Modal Fusion Transformer, to integrate image and LiDAR
+  representations using attention. We experimentally validate the efficacy of
+  our approach in urban settings involving complex scenarios using the CARLA
+  urban driving simulator. Our approach achieves state-of-the-art driving
+  performance while reducing collisions by 76% compared to geometry-based
+  fusion.%
+    }
+    \verb{eprint}
+    \verb 2104.09224
+    \endverb
+    \field{title}{Multi-Modal Fusion Transformer for End-to-End Autonomous
+  Driving}
+    \verb{file}
+    \verb :Prakash2021 - Multi Modal Fusion Transformer for End to End Autonomo
+    \verb us Driving.pdf:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{month}{04}
+    \field{year}{2021}
+  \endentry
+
+  \entry{Prakash2020}{inproceedings}{}
+    \name{author}{5}{}{%
+      {{hash=PA}{%
+         family={Prakash},
+         familyi={P\bibinitperiod},
+         given={Aditya},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=BA}{%
+         family={Behl},
+         familyi={B\bibinitperiod},
+         given={Aseem},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=OBE}{%
+         family={Ohn-Bar},
+         familyi={O\bibinithyphendelim B\bibinitperiod},
+         given={Eshed},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=CK}{%
+         family={Chitta},
+         familyi={C\bibinitperiod},
+         given={Kashyap},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=GA}{%
+         family={Geiger},
+         familyi={G\bibinitperiod},
+         given={Andreas},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{PA+1}
+    \strng{fullhash}{PABAOBECKGA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{booktitle}{Proceedings of the IEEE/CVF Conference on Computer Vision
+  and Pattern Recognition (CVPR)}
+    \field{title}{Exploring Data Aggregation in Policy Learning for
+  Vision-Based Urban Autonomous Driving}
+    \field{year}{2020}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{Rizve2021}{article}{}
+    \name{author}{4}{}{%
+      {{hash=RMN}{%
+         family={Rizve},
+         familyi={R\bibinitperiod},
+         given={Mamshad\bibnamedelima Nayeem},
+         giveni={M\bibinitperiod\bibinitdelim N\bibinitperiod},
+      }}%
+      {{hash=DK}{%
+         family={Duarte},
+         familyi={D\bibinitperiod},
+         given={Kevin},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=RYS}{%
+         family={Rawat},
+         familyi={R\bibinitperiod},
+         given={Yogesh\bibnamedelima S},
+         giveni={Y\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=SM}{%
+         family={Shah},
+         familyi={S\bibinitperiod},
+         given={Mubarak},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.LG, cs.CV}
+    \strng{namehash}{RMN+1}
+    \strng{fullhash}{RMNDKRYSSM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{abstract}{%
+    The recent research in semi-supervised learning (SSL) is mostly dominated
+  by consistency regularization based methods which achieve strong performance.
+  However, they heavily rely on domain-specific data augmentations, which are
+  not easy to generate for all data modalities. Pseudo-labeling (PL) is a
+  general SSL approach that does not have this constraint but performs
+  relatively poorly in its original formulation. We argue that PL underperforms
+  due to the erroneous high confidence predictions from poorly calibrated
+  models; these predictions generate many incorrect pseudo-labels, leading to
+  noisy training. We propose an uncertainty-aware pseudo-label selection (UPS)
+  framework which improves pseudo labeling accuracy by drastically reducing the
+  amount of noise encountered in the training process. Furthermore, UPS
+  generalizes the pseudo-labeling process, allowing for the creation of
+  negative pseudo-labels; these negative pseudo-labels can be used for
+  multi-label classification as well as negative learning to improve the
+  single-label classification. We achieve strong performance when compared to
+  recent SSL methods on the CIFAR-10 and CIFAR-100 datasets. Also, we
+  demonstrate the versatility of our method on the video dataset UCF-101 and
+  the multi-label dataset Pascal VOC.%
+    }
+    \verb{eprint}
+    \verb 2101.06329
+    \endverb
+    \field{title}{In Defense of Pseudo-Labeling: An Uncertainty-Aware
+  Pseudo-label Selection Framework for Semi-Supervised Learning}
+    \verb{file}
+    \verb :http\://arxiv.org/pdf/2101.06329v3:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.LG}
+    \field{month}{01}
+    \field{year}{2021}
+  \endentry
+
+  \entry{Sauer2018}{article}{}
+    \name{author}{3}{}{%
+      {{hash=SA}{%
+         family={Sauer},
+         familyi={S\bibinitperiod},
+         given={Axel},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=SN}{%
+         family={Savinov},
+         familyi={S\bibinitperiod},
+         given={Nikolay},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=GA}{%
+         family={Geiger},
+         familyi={G\bibinitperiod},
+         given={Andreas},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.RO, cs.LG, cs.SY}
+    \strng{namehash}{SASNGA1}
+    \strng{fullhash}{SASNGA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{abstract}{%
+    Most existing approaches to autonomous driving fall into one of two
+  categories: modular pipelines, that build an extensive model of the
+  environment, and imitation learning approaches, that map images directly to
+  control outputs. A recently proposed third paradigm, direct perception, aims
+  to combine the advantages of both by using a neural network to learn
+  appropriate low-dimensional intermediate representations. However, existing
+  direct perception approaches are restricted to simple highway situations,
+  lacking the ability to navigate intersections, stop at traffic lights or
+  respect speed limits. In this work, we propose a direct perception approach
+  which maps video input to intermediate representations suitable for
+  autonomous navigation in complex urban environments given high-level
+  directional inputs. Compared to state-of-the-art reinforcement and
+  conditional imitation learning approaches, we achieve an improvement of up to
+  68 % in goal-directed navigation on the challenging CARLA simulation
+  benchmark. In addition, our approach is the first to handle traffic lights
+  and speed signs by using image-level labels only, as well as smooth
+  car-following, resulting in a significant reduction of traffic accidents in
+  simulation.%
+    }
+    \verb{eprint}
+    \verb 1806.06498
+    \endverb
+    \field{title}{Conditional Affordance Learning for Driving in Urban
+  Environments}
+    \verb{file}
+    \verb :http\://arxiv.org/pdf/1806.06498v3:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.RO}
+    \field{month}{06}
+    \field{year}{2018}
+  \endentry
+
+  \entry{Tampuu2020}{article}{}
+    \name{author}{5}{}{%
+      {{hash=TA}{%
+         family={Tampuu},
+         familyi={T\bibinitperiod},
+         given={Ardi},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=SM}{%
+         family={Semikin},
+         familyi={S\bibinitperiod},
+         given={Maksym},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=MN}{%
+         family={Muhammad},
+         familyi={M\bibinitperiod},
+         given={Naveed},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=FD}{%
+         family={Fishman},
+         familyi={F\bibinitperiod},
+         given={Dmytro},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=MT}{%
+         family={Matiisen},
+         familyi={M\bibinitperiod},
+         given={Tambet},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.AI, cs.RO, 68T40, I.2.9}
+    \strng{namehash}{TA+1}
+    \strng{fullhash}{TASMMNFDMT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{abstract}{%
+    Autonomous driving is of great interest to industry and academia alike. The
+  use of machine learning approaches for autonomous driving has long been
+  studied, but mostly in the context of perception. In this paper we take a
+  deeper look on the so called end-to-end approaches for autonomous driving,
+  where the entire driving pipeline is replaced with a single neural network.
+  We review the learning methods, input and output modalities, network
+  architectures and evaluation schemes in end-to-end driving literature.
+  Interpretability and safety are discussed separately, as they remain
+  challenging for this approach. Beyond providing a comprehensive overview of
+  existing methods, we conclude the review with an architecture that combines
+  the most promising elements of the end-to-end autonomous driving systems.%
+    }
+    \verb{doi}
+    \verb 10.1109/TNNLS.2020.3043505
+    \endverb
+    \verb{eprint}
+    \verb 2003.06404
+    \endverb
+    \field{title}{A Survey of End-to-End Driving: Architectures and Training
+  Methods}
+    \verb{file}
+    \verb :http\://arxiv.org/pdf/2003.06404v2:PDF
+    \endverb
+    \field{journaltitle}{IEEE Transactions on Neural Networks and Learning
+  Systems, 2020}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.AI}
+    \field{month}{03}
+    \field{year}{2020}
+  \endentry
+
+  \entry{torabi2018}{article}{}
+    \name{author}{3}{}{%
+      {{hash=TF}{%
+         family={Torabi},
+         familyi={T\bibinitperiod},
+         given={Faraz},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=WG}{%
+         family={Warnell},
+         familyi={W\bibinitperiod},
+         given={Garrett},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=SP}{%
+         family={Stone},
+         familyi={S\bibinitperiod},
+         given={Peter},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.AI}
+    \strng{namehash}{TFWGSP1}
+    \strng{fullhash}{TFWGSP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{abstract}{%
+    Humans often learn how to perform tasks via imitation: they observe others
+  perform a task, and then very quickly infer the appropriate actions to take
+  based on their observations. While extending this paradigm to autonomous
+  agents is a well-studied problem in general, there are two particular aspects
+  that have largely been overlooked: (1) that the learning is done from
+  observation only (i.e., without explicit action information), and (2) that
+  the learning is typically done very quickly. In this work, we propose a
+  two-phase, autonomous imitation learning technique called behavioral cloning
+  from observation (BCO), that aims to provide improved performance with
+  respect to both of these aspects. First, we allow the agent to acquire
+  experience in a self-supervised fashion. This experience is used to develop a
+  model which is then utilized to learn a particular task by observing an
+  expert perform that task without the knowledge of the specific actions taken.
+  We experimentally compare BCO to imitation learning methods, including the
+  state-of-the-art, generative adversarial imitation learning (GAIL) technique,
+  and we show comparable task performance in several different simulation
+  domains while exhibiting increased learning speed after expert trajectories
+  become available.%
+    }
+    \verb{eprint}
+    \verb 1805.01954
+    \endverb
+    \field{title}{Behavioral Cloning from Observation}
+    \verb{file}
+    \verb :http\://arxiv.org/pdf/1805.01954v2:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.AI}
+    \field{month}{05}
+    \field{year}{2018}
+  \endentry
+
+  \entry{Torabi2019}{article}{}
+    \name{author}{3}{}{%
+      {{hash=TF}{%
+         family={Torabi},
+         familyi={T\bibinitperiod},
+         given={Faraz},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=WG}{%
+         family={Warnell},
+         familyi={W\bibinitperiod},
+         given={Garrett},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=SP}{%
+         family={Stone},
+         familyi={S\bibinitperiod},
+         given={Peter},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.RO, cs.AI, cs.LG}
+    \strng{namehash}{TFWGSP1}
+    \strng{fullhash}{TFWGSP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{abstract}{%
+    Imitation learning is the process by which one agent tries to learn how to
+  perform a certain task using information generated by another, often
+  more-expert agent performing that same task. Conventionally, the imitator has
+  access to both state and action information generated by an expert performing
+  the task (e.g., the expert may provide a kinesthetic demonstration of object
+  placement using a robotic arm). However, requiring the action information
+  prevents imitation learning from a large number of existing valuable learning
+  resources such as online videos of humans performing tasks. To overcome this
+  issue, the specific problem of imitation from observation (IfO) has recently
+  garnered a great deal of attention, in which the imitator only has access to
+  the state information (e.g., video frames) generated by the expert. In this
+  paper, we provide a literature review of methods developed for IfO, and then
+  point out some open research problems and potential future work.%
+    }
+    \verb{eprint}
+    \verb 1905.13566
+    \endverb
+    \field{title}{Recent Advances in Imitation Learning from Observation}
+    \verb{file}
+    \verb :http\://arxiv.org/pdf/1905.13566v2:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.RO}
+    \field{month}{05}
+    \field{year}{2019}
+  \endentry
+
+  \entry{Toromanoff2019}{article}{}
+    \name{author}{3}{}{%
+      {{hash=TM}{%
+         family={Toromanoff},
+         familyi={T\bibinitperiod},
+         given={Marin},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=WE}{%
+         family={Wirbel},
+         familyi={W\bibinitperiod},
+         given={Emilie},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=MF}{%
+         family={Moutarde},
+         familyi={M\bibinitperiod},
+         given={Fabien},
+         giveni={F\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.LG, cs.AI, cs.CV, cs.RO, stat.ML}
+    \strng{namehash}{TMWEMF1}
+    \strng{fullhash}{TMWEMF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{abstract}{%
+    Reinforcement Learning (RL) aims at learning an optimal behavior policy
+  from its own experiments and not rule-based control methods. However, there
+  is no RL algorithm yet capable of handling a task as difficult as urban
+  driving. We present a novel technique, coined implicit affordances, to
+  effectively leverage RL for urban driving thus including lane keeping,
+  pedestrians and vehicles avoidance, and traffic light detection. To our
+  knowledge we are the first to present a successful RL agent handling such a
+  complex task especially regarding the traffic light detection. Furthermore,
+  we have demonstrated the effectiveness of our method by winning the Camera
+  Only track of the CARLA challenge.%
+    }
+    \verb{eprint}
+    \verb 1911.10868
+    \endverb
+    \field{title}{End-to-End Model-Free Reinforcement Learning for Urban
+  Driving using Implicit Affordances}
+    \verb{file}
+    \verb :http\://arxiv.org/pdf/1911.10868v2:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.LG}
+    \field{month}{11}
+    \field{year}{2019}
+  \endentry
+
+  \entry{Wang2019a}{inproceedings}{}
+    \name{author}{5}{}{%
+      {{hash=WD}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Dequan},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=DC}{%
+         family={Devin},
+         familyi={D\bibinitperiod},
+         given={Coline},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=CQZ}{%
+         family={Cai},
+         familyi={C\bibinitperiod},
+         given={Qi-Zhi},
+         giveni={Q\bibinithyphendelim Z\bibinitperiod},
+      }}%
+      {{hash=KP}{%
+         family={Kr{\"a}henb{\"u}hl},
+         familyi={K\bibinitperiod},
+         given={Philipp},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=DT}{%
+         family={Darrell},
+         familyi={D\bibinitperiod},
+         given={Trevor},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WD+1}
+    \strng{fullhash}{WDDCCQZKPDT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{booktitle}{IROS}
+    \field{title}{Monocular plan view networks for autonomous driving}
+    \field{year}{2019}
+  \endentry
+
+  \entry{Wang2020a}{article}{}
+    \name{author}{5}{}{%
+      {{hash=WJ}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Jingke},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=WY}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Yue},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=ZD}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Dongkun},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=YY}{%
+         family={Yang},
+         familyi={Y\bibinitperiod},
+         given={Yezhou},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=XR}{%
+         family={Xiong},
+         familyi={X\bibinitperiod},
+         given={Rong},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.RO, cs.AI}
+    \strng{namehash}{WJ+1}
+    \strng{fullhash}{WJWYZDYYXR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{abstract}{%
+    Learning-based driving solution, a new branch for autonomous driving, is
+  expected to simplify the modeling of driving by learning the underlying
+  mechanisms from data. To improve the tactical decision-making for
+  learning-based driving solution, we introduce hierarchical behavior and
+  motion planning (HBMP) to explicitly model the behavior in learning-based
+  solution. Due to the coupled action space of behavior and motion, it is
+  challenging to solve HBMP problem using reinforcement learning (RL) for
+  long-horizon driving tasks. We transform HBMP problem by integrating a
+  classical sampling-based motion planner, of which the optimal cost is
+  regarded as the rewards for high-level behavior learning. As a result, this
+  formulation reduces action space and diversifies the rewards without losing
+  the optimality of HBMP. In addition, we propose a sharable representation for
+  input sensory data across simulation platforms and real-world environment, so
+  that models trained in a fast event-based simulator, SUMO, can be used to
+  initialize and accelerate the RL training in a dynamics based simulator,
+  CARLA. Experimental results demonstrate the effectiveness of the method.
+  Besides, the model is successfully transferred to the real-world, validating
+  the generalization capability.%
+    }
+    \verb{eprint}
+    \verb 2005.03863
+    \endverb
+    \field{title}{Learning hierarchical behavior and motion planning for
+  autonomous driving}
+    \verb{file}
+    \verb :http\://arxiv.org/pdf/2005.03863v1:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.RO}
+    \field{month}{05}
+    \field{year}{2020}
+  \endentry
+
+  \entry{Wang2017}{article}{}
+    \name{author}{4}{}{%
+      {{hash=WS}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Sen},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=CR}{%
+         family={Clark},
+         familyi={C\bibinitperiod},
+         given={Ronald},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=WH}{%
+         family={Wen},
+         familyi={W\bibinitperiod},
+         given={Hongkai},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=TN}{%
+         family={Trigoni},
+         familyi={T\bibinitperiod},
+         given={Niki},
+         giveni={N\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.CV, cs.RO}
+    \strng{namehash}{WS+1}
+    \strng{fullhash}{WSCRWHTN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{abstract}{%
+    This paper studies monocular visual odometry (VO) problem. Most of existing
+  VO algorithms are developed under a standard pipeline including feature
+  extraction, feature matching, motion estimation, local optimisation, etc.
+  Although some of them have demonstrated superior performance, they usually
+  need to be carefully designed and specifically fine-tuned to work well in
+  different environments. Some prior knowledge is also required to recover an
+  absolute scale for monocular VO. This paper presents a novel end-to-end
+  framework for monocular VO by using deep Recurrent Convolutional Neural
+  Networks (RCNNs). Since it is trained and deployed in an end-to-end manner,
+  it infers poses directly from a sequence of raw RGB images (videos) without
+  adopting any module in the conventional VO pipeline. Based on the RCNNs, it
+  not only automatically learns effective feature representation for the VO
+  problem through Convolutional Neural Networks, but also implicitly models
+  sequential dynamics and relations using deep Recurrent Neural Networks.
+  Extensive experiments on the KITTI VO dataset show competitive performance to
+  state-of-the-art methods, verifying that the end-to-end Deep Learning
+  technique can be a viable complement to the traditional VO systems.%
+    }
+    \verb{doi}
+    \verb 10.1109/ICRA.2017.7989236
+    \endverb
+    \verb{eprint}
+    \verb 1709.08429
+    \endverb
+    \field{title}{DeepVO: Towards End-to-End Visual Odometry with Deep
+  Recurrent Convolutional Neural Networks}
+    \verb{file}
+    \verb :Wang2017 - DeepVO_ Towards End to End Visual Odometry with Deep Recu
+    \verb rrent Convolutional Neural Networks.pdf:PDF;:http\://arxiv.org/pdf/17
+    \verb 09.08429v1:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{month}{09}
+    \field{year}{2017}
+  \endentry
+
+  \entry{Argoverse2}{inproceedings}{}
+    \name{author}{13}{}{%
+      {{hash=WB}{%
+         family={Wilson},
+         familyi={W\bibinitperiod},
+         given={Benjamin},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=QW}{%
+         family={Qi},
+         familyi={Q\bibinitperiod},
+         given={William},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=AT}{%
+         family={Agarwal},
+         familyi={A\bibinitperiod},
+         given={Tanmay},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=LJ}{%
+         family={Lambert},
+         familyi={L\bibinitperiod},
+         given={John},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=SJ}{%
+         family={Singh},
+         familyi={S\bibinitperiod},
+         given={Jagjeet},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=KS}{%
+         family={Khandelwal},
+         familyi={K\bibinitperiod},
+         given={Siddhesh},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=PB}{%
+         family={Pan},
+         familyi={P\bibinitperiod},
+         given={Bowen},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=KR}{%
+         family={Kumar},
+         familyi={K\bibinitperiod},
+         given={Ratnesh},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=HA}{%
+         family={Hartnett},
+         familyi={H\bibinitperiod},
+         given={Andrew},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=PJK}{%
+         family={Pontes},
+         familyi={P\bibinitperiod},
+         given={Jhony\bibnamedelima Kaesemodel},
+         giveni={J\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=RD}{%
+         family={Ramanan},
+         familyi={R\bibinitperiod},
+         given={Deva},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=CP}{%
+         family={Carr},
+         familyi={C\bibinitperiod},
+         given={Peter},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=HJ}{%
+         family={Hays},
+         familyi={H\bibinitperiod},
+         given={James},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WB+1}
+    \strng{fullhash}{WBQWATLJSJKSPBKRHAPJKRDCPHJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{booktitle}{Proceedings of the Neural Information Processing Systems
+  Track on Datasets and Benchmarks (NeurIPS Datasets and Benchmarks 2021)}
+    \field{title}{Argoverse 2: Next Generation Datasets for Self-driving
+  Perception and Forecasting}
+    \field{year}{2021}
+  \endentry
+
+  \entry{Wu2018}{article}{}
+    \name{author}{4}{}{%
+      {{hash=WZ}{%
+         family={Wu},
+         familyi={W\bibinitperiod},
+         given={Zhirong},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=XY}{%
+         family={Xiong},
+         familyi={X\bibinitperiod},
+         given={Yuanjun},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=YS}{%
+         family={Yu},
+         familyi={Y\bibinitperiod},
+         given={Stella},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=LD}{%
+         family={Lin},
+         familyi={L\bibinitperiod},
+         given={Dahua},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.CV, cs.LG}
+    \strng{namehash}{WZ+1}
+    \strng{fullhash}{WZXYYSLD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{abstract}{%
+    Neural net classifiers trained on data with annotated class labels can also
+  capture apparent visual similarity among categories without being directed to
+  do so. We study whether this observation can be extended beyond the
+  conventional domain of supervised learning: Can we learn a good feature
+  representation that captures apparent similarity among instances, instead of
+  classes, by merely asking the feature to be discriminative of individual
+  instances? We formulate this intuition as a non-parametric classification
+  problem at the instance-level, and use noise-contrastive estimation to tackle
+  the computational challenges imposed by the large number of instance classes.
+  Our experimental results demonstrate that, under unsupervised learning
+  settings, our method surpasses the state-of-the-art on ImageNet
+  classification by a large margin. Our method is also remarkable for
+  consistently improving test performance with more training data and better
+  network architectures. By fine-tuning the learned feature, we further obtain
+  competitive results for semi-supervised learning and object detection tasks.
+  Our non-parametric model is highly compact: With 128 features per image, our
+  method requires only 600MB storage for a million images, enabling fast
+  nearest neighbour retrieval at the run time.%
+    }
+    \verb{eprint}
+    \verb 1805.01978
+    \endverb
+    \field{title}{Unsupervised Feature Learning via Non-Parametric
+  Instance-level Discrimination}
+    \verb{file}
+    \verb :http\://arxiv.org/pdf/1805.01978v1:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{month}{05}
+    \field{year}{2018}
+  \endentry
+
+  \entry{Xiao2020}{article}{}
+    \name{author}{4}{}{%
+      {{hash=XY}{%
+         family={Xiao},
+         familyi={X\bibinitperiod},
+         given={Yi},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=CF}{%
+         family={Codevilla},
+         familyi={C\bibinitperiod},
+         given={Felipe},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=PC}{%
+         family={Pal},
+         familyi={P\bibinitperiod},
+         given={Christopher},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=LAM}{%
+         family={Lopez},
+         familyi={L\bibinitperiod},
+         given={Antonio\bibnamedelima M.},
+         giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.CV, cs.LG, cs.RO}
+    \strng{namehash}{XY+1}
+    \strng{fullhash}{XYCFPCLAM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{X}
+    \field{sortinithash}{X}
+    \field{abstract}{%
+    Human drivers produce a vast amount of data which could, in principle, be
+  used to improve autonomous driving systems. Unfortunately, seemingly
+  straightforward approaches for creating end-to-end driving models that map
+  sensor data directly into driving actions are problematic in terms of
+  interpretability, and typically have significant difficulty dealing with
+  spurious correlations. Alternatively, we propose to use this kind of
+  action-based driving data for learning representations. Our experiments show
+  that an affordance-based driving model pre-trained with this approach can
+  leverage a relatively small amount of weakly annotated imagery and outperform
+  pure end-to-end driving models, while being more interpretable. Further, we
+  demonstrate how this strategy outperforms previous methods based on learning
+  inverse dynamics models as well as other methods based on heavy human
+  supervision (ImageNet).%
+    }
+    \verb{eprint}
+    \verb 2008.09417
+    \endverb
+    \field{title}{Action-Based Representation Learning for Autonomous Driving}
+    \verb{file}
+    \verb :http\://arxiv.org/pdf/2008.09417v2:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{month}{08}
+    \field{year}{2020}
+  \endentry
+
+  \entry{Xiao2019}{article}{}
+    \name{author}{5}{}{%
+      {{hash=XY}{%
+         family={Xiao},
+         familyi={X\bibinitperiod},
+         given={Yi},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=CF}{%
+         family={Codevilla},
+         familyi={C\bibinitperiod},
+         given={Felipe},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=GA}{%
+         family={Gurram},
+         familyi={G\bibinitperiod},
+         given={Akhil},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=UO}{%
+         family={Urfalioglu},
+         familyi={U\bibinitperiod},
+         given={Onay},
+         giveni={O\bibinitperiod},
+      }}%
+      {{hash=LAM}{%
+         family={López},
+         familyi={L\bibinitperiod},
+         given={Antonio\bibnamedelima M.},
+         giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.CV}
+    \strng{namehash}{XY+1}
+    \strng{fullhash}{XYCFGAUOLAM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{X}
+    \field{sortinithash}{X}
+    \field{abstract}{%
+    A crucial component of an autonomous vehicle (AV) is the artificial
+  intelligence (AI) is able to drive towards a desired destination. Today,
+  there are different paradigms addressing the development of AI drivers. On
+  the one hand, we find modular pipelines, which divide the driving task into
+  sub-tasks such as perception and maneuver planning and control. On the other
+  hand, we find end-to-end driving approaches that try to learn a direct
+  mapping from input raw sensor data to vehicle control signals. The later are
+  relatively less studied, but are gaining popularity since they are less
+  demanding in terms of sensor data annotation. This paper focuses on
+  end-to-end autonomous driving. So far, most proposals relying on this
+  paradigm assume RGB images as input sensor data. However, AVs will not be
+  equipped only with cameras, but also with active sensors providing accurate
+  depth information (e.g., LiDARs). Accordingly, this paper analyses whether
+  combining RGB and depth modalities, i.e. using RGBD data, produces better
+  end-to-end AI drivers than relying on a single modality. We consider
+  multimodality based on early, mid and late fusion schemes, both in
+  multisensory and single-sensor (monocular depth estimation) settings. Using
+  the CARLA simulator and conditional imitation learning (CIL), we show how,
+  indeed, early fusion multimodality outperforms single-modality.%
+    }
+    \verb{doi}
+    \verb 10.1109/TITS.2020.3013234
+    \endverb
+    \verb{eprint}
+    \verb 1906.03199
+    \endverb
+    \field{title}{Multimodal End-to-End Autonomous Driving}
+    \verb{file}
+    \verb :http\://arxiv.org/pdf/1906.03199v2:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{month}{06}
+    \field{year}{2019}
+  \endentry
+
+  \entry{Yadav2022}{article}{}
+    \name{author}{8}{}{%
+      {{hash=YK}{%
+         family={Yadav},
+         familyi={Y\bibinitperiod},
+         given={Karmesh},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=RR}{%
+         family={Ramrakhya},
+         familyi={R\bibinitperiod},
+         given={Ram},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=MA}{%
+         family={Majumdar},
+         familyi={M\bibinitperiod},
+         given={Arjun},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=BVP}{%
+         family={Berges},
+         familyi={B\bibinitperiod},
+         given={Vincent-Pierre},
+         giveni={V\bibinithyphendelim P\bibinitperiod},
+      }}%
+      {{hash=KS}{%
+         family={Kuhar},
+         familyi={K\bibinitperiod},
+         given={Sachit},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=BD}{%
+         family={Batra},
+         familyi={B\bibinitperiod},
+         given={Dhruv},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=BA}{%
+         family={Baevski},
+         familyi={B\bibinitperiod},
+         given={Alexei},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=MO}{%
+         family={Maksymets},
+         familyi={M\bibinitperiod},
+         given={Oleksandr},
+         giveni={O\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.CV, cs.LG}
+    \strng{namehash}{YK+1}
+    \strng{fullhash}{YKRRMABVPKSBDBAMO1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{Y}
+    \field{sortinithash}{Y}
+    \field{abstract}{%
+    How should we learn visual representations for embodied agents that must
+  see and move? The status quo is tabula rasa in vivo, i.e. learning visual
+  representations from scratch while also learning to move, potentially
+  augmented with auxiliary tasks (e.g. predicting the action taken between two
+  successive observations). In this paper, we show that an alternative 2-stage
+  strategy is far more effective: (1) offline pretraining of visual
+  representations with self-supervised learning (SSL) using large-scale
+  pre-rendered images of indoor environments (Omnidata), and (2) online
+  finetuning of visuomotor representations on specific tasks with image
+  augmentations under long learning schedules. We call this method Offline
+  Visual Representation Learning (OVRL). We conduct large-scale experiments -
+  on 3 different 3D datasets (Gibson, HM3D, MP3D), 2 tasks (ImageNav,
+  ObjectNav), and 2 policy learning algorithms (RL, IL) - and find that the
+  OVRL representations lead to significant across-the-board improvements in
+  state of art, on ImageNav from 29.2% to 54.2% (+25% absolute, 86% relative)
+  and on ObjectNav from 18.1% to 23.2% (+5.1% absolute, 28% relative).
+  Importantly, both results were achieved by the same visual encoder
+  generalizing to datasets that were not seen during pretraining. While the
+  benefits of pretraining sometimes diminish (or entirely disappear) with long
+  finetuning schedules, we find that OVRL's performance gains continue to
+  increase (not decrease) as the agent is trained for 2 billion frames of
+  experience.%
+    }
+    \verb{eprint}
+    \verb 2204.13226
+    \endverb
+    \field{title}{Offline Visual Representation Learning for Embodied
+  Navigation}
+    \verb{file}
+    \verb :Yadav2022 - Offline Visual Representation Learning for Embodied Navi
+    \verb gation.pdf:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{month}{04}
+    \field{year}{2022}
+  \endentry
+
+  \entry{Yang2021}{article}{}
+    \name{author}{5}{}{%
+      {{hash=YJ}{%
+         family={Yang},
+         familyi={Y\bibinitperiod},
+         given={Jihan},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=SS}{%
+         family={Shi},
+         familyi={S\bibinitperiod},
+         given={Shaoshuai},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=WZ}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Zhe},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=LH}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Hongsheng},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=QX}{%
+         family={Qi},
+         familyi={Q\bibinitperiod},
+         given={Xiaojuan},
+         giveni={X\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.CV, cs.LG}
+    \strng{namehash}{YJ+1}
+    \strng{fullhash}{YJSSWZLHQX1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{Y}
+    \field{sortinithash}{Y}
+    \field{abstract}{%
+    We present a new domain adaptive self-training pipeline, named ST3D, for
+  unsupervised domain adaptation on 3D object detection from point clouds.
+  First, we pre-train the 3D detector on the source domain with our proposed
+  random object scaling strategy for mitigating the negative effects of source
+  domain bias. Then, the detector is iteratively improved on the target domain
+  by alternatively conducting two steps, which are the pseudo label updating
+  with the developed quality-aware triplet memory bank and the model training
+  with curriculum data augmentation. These specific designs for 3D object
+  detection enable the detector to be trained with consistent and high-quality
+  pseudo labels and to avoid overfitting to the large number of easy examples
+  in pseudo labeled data. Our ST3D achieves state-of-the-art performance on all
+  evaluated datasets and even surpasses fully supervised results on KITTI 3D
+  object detection benchmark. Code will be available at
+  https://github.com/CVMI-Lab/ST3D.%
+    }
+    \verb{eprint}
+    \verb 2103.05346
+    \endverb
+    \field{title}{ST3D: Self-training for Unsupervised Domain Adaptation on 3D
+  Object Detection}
+    \verb{file}
+    \verb :http\://arxiv.org/pdf/2103.05346v2:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{month}{03}
+    \field{year}{2021}
+  \endentry
+
+  \entry{Yarats2021}{article}{}
+    \name{author}{4}{}{%
+      {{hash=YD}{%
+         family={Yarats},
+         familyi={Y\bibinitperiod},
+         given={Denis},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=FR}{%
+         family={Fergus},
+         familyi={F\bibinitperiod},
+         given={Rob},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=LA}{%
+         family={Lazaric},
+         familyi={L\bibinitperiod},
+         given={Alessandro},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=PL}{%
+         family={Pinto},
+         familyi={P\bibinitperiod},
+         given={Lerrel},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.AI, cs.LG}
+    \strng{namehash}{YD+1}
+    \strng{fullhash}{YDFRLAPL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{Y}
+    \field{sortinithash}{Y}
+    \field{abstract}{%
+    We present DrQ-v2, a model-free reinforcement learning (RL) algorithm for
+  visual continuous control. DrQ-v2 builds on DrQ, an off-policy actor-critic
+  approach that uses data augmentation to learn directly from pixels. We
+  introduce several improvements that yield state-of-the-art results on the
+  DeepMind Control Suite. Notably, DrQ-v2 is able to solve complex humanoid
+  locomotion tasks directly from pixel observations, previously unattained by
+  model-free RL. DrQ-v2 is conceptually simple, easy to implement, and provides
+  significantly better computational footprint compared to prior work, with the
+  majority of tasks taking just 8 hours to train on a single GPU. Finally, we
+  publicly release DrQ-v2's implementation to provide RL practitioners with a
+  strong and computationally efficient baseline.%
+    }
+    \verb{eprint}
+    \verb 2107.09645
+    \endverb
+    \field{title}{Mastering Visual Continuous Control: Improved Data-Augmented
+  Reinforcement Learning}
+    \verb{file}
+    \verb :http\://arxiv.org/pdf/2107.09645v1:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.AI}
+    \field{month}{07}
+    \field{year}{2021}
+  \endentry
+
+  \entry{Zbontar2021}{article}{}
+    \name{author}{5}{}{%
+      {{hash=ZJ}{%
+         family={Zbontar},
+         familyi={Z\bibinitperiod},
+         given={Jure},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=JL}{%
+         family={Jing},
+         familyi={J\bibinitperiod},
+         given={Li},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=MI}{%
+         family={Misra},
+         familyi={M\bibinitperiod},
+         given={Ishan},
+         giveni={I\bibinitperiod},
+      }}%
+      {{hash=LY}{%
+         family={LeCun},
+         familyi={L\bibinitperiod},
+         given={Yann},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=DS}{%
+         family={Deny},
+         familyi={D\bibinitperiod},
+         given={Stéphane},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.CV, cs.AI, cs.LG, q-bio.NC}
+    \strng{namehash}{ZJ+1}
+    \strng{fullhash}{ZJJLMILYDS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{Z}
+    \field{sortinithash}{Z}
+    \field{abstract}{%
+    Self-supervised learning (SSL) is rapidly closing the gap with supervised
+  methods on large computer vision benchmarks. A successful approach to SSL is
+  to learn embeddings which are invariant to distortions of the input sample.
+  However, a recurring issue with this approach is the existence of trivial
+  constant solutions. Most current methods avoid such solutions by careful
+  implementation details. We propose an objective function that naturally
+  avoids collapse by measuring the cross-correlation matrix between the outputs
+  of two identical networks fed with distorted versions of a sample, and making
+  it as close to the identity matrix as possible. This causes the embedding
+  vectors of distorted versions of a sample to be similar, while minimizing the
+  redundancy between the components of these vectors. The method is called
+  Barlow Twins, owing to neuroscientist H. Barlow's redundancy-reduction
+  principle applied to a pair of identical networks. Barlow Twins does not
+  require large batches nor asymmetry between the network twins such as a
+  predictor network, gradient stopping, or a moving average on the weight
+  updates. Intriguingly it benefits from very high-dimensional output vectors.
+  Barlow Twins outperforms previous methods on ImageNet for semi-supervised
+  classification in the low-data regime, and is on par with current state of
+  the art for ImageNet classification with a linear classifier head, and for
+  transfer tasks of classification and object detection.%
+    }
+    \verb{eprint}
+    \verb 2103.03230
+    \endverb
+    \field{title}{Barlow Twins: Self-Supervised Learning via Redundancy
+  Reduction}
+    \verb{file}
+    \verb :Zbontar2021 - Barlow Twins_ Self Supervised Learning Via Redundancy
+    \verb Reduction.pdf:PDF;:http\://arxiv.org/pdf/2103.03230v3:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{month}{03}
+    \field{year}{2021}
+  \endentry
+
+  \entry{Zhai2019}{article}{}
+    \name{author}{4}{}{%
+      {{hash=ZG}{%
+         family={Zhai},
+         familyi={Z\bibinitperiod},
+         given={Guangyao},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=LL}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Liang},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=ZL}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Linjian},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=LY}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Yong},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.CV, cs.LG, eess.IV}
+    \strng{namehash}{ZG+1}
+    \strng{fullhash}{ZGLLZLLY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{Z}
+    \field{sortinithash}{Z}
+    \field{abstract}{%
+    While many visual ego-motion algorithm variants have been proposed in the
+  past decade, learning based ego-motion estimation methods have seen an
+  increasing attention because of its desirable properties of robustness to
+  image noise and camera calibration independence. In this work, we propose a
+  data-driven approach of fully trainable visual ego-motion estimation for a
+  monocular camera. We use an end-to-end learning approach in allowing the
+  model to map directly from input image pairs to an estimate of ego-motion
+  (parameterized as 6-DoF transformation matrices). We introduce a novel
+  two-module Long-term Recurrent Convolutional Neural Networks called
+  PoseConvGRU, with an explicit sequence pose estimation loss to achieve this.
+  The feature-encoding module encodes the short-term motion feature in an image
+  pair, while the memory-propagating module captures the long-term motion
+  feature in the consecutive image pairs. The visual memory is implemented with
+  convolutional gated recurrent units, which allows propagating information
+  over time. At each time step, two consecutive RGB images are stacked together
+  to form a 6 channels tensor for module-1 to learn how to extract motion
+  information and estimate poses. The sequence of output maps is then passed
+  through a stacked ConvGRU module to generate the relative transformation pose
+  of each image pair. We also augment the training data by randomly skipping
+  frames to simulate the velocity variation which results in a better
+  performance in turning and high-velocity situations. We evaluate the
+  performance of our proposed approach on the KITTI Visual Odometry benchmark.
+  The experiments show a competitive performance of the proposed method to the
+  geometric method and encourage further exploration of learning based methods
+  for the purpose of estimating camera ego-motion even though geometrical
+  methods demonstrate promising results.%
+    }
+    \verb{eprint}
+    \verb 1906.08095
+    \endverb
+    \field{title}{PoseConvGRU: A Monocular Approach for Visual Ego-motion
+  Estimation by Learning}
+    \verb{file}
+    \verb :Zhai2019 - PoseConvGRU_ a Monocular Approach for Visual Ego Motion E
+    \verb stimation by Learning.pdf:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{month}{06}
+    \field{year}{2019}
+  \endentry
+
+  \entry{Zhang2021}{article}{}
+    \name{author}{2}{}{%
+      {{hash=ZJ}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Jimuyang},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=OBE}{%
+         family={Ohn-Bar},
+         familyi={O\bibinithyphendelim B\bibinitperiod},
+         given={Eshed},
+         giveni={E\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.CV, cs.AI, cs.LG, cs.RO}
+    \strng{namehash}{ZJOBE1}
+    \strng{fullhash}{ZJOBE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{Z}
+    \field{sortinithash}{Z}
+    \field{abstract}{%
+    When in a new situation or geographical location, human drivers have an
+  extraordinary ability to watch others and learn maneuvers that they
+  themselves may have never performed. In contrast, existing techniques for
+  learning to drive preclude such a possibility as they assume direct access to
+  an instrumented ego-vehicle with fully known observations and expert driver
+  actions. However, such measurements cannot be directly accessed for the
+  non-ego vehicles when learning by watching others. Therefore, in an
+  application where data is regarded as a highly valuable asset, current
+  approaches completely discard the vast portion of the training data that can
+  be potentially obtained through indirect observation of surrounding vehicles.
+  Motivated by this key insight, we propose the Learning by Watching (LbW)
+  framework which enables learning a driving policy without requiring full
+  knowledge of neither the state nor expert actions. To increase its data,
+  i.e., with new perspectives and maneuvers, LbW makes use of the
+  demonstrations of other vehicles in a given scene by (1) transforming the
+  ego-vehicle's observations to their points of view, and (2) inferring their
+  expert actions. Our LbW agent learns more robust driving policies while
+  enabling data-efficient learning, including quick adaptation of the policy to
+  rare and novel scenarios. In particular, LbW drives robustly even with a
+  fraction of available driving data required by existing methods, achieving an
+  average success rate of 92% on the original CARLA benchmark with only 30
+  minutes of total driving data and 82% with only 10 minutes.%
+    }
+    \verb{eprint}
+    \verb 2106.05966
+    \endverb
+    \field{title}{Learning by Watching}
+    \verb{file}
+    \verb :Zhang2021 - Learning by Watching.pdf:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{month}{06}
+    \field{year}{2021}
+  \endentry
+
+  \entry{Zhang2022a}{article}{}
+    \name{author}{3}{}{%
+      {{hash=ZJ}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Jimuyang},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=ZR}{%
+         family={Zhu},
+         familyi={Z\bibinitperiod},
+         given={Ruizhao},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=OBE}{%
+         family={Ohn-Bar},
+         familyi={O\bibinithyphendelim B\bibinitperiod},
+         given={Eshed},
+         giveni={E\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.CV, cs.AI, cs.RO}
+    \strng{namehash}{ZJZROBE1}
+    \strng{fullhash}{ZJZROBE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{Z}
+    \field{sortinithash}{Z}
+    \field{abstract}{%
+    Effectively utilizing the vast amounts of ego-centric navigation data that
+  is freely available on the internet can advance generalized intelligent
+  systems, i.e., to robustly scale across perspectives, platforms,
+  environmental conditions, scenarios, and geographical locations. However, it
+  is difficult to directly leverage such large amounts of unlabeled and highly
+  diverse data for complex 3D reasoning and planning tasks. Consequently,
+  researchers have primarily focused on its use for various auxiliary pixel-
+  and image-level computer vision tasks that do not consider an ultimate
+  navigational objective. In this work, we introduce SelfD, a framework for
+  learning scalable driving by utilizing large amounts of online monocular
+  images. Our key idea is to leverage iterative semi-supervised training when
+  learning imitative agents from unlabeled data. To handle unconstrained
+  viewpoints, scenes, and camera parameters, we train an image-based model that
+  directly learns to plan in the Bird's Eye View (BEV) space. Next, we use
+  unlabeled data to augment the decision-making knowledge and robustness of an
+  initially trained model via self-training. In particular, we propose a
+  pseudo-labeling step which enables making full use of highly diverse
+  demonstration data through "hypothetical" planning-based data augmentation.
+  We employ a large dataset of publicly available YouTube videos to train SelfD
+  and comprehensively analyze its generalization benefits across challenging
+  navigation scenarios. Without requiring any additional data collection or
+  annotation efforts, SelfD demonstrates consistent improvements (by up to 24%)
+  in driving performance evaluation on nuScenes, Argoverse, Waymo, and CARLA.%
+    }
+    \verb{eprint}
+    \verb 2204.10320
+    \endverb
+    \field{title}{SelfD: Self-Learning Large-Scale Driving Policies From the
+  Web}
+    \verb{file}
+    \verb :Zhang2022a - SelfD_ Self Learning Large Scale Driving Policies from
+    \verb the Web.pdf:PDF
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{month}{04}
+    \field{year}{2022}
+  \endentry
+
+  \entry{Zhang2022}{article}{}
+    \name{author}{3}{}{%
+      {{hash=ZQ}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Qihang},
+         giveni={Q\bibinitperiod},
+      }}%
+      {{hash=PZ}{%
+         family={Peng},
+         familyi={P\bibinitperiod},
+         given={Zhenghao},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=ZB}{%
+         family={Zhou},
+         familyi={Z\bibinitperiod},
+         given={Bolei},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.CV, cs.LG, cs.RO}
+    \strng{namehash}{ZQPZZB1}
+    \strng{fullhash}{ZQPZZB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{Z}
+    \field{sortinithash}{Z}
+    \field{abstract}{%
+    Deep visuomotor policy learning achieves promising results in control tasks
+  such as robotic manipulation and autonomous driving, where the action is
+  generated from the visual input by the neural policy. However, it requires a
+  huge number of online interactions with the training environment, which
+  limits its real-world application. Compared to the popular unsupervised
+  feature learning for visual recognition, feature pretraining for visuomotor
+  control tasks is much less explored. In this work, we aim to pretrain policy
+  representations for driving tasks using hours-long uncurated YouTube videos.
+  A new contrastive policy pretraining method is developed to learn
+  action-conditioned features from video frames with action pseudo labels.
+  Experiments show that the resulting action-conditioned features bring
+  substantial improvements to the downstream reinforcement learning and
+  imitation learning tasks, outperforming the weights pretrained from previous
+  unsupervised learning methods. Code and models will be made publicly
+  available.%
+    }
+    \verb{eprint}
+    \verb 2204.02393
+    \endverb
+    \field{title}{Action-Conditioned Contrastive Policy Pretraining}
+    \verb{file}
+    \verb :Zhang2022 - Action Conditioned Contrastive Policy Pretraining.pdf:PD
+    \verb F
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{month}{04}
+    \field{year}{2022}
+  \endentry
+
+  \entry{DBLP:journals/corr/abs-1912-02973}{article}{}
+    \name{author}{6}{}{%
+      {{hash=ZA}{%
+         family={Zhao},
+         familyi={Z\bibinitperiod},
+         given={Albert},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=HT}{%
+         family={He},
+         familyi={H\bibinitperiod},
+         given={Tong},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=LY}{%
+         family={Liang},
+         familyi={L\bibinitperiod},
+         given={Yitao},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=HH}{%
+         family={Huang},
+         familyi={H\bibinitperiod},
+         given={Haibin},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=dBGV}{%
+         prefix={den},
+         prefixi={d\bibinitperiod},
+         family={Broeck},
+         familyi={B\bibinitperiod},
+         given={Guy\bibnamedelima Van},
+         giveni={G\bibinitperiod\bibinitdelim V\bibinitperiod},
+      }}%
+      {{hash=SS}{%
+         family={Soatto},
+         familyi={S\bibinitperiod},
+         given={Stefano},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ZA+1}
+    \strng{fullhash}{ZAHTLYHHBGVdSS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{Z}
+    \field{sortinithash}{Z}
+    \field{title}{LaTeS: Latent Space Distillation for Teacher-Student Driving
+  Policy Learning}
+    \verb{url}
+    \verb http://arxiv.org/abs/1912.02973
+    \endverb
+    \field{volume}{abs/1912.02973}
+    \field{journaltitle}{CoRR}
+    \field{year}{2019}
+  \endentry
+
+  \entry{Zhou2019a}{article}{}
+    \name{author}{3}{}{%
+      {{hash=ZB}{%
+         family={Zhou},
+         familyi={Z\bibinitperiod},
+         given={Brady},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=KP}{%
+         family={Krähenbühl},
+         familyi={K\bibinitperiod},
+         given={Philipp},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=KV}{%
+         family={Koltun},
+         familyi={K\bibinitperiod},
+         given={Vladlen},
+         giveni={V\bibinitperiod},
+      }}%
+    }
+    \keyw{cs.CV, cs.AI, cs.LG, cs.RO}
+    \strng{namehash}{ZBKPKV1}
+    \strng{fullhash}{ZBKPKV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{Z}
+    \field{sortinithash}{Z}
+    \field{abstract}{%
+    Computer vision produces representations of scene content. Much computer
+  vision research is predicated on the assumption that these intermediate
+  representations are useful for action. Recent work at the intersection of
+  machine learning and robotics calls this assumption into question by training
+  sensorimotor systems directly for the task at hand, from pixels to actions,
+  with no explicit intermediate representations. Thus the central question of
+  our work: Does computer vision matter for action? We probe this question and
+  its offshoots via immersive simulation, which allows us to conduct controlled
+  reproducible experiments at scale. We instrument immersive three-dimensional
+  environments to simulate challenges such as urban driving, off-road trail
+  traversal, and battle. Our main finding is that computer vision does matter.
+  Models equipped with intermediate representations train faster, achieve
+  higher task performance, and generalize better to previously unseen
+  environments. A video that summarizes the work and illustrates the results
+  can be found at https://youtu.be/4MfWa2yZ0Jc%
+    }
+    \verb{doi}
+    \verb 10.1126/scirobotics.aaw6661
+    \endverb
+    \verb{eprint}
+    \verb 1905.12887
+    \endverb
+    \field{title}{Does computer vision matter for action?}
+    \verb{file}
+    \verb :http\://arxiv.org/pdf/1905.12887v2:PDF
+    \endverb
+    \field{journaltitle}{Science Robotics 22 May 2019: Vol. 4, Issue 30,
+  eaaw6661}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.CV}
+    \field{month}{05}
+    \field{year}{2019}
+  \endentry
+\enddatalist
+\endinput
